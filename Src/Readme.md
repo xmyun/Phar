@@ -28,3 +28,4 @@ Start point:
 Dataload:  
 	1. datasetPre.py	dataAug.py	
 
+Different dataset has different performance. 
