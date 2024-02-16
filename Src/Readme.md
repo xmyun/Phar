@@ -29,3 +29,4 @@ Dataload:
 	1. datasetPre.py	dataAug.py	
 
 Different dataset has different performance. 
+Dataset 1. have different performance.
