@@ -4,3 +4,5 @@ Datasets/Merge/
 Datasets/Shoaib/
 Datasets/Uci/
 Semi-supervised-learning/
+Src/checkpoint/
+Src/__pycache__/
