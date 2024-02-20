@@ -3,8 +3,6 @@
 import argparse
 import math
 import os
-import random
-
 import numpy as np
 import torch
 
@@ -16,8 +14,6 @@ from torch.utils.data import Dataset, DataLoader
 from dataAug import IMUDataset, IMUTTADataset, FFTDataset
 from dataAug import Preprocess4Normalization, Preprocess4Sample, Preprocess4Rotation, Preprocess4Noise, Preprocess4Permute
 from argParse import set_seeds
-
-# from config import create_io_config, load_dataset_config, TrainConfig, MaskConfig, load_model_config
 
 
 def get_device(gpu, print_info=True):
@@ -47,7 +43,9 @@ def merge_last(x, n_dims):
     assert n_dims > 1 and n_dims < len(s)
     return x.view(*s[:-n_dims], -1)
 
-
+    # if temp_label.shape == (2, 1): # This will filter out some datas. 
+        # index[i] = True
+        # label_new.append(label[i, 0, :])
 def filter_dataset(data, label, filter_index=[0, 1]):
     index = np.zeros(data.shape[0], dtype=bool)
     label_new = []
@@ -55,9 +53,9 @@ def filter_dataset(data, label, filter_index=[0, 1]):
         temp_label = np.unique(label[i, :, filter_index], axis=1)
         # if temp_label.shape == (2, 1): # This will filter out some datas. 
         index[i] = True
-        label_new.append(label[i, 0, :])
+        label_new.append(label[i, 0, :]) 
     # print('Before Merge: %d, After Merge: %d' % (data.shape[0], np.sum(index)))
-    return data[index], np.array(label_new)
+    return data[index], np.array(label_new) 
 
 
 def reshape_data(data_set, seq_len):
@@ -100,7 +98,6 @@ def filter_domain_list(data, labels, domain_list, label_domain_index=2):
     else:
         index = np.isin(labels[:, 0, label_domain_index], np.array(domain_list) - 1)
         return data[index, ...], labels[index, ...]
-
 
 
 def filter_user(data, labels, labels_user, user):
@@ -513,7 +510,7 @@ def load_dataset(args):
             = further_split_train(data, splitTrain_again, result_tvt_1)
         
         # Read user_list for train:
-        Domain_index = 0  # Sourcee domain; 
+        Domain_all = 0  # Sourcee domain; 
         # 创建一个包含0到72的数组
         User_list_2= np.array([i for i in range(0, 72)]) 
         if Domain_index_t == 1: # 使用列表推导式从数组中剔除0到8.  Hhar -- 1_9: 0-8;
@@ -526,7 +523,7 @@ def load_dataset(args):
             User_list_2 = np.array([i for i in User_list_2 if not (63 <= i <= 72)])  
         else:
             print("Dataset wrong!!!")
-        data_set_2, label_set_2 = load_Across_users(User_list_2, data, label, Domain_index)
+        data_set_2, label_set_2 = load_Across_users(User_list_2, data, label, Domain_all)
         result_tvt_2= separate_user_tvt(data, data_set_2, label_set_2)
         # shape is: data_train, label_train, data_vali, label_vali, data_test, label_test
         data_train, label_train, _,_, _, _ \

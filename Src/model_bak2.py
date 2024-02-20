@@ -14,7 +14,7 @@ from nwd import NuclearWassersteinDiscrepancy
 from match_utils import ce_loss, consistency_loss, Get_Scalar, concat_all_gather
 from torch.cuda.amp import autocast, GradScaler
 import contextlib
-from gram import J_t
+from gram import *
 # from utils import Preprocess4Normalization, Preprocess4Sample, Preprocess4Rotation, Preprocess4Noise, Preprocess4Permute
 # pipeline_tta = [Preprocess4Normalization(args.input),Preprocess4Sample(args.seq_len, temporal=0.4)
 #             , Preprocess4Rotation(), Preprocess4Noise(), Preprocess4Permute()]
@@ -811,9 +811,9 @@ class CoTTA(nn.Module):
             for nm, m  in self.model.named_modules():
                 for npp, p in m.named_parameters():
                     if npp in ['weight', 'bias'] and p.requires_grad:
-                        mask = (torch.rand(p.shape)<self.rst).float().cuda() 
+                        mask = (torch.rand(p.shape)<self.rst).float().cuda(self.args.device) 
                         with torch.no_grad():
-                            p.data = self.model_state[f"{nm}.{npp}"].cuda() * mask + p * (1.-mask)
+                            p.data = self.model_state[f"{nm}.{npp}"].cuda(self.args.device) * mask + p * (1.-mask)
         return outputs_ema
 
 
@@ -938,7 +938,7 @@ class CoTTA_attack(nn.Module):
             # print(J_t_median)
             inputs.append([input,J_t_median])
         x_attack = self.attack(x,outputs)
-        x_attack = x_attack.to('cuda')
+        x_attack = x_attack.to(self.args.device)
         inputs.append([x_attack,J_t(self.model, x, x_attack)])
         J_list = sorted(inputs,key=lambda x:x[1])
         # inputs = min(inputs,key=lambda x:x[1])
@@ -946,7 +946,7 @@ class CoTTA_attack(nn.Module):
         inputs_nwd = torch.cat((x, inputs[0]), dim=0)
         # f = self.model(inputs_nwd)
         discrepancy_loss = -discrepancy(inputs_nwd)
-        discrepancy_loss = discrepancy_loss.to('cuda')
+        discrepancy_loss = discrepancy_loss.to(self.args.device)
         if inputs[1]<np.exp(epoch*0.1): # epoch * 0.1
             # print('J_t_median:',inputs[1])
             for i in range(N):
@@ -981,7 +981,7 @@ class CoTTA_attack(nn.Module):
             a=0.01
             # loss = (softmax_entropy(outputs, outputs_ema)).mean(0)+inputs[1]+a
             gram_loss = inputs[1]
-            gram_loss = gram_loss.to('cuda')
+            gram_loss = gram_loss.to('cuda') # self.args.device
             # print('gramloss:',gram_loss)
             # print('cross:',((softmax_entropy(outputs, outputs_ema)).mean(0)))
             # loss = (softmax_entropy(outputs, outputs_ema)).mean(0)+0.1*gram_loss
@@ -1019,13 +1019,14 @@ class CoTTA_attack_softmatch(nn.Module):
         self.args = arg
         assert steps > 0, "cotta requires >= 1 step(s) to forward and update"
         self.episodic = episodic
-        self.transform = [Preprocess4Normalization_t(arg.input),Preprocess4Sample_t(arg.seq_len, temporal=0.4)
+        self.transform = [Preprocess4Normalization_t(arg.input)#,Preprocess4Sample_t(arg.seq_len, temporal=0.4)
                           ,Preprocess4Rotation_t(), Preprocess4Noise_t(), Preprocess4Permute_t()]
-        self.transform1_norm = transforms.Compose([Preprocess4Normalization_t(arg.input)])
-        self.transform2_sample = transforms.Compose([Preprocess4Sample_t(arg.seq_len, temporal=0.4)])
-        self.transform3_rot = transforms.Compose([Preprocess4Rotation_t()])
-        self.transform4_noise = transforms.Compose([Preprocess4Noise_t()])
-        self.transform5_permu = transforms.Compose([Preprocess4Permute_t()])
+        
+        # self.transform1_norm = transforms.Compose([Preprocess4Normalization_t(arg.input)])
+        # self.transform2_sample = transforms.Compose([Preprocess4Sample_t(arg.seq_len, temporal=0.4)])
+        # self.transform3_rot = transforms.Compose([Preprocess4Rotation_t()])
+        # self.transform4_noise = transforms.Compose([Preprocess4Noise_t()])
+        # self.transform5_permu = transforms.Compose([Preprocess4Permute_t()])
         self.attack = PGD(self.model,eps=0.04, alpha=1 / 255, steps=10) # eps=0.03, alpha=2 / 255,
         self.model_state, self.optimizer_state, self.model_ema, self.model_anchor = \
             copy_model_and_optimizer(self.model, self.optimizer)
@@ -1120,16 +1121,32 @@ class CoTTA_attack_softmatch(nn.Module):
         anchor_prob = torch.nn.functional.softmax(self.model_anchor(x), dim=1).max(1)[0]
         standard_ema = self.model_ema(x)
         # Augmentation-averaged Prediction
-        N = 32 # 32 64 
+        N = 8 # 32 64 
         outputs_emas = []
         inputs=[]
-        for transform in self.transform:
-            input = transform(x.clone())
-            J_t_median = J_t(self.model, x, input)
-            inputs.append([input,J_t_median])
+        
         x_attack = self.attack(x,outputs)
-        x_attack = x_attack.to('cuda')
-        inputs.append([x_attack,J_t(self.model, x, x_attack)])
+        x_attack = x_attack.to(self.args.device)
+        for i in range(N):
+            for i in np.arange(0, len(self.transform)+1, 1):
+                # print(i) 
+                if i==2: 
+                    input = self.transform[i](x.clone()) # x_ema x_attack
+                elif i==4:
+                    input = x_attack 
+                else:
+                    input = self.transform[i](x) # x_ema x_attack
+                J_t_median = J_t(self.model, x, input)
+                inputs.append([input,J_t_median])
+                    
+        # for transform in self.transform:
+        #     input = transform(x.clone())
+        #     J_t_median = J_t(self.model, x, input)
+        #     inputs.append([input,J_t_median])
+        # x_attack = self.attack(x,outputs)
+        # x_attack = x_attack.to('cuda')#self.args.device
+        # inputs.append([x_attack,J_t(self.model, x, x_attack)])
+        
         J_list = sorted(inputs,key=lambda x:x[1])
         with self.amp_cm():
             x_ulb_w = J_list[0][0]
@@ -1179,7 +1196,7 @@ class CoTTA_attack_softmatch(nn.Module):
         inputs = J_list[round(np.exp(epoch*0.01))-1]
         inputs_nwd = torch.cat((x, inputs[0]), dim=0)
         discrepancy_loss = -discrepancy(inputs_nwd)
-        discrepancy_loss = discrepancy_loss.to('cuda')
+        discrepancy_loss = discrepancy_loss.to(self.args.device)
         if inputs[1]<np.exp(epoch*0.1): # epoch * 0.1
             for i in range(N):
                 outputs_  = self.model_ema(inputs[0]).detach()
@@ -1192,7 +1209,7 @@ class CoTTA_attack_softmatch(nn.Module):
             # Student update
             optimizer.zero_grad()
             gram_loss = inputs[1]
-            gram_loss = gram_loss.to('cuda')
+            gram_loss = gram_loss.to(self.args.device)
             # print('gramloss:',gram_loss)
             # print('cross:',((softmax_entropy(outputs, outputs_ema)).mean(0)))
             # loss = (softmax_entropy(outputs, outputs_ema)).mean(0)+0.1*gram_loss
@@ -1207,10 +1224,10 @@ class CoTTA_attack_softmatch(nn.Module):
             for nm, m  in self.model.named_modules():
                 for npp, p in m.named_parameters():
                     if npp in ['weight', 'bias'] and p.requires_grad:
-                        # mask = (torch.rand(p.shape)<self.rst).float().cuda() 
+                        # mask = (torch.rand(p.shape)<self.rst).float().cuda(self.args.device) 
                         mask=0.05
                         with torch.no_grad():
-                            p.data = self.model_state[f"{nm}.{npp}"].cuda() * mask + p * (1.-mask)
+                            p.data = self.model_state[f"{nm}.{npp}"].cuda(self.args.device) * mask + p * (1.-mask)
         # return outputs_ema 
         return standard_ema
 @torch.jit.script

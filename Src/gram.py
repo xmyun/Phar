@@ -1,6 +1,11 @@
 import torch
 import numpy as np
 import torch.nn.functional as F
+import os
+import time
+from torch import nn
+from datasetPre import * 
+from argParse import *
 def kmmd_dist(x1, x2):
     X_total = torch.cat([x1,x2],0)
     Gram_matrix = gaussian_kernel(X_total,X_total,kernel_mul=2.0, kernel_num=2, fix_sigma=0, mean_sigma=0)
@@ -116,6 +121,7 @@ def J_t(model, source, target):
     # J_star = np.abs(J_t - J_t_median)/1.4826/(J_MAD+1e-6)
     # print('J_t_median:',J_t_median)
     return kmmd
+
 def threshold_determine(clean_feature_target, ood_detection):
     test_deviations_list = []
     step = 5
@@ -164,27 +170,22 @@ class Feature_Correlations:
     def G_p(self, ob, p):
         temp = ob.detach()
         temp = temp**p
-
-        temp = temp.reshape(temp.shape[0], temp.shape[1], -1) #temp.shape[0], temp.shape[1], -1
+        temp = temp.reshape(temp.shape[0],temp.shape[1],-1)
         temp = ((torch.matmul(temp,temp.transpose(dim0=2,dim1=1))))
         temp = temp.triu()
         temp = temp.sign()*torch.abs(temp)**(1/p)
-
-        temp = temp.reshape(temp.shape[0],-1) 
-        self.num_feature = temp.shape[-1]/2 
+        temp = temp.reshape(temp.shape[0],-1)
+        self.num_feature = temp.shape[-1]/2
         return temp
 
     def get_median_mad(self, feat_list):
         medians = []
         mads = []
         for L,feat_L in enumerate(feat_list):
-            if (feat_L.detach()).shape[0] == 0: # zero will present bugs. 
-                    continue
             if L==len(medians):
                 medians.append([None]*len(self.power))
                 mads.append([None]*len(self.power))
             for p,P in enumerate(self.power):
-                # print((feat_L.detach()**P).shape[0])
                 g_p = self.G_p(feat_L,P)
                 current_median = g_p.median(dim=0,keepdim=True)[0]
                 current_mad = torch.abs(g_p - current_median).median(dim=0,keepdim=True)[0]
@@ -220,3 +221,74 @@ class Feature_Correlations:
         deviations.append(batch_deviations)
         deviations = np.concatenate(deviations,axis=0)/self.num_feature /len(self.power)
         return deviations
+
+def eval(model,args, data_loader_test):
+    """ Evaluation Loop """
+    model.eval() # evaluation mode
+    model = model.to(args.device)
+    if args.data_parallel: # use Data Parallelism with Multi-GPU
+        model = nn.DataParallel(model)
+    results = [] # prediction results
+    labels = []
+    time_sum = 0.0
+    for batch in data_loader_test:
+        batch = [t.to(args.device) for t in batch]
+        with torch.no_grad(): # evaluation without gradient calculation
+            start_time = time.time()
+            inputs, label = batch
+            result = model(inputs, False) 
+            time_sum += time.time() - start_time
+            results.append(result)
+            labels.append(label)
+    label = torch.cat(labels, 0)
+    predict = torch.cat(results, 0)
+    return stat_acc_f1(label.cpu().numpy(), predict.cpu().numpy())
+
+def eval_gram(model,args, data_loader_train, data_loader_validate):
+    """ Evaluation Loop """
+    model.eval() # evaluation mode
+    model = model.to(args.device)
+    if args.data_parallel: # use Data Parallelism with Multi-GPU
+        model = nn.DataParallel(model)
+    results = [] # prediction results
+    labels = []
+    time_sum = 0.0
+    for batch_train,batch_valid in zip(data_loader_train, data_loader_validate):
+        batch_train = [t.to(args.device) for t in batch_train]
+        batch_valid = [t.to(args.device) for t in batch_valid]
+        with torch.no_grad(): # evaluation without gradient calculation
+            start_time = time.time()
+            inputs_s, label_s = batch_train
+            inputs_t, label_t = batch_valid
+            J_t_median = J_t(model, inputs_s, inputs_t)
+            # result = model(inputs, False) 
+            time_sum += time.time() - start_time
+            # print('J_t_median:',J_t_median.detach().numpy())
+            results.append(J_t_median.detach().numpy().item())
+            # labels.append(label)
+    # label = torch.cat(labels, 0)
+    # predict = torch.cat(results, 0)
+    print('results:',np.median(results))
+    return np.median(results)
+from fetch_model import fetch_classifier
+def select_model(args,source,target):
+    J_t = []
+    acc = []
+    for i in range(700):
+        model = fetch_classifier(args)
+        model_path = args.save_path + "shoaib_20_120" + str(i) + '.pt'
+        print(model_path)
+        if os.path.exists(model_path):
+            model_dicts = torch.load(model_path)
+            model.load_state_dict(model_dicts)
+            model = model.to(torch.device('cuda'))
+            model.eval()
+            # test_acc,test_F1 = eval(model,args, target)
+            # acc.append([test_acc,model_path])
+            J_t_median = eval_gram(model,args, source, target)
+            J_t.append([J_t_median,model_path])
+            # print(f'J_t_median:{J_t_median}')
+    # acc_list = sorted(acc,key=lambda x:x[0])
+    J_list = sorted(J_t,key=lambda x:x[0])
+    # return acc_list[699][1]
+    return J_list[0][1]

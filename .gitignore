@@ -4,4 +4,8 @@ Datasets/Merge/
 Datasets/Shoaib/
 Datasets/Uci/
 Src/checkpoint/
+Src/checkpoint_ucik/
+Src/checkpoint_motionk/
+Src/checkpoint_shoaibk/
+Src/checkpoint_Hhark/
 Src/__pycache__/
