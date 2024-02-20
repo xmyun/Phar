@@ -501,7 +501,7 @@ def load_dataset(args):
         
     elif("shoaib" in args.dataset): # Inter multiple dataset. 
         # Read user_list for test: 
-        Domain_index_t = 4  # Targe Cross domain; 
+        Domain_index_t = 1  # Targe Cross domain; 
         data_set_1, label_set_1 = load_Uci_users(data, label, Domain_index_t) # 1
         result_tvt_1= separate_user_tvt(data, data_set_1, label_set_1)
         splitTrain_again = 1 

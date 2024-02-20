@@ -46,7 +46,7 @@ def cotta(args):
         base_model = fetch_classifier(args) 
         # best_model_path = select_model(args,data_loader_train,data_loader_test) 
         # base_model_dicts = torch.load(best_model_path) 
-        base_model_dicts = torch.load(args.save_path + args.dataset + '2.pt') # shoaib_20_120 
+        base_model_dicts = torch.load(args.save_path + args.dataset + '151.pt') # shoaib_20_120 
         # print("路径", args.save_path + args.dataset + '.pt') 
         base_model.load_state_dict(base_model_dicts)
         optimizer = torch.optim.Adam(params=base_model.parameters(), lr=args.lr)  # , weight_decay=0.95
