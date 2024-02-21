@@ -52,9 +52,9 @@ def filter_dataset(data, label, filter_index=[0, 1]):
     label_new = []
     for i in range(label.shape[0]):
         temp_label = np.unique(label[i, :, filter_index], axis=1)
-        # if temp_label.shape == (2, 1): # This will filter out some datas. 
-        index[i] = True
-        label_new.append(label[i, 0, :]) 
+        if temp_label.shape == (2, 1): # This will filter out some datas. 
+            index[i] = True
+            label_new.append(label[i, 0, :]) 
     # print('Before Merge: %d, After Merge: %d' % (data.shape[0], np.sum(index)))
     return data[index], np.array(label_new) 
 
@@ -341,14 +341,18 @@ def Extractor_Users(data, labels, Tarsers, user_label_index=1):
 
 # 读取 指定的 用户: User_list
 def load_Uci_users(data, label, Domain_index):  # User_list, 
-    if Domain_index == 1: # 使用列表推导式从数组中剔除0到8.  Hhar -- 1_9: 0-8;
+    if Domain_index == 1: # 使用列表推导式从数组中提取0到8.  Hhar -- 1_9: 0-8;
         User_list_1= np.array([i for i in range(0, 8)])
-    elif Domain_index == 2: # 使用列表推导式从数组中剔除9到38. Uci -- 2_30: 9-38
+    elif Domain_index == 2: # 使用列表推导式从数组中提取9到38. Uci -- 2_30: 9-38
         User_list_1= np.array([i for i in range(9, 38)])
-    elif Domain_index == 3: # 使用列表推导式从数组中剔除9到38. Motion -- 3_24: 39-62;
+    elif Domain_index == 3: # 使用列表推导式从数组中提取9到38. Motion -- 3_24: 39-62;
         User_list_1= np.array([i for i in range(39, 62)])
-    elif Domain_index == 4: # 使用列表推导式从数组中剔除9到38. Shoaib -- 4_10: 63-72
+    elif Domain_index == 4: # 使用列表推导式从数组中提取9到38. Shoaib -- 4_10: 63-72
         User_list_1= np.array([i for i in range(63, 72)])
+    elif Domain_index == 5: # 使用列表推导式从数组中提取9到38. usc -- 3_24: 73-86;
+        User_list_1= np.array([i for i in range(73, 86)])
+    elif Domain_index == 6: # 使用列表推导式从数组中提取9到38. ku -- 4_10: 87-166
+        User_list_1= np.array([i for i in range(87, 166)])
     else:
         print("Dataset wrong!!!")
     
@@ -481,8 +485,8 @@ def load_dataset(args):
     print("种子的数值")
     path_label = os.path.join("/label_" + "20_120" + ".npy") 
     path_data = os.path.join("/data_" + "20_120" + ".npy") 
-    path_label = "/mnt/home/xuemeng/ttaIMU/IMU_Hete/Datasets/Merge/UniHarData" + path_label # UniHarData
-    path_data = "/mnt/home/xuemeng/ttaIMU/IMU_Hete/Datasets/Merge/UniHarData" + path_data # 
+    path_label = "/mnt/home/xuemeng/ttaIMU/IMU_Hete/Datasets/Merge/OurData" + path_label # UniHarData
+    path_data = "/mnt/home/xuemeng/ttaIMU/IMU_Hete/Datasets/Merge/OurData" + path_data #  OurData
     # print(path_label)
     label = np.load(path_label).astype(np.float32)
     data = np.load(path_data).astype(np.float32)
@@ -502,9 +506,23 @@ def load_dataset(args):
         splitTrain_again = 1 
         data_train, label_train, data_vali, label_vali, data_test, label_test \
             = further_split_train(data, splitTrain_again, result_tvt)
+    elif(args.cd == "SCroDom"): # Inter single dataset. 
+        Domain_index_s = int(Domain_sd[0]) # Single source domain; 
+        Domain_index_t = int(Domain_td[0]) # Single target domain; 
+        data_set_s, label_set_s = load_Uci_users(data, label, Domain_index_s)  
+        result_tvt_s= separate_user_tvt(data, data_set_s, label_set_s)
+        splitTrain_again = 1 
+        data_train, label_train, _, _, _, _ \
+            = further_split_train(data, splitTrain_again, result_tvt_s)
+        
+        data_set_t, label_set_t = load_Uci_users(data, label, Domain_index_t)  
+        result_tvt_t= separate_user_tvt(data, data_set_t, label_set_t)
+        data_test, label_test, data_vali, label_vali, _, _ \
+            = further_split_train(data, splitTrain_again, result_tvt_t)
+        
     elif(args.cd == "MCroDom"): # Inter multiple dataset. 
         # Read user_list for test: 
-        Domain_index_t = int(Domain_td[0] ) # Targe Cross domain; 
+        Domain_index_t = int(Domain_td[0]) # Targe Cross domain; 
         data_set_1, label_set_1 = load_Uci_users(data, label, Domain_index_t) # 1
         result_tvt_1= separate_user_tvt(data, data_set_1, label_set_1)
         splitTrain_again = 1 
@@ -515,15 +533,19 @@ def load_dataset(args):
         # Read user_list for train:
         Domain_all = int(Domain_sd[0]) # Sourcee domain; 
         # 创建一个包含0到72的数组
-        User_list_2= np.array([i for i in range(0, 72)]) 
+        User_list_2= np.array([i for i in range(0, 166)]) # 72 166
         if Domain_index_t == 1: # 使用列表推导式从数组中剔除0到8.  Hhar -- 1_9: 0-8;
             User_list_2 = np.array([i for i in User_list_2 if not (0 <= i <= 8)]) 
         elif Domain_index_t == 2: # 使用列表推导式从数组中剔除9到38. Uci -- 2_30: 9-38
             User_list_2 = np.array([i for i in User_list_2 if not (9 <= i <= 38)]) 
-        elif Domain_index_t == 3: # 使用列表推导式从数组中剔除9到38. Motion -- 3_24: 39-62;
+        elif Domain_index_t == 3: # 使用列表推导式从数组中剔除39到62. Motion -- 3_24: 39-62;
             User_list_2 = np.array([i for i in User_list_2 if not (39 <= i <= 62)]) 
-        elif Domain_index_t == 4: # 使用列表推导式从数组中剔除9到38. Shoaib -- 4_10: 63-72
+        elif Domain_index_t == 4: # 使用列表推导式从数组中剔除63到72. Shoaib -- 4_10: 63-72
             User_list_2 = np.array([i for i in User_list_2 if not (63 <= i <= 72)])  
+        elif Domain_index_t == 5: # 使用列表推导式从数组中剔除73到87. usc -- 5_14: 63-72
+            User_list_2 = np.array([i for i in User_list_2 if not (73 <= i <= 86)])  
+        elif Domain_index_t == 6: # 使用列表推导式从数组中剔除87到166. ku -- 6_80: 87-166
+            User_list_2 = np.array([i for i in User_list_2 if not (87 <= i <= 166)])  
         else:
             print("Dataset wrong!!!")
         data_set_2, label_set_2 = load_Across_users(User_list_2, data, label, Domain_all)

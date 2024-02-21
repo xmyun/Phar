@@ -285,7 +285,7 @@ def select_model(args,source,target):
     acc = []
     for i in range(50): # 699 
         model = fetch_classifier(args)
-        model_path = args.save_path + "shoaib_20_120" + str(i) + '.pt'
+        model_path = args.save_path + "new_20_120" + str(i) + '.pt'
         print(model_path)
         if os.path.exists(model_path):
             print(model_path)

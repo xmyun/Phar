@@ -41,9 +41,8 @@ def eval(model, args, data_loader_test, data_loader_tta, epoch):
 
 def cotta(args):
         data_loader_train ,data_loader_valid, data_loader_test, data_loader_tta = load_dataset(args)
-        print("Exit for code debug.")
-        exit()
-        
+        # print("Exit for code debug.")
+        # exit()
         criterion = nn.CrossEntropyLoss()
         """ Train Loop """
         base_model = fetch_classifier(args) 

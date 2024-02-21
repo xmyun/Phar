@@ -73,6 +73,22 @@
         "domain_label_size": 4,
         "size": 26288,
         "note": "hhar+uci+motion+shoaib"
+    },
+    "new_20_120": {
+        "sr": 20,
+        "seq_len": 120,
+        "dimension": 6,
+        "activity_label_index": 0,
+        "activity_label_size": 6,
+        "activity_label": [
+            "still", "walking", "upstairs" , "downstairs", "jogging", "biking"
+        ],
+        "user_label_index": 1,
+        "user_label_size": 167,
+        "domain_label_index": 2,
+        "domain_label_size": 6,
+        "size": 34530,
+        "note": "hhar+uci+motion+shoaib+usc+ku"
     }
 }
 

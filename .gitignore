@@ -3,10 +3,13 @@ Datasets/Motion/
 Datasets/Merge/
 Datasets/Shoaib/
 Datasets/Uci/
+Datasets/KU/
+Datasets/Usc/
 Src/checkpoint/
 Src/checkpoint_ucik/
 Src/checkpoint_motionk/
 Src/checkpoint_shoaibk/
+Src/checkpoint_shoaib/
 Src/checkpoint_Hhark/
 Src/saved/
 Src/__pycache__/
