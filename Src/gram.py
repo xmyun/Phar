@@ -6,6 +6,7 @@ import time
 from torch import nn
 from datasetPre import * 
 from argParse import *
+from utils import Preprocess4Sample_t,Preprocess4Rotation_t,Preprocess4Normalization_t, Preprocess4Noise_t, Preprocess4Permute_t
 def kmmd_dist(x1, x2):
     X_total = torch.cat([x1,x2],0)
     Gram_matrix = gaussian_kernel(X_total,X_total,kernel_mul=2.0, kernel_num=2, fix_sigma=0, mean_sigma=0)
@@ -64,7 +65,10 @@ def gaussian_kernel(x1, x2, kernel_mul=2.0, kernel_num=5, fix_sigma=0, mean_sigm
     kernel_val = [torch.exp(-L2_distance / bandwidth_temp) for bandwidth_temp in bandwidth_list]
     return sum(kernel_val)  #L2_distance #
 
-
+def tta_transform(arg):
+    return [Preprocess4Normalization_t(arg.input),Preprocess4Sample_t(arg.seq_len, temporal=0.4)
+                          ,Preprocess4Rotation_t(), Preprocess4Noise_t(), Preprocess4Permute_t()]
+    
 def J_t(model, source, target):
     J_t = []
     def hook_fn(module, input, output):
@@ -244,8 +248,9 @@ def eval(model,args, data_loader_test):
     predict = torch.cat(results, 0)
     return stat_acc_f1(label.cpu().numpy(), predict.cpu().numpy())
 
-def eval_gram(model,args, data_loader_train, data_loader_validate):
+def eval_gram(model,args, data_loader_validate):
     """ Evaluation Loop """
+    transforms = tta_transform(args)
     model.eval() # evaluation mode
     model = model.to(args.device)
     if args.data_parallel: # use Data Parallelism with Multi-GPU
@@ -253,14 +258,17 @@ def eval_gram(model,args, data_loader_train, data_loader_validate):
     results = [] # prediction results
     labels = []
     time_sum = 0.0
-    for batch_train,batch_valid in zip(data_loader_train, data_loader_validate):
-        batch_train = [t.to(args.device) for t in batch_train]
+    for batch_valid in data_loader_validate:
         batch_valid = [t.to(args.device) for t in batch_valid]
         with torch.no_grad(): # evaluation without gradient calculation
             start_time = time.time()
-            inputs_s, label_s = batch_train
             inputs_t, label_t = batch_valid
-            J_t_median = J_t(model, inputs_s, inputs_t)
+            all_Jt = []
+            for transform in transforms:
+                input = transform(inputs_t.clone())
+                J_t_median = J_t(model, inputs_t, input)
+                all_Jt.append(J_t_median)
+            J_t_median = min(all_Jt)
             # result = model(inputs, False) 
             time_sum += time.time() - start_time
             # print('J_t_median:',J_t_median.detach().numpy())
@@ -270,22 +278,24 @@ def eval_gram(model,args, data_loader_train, data_loader_validate):
     # predict = torch.cat(results, 0)
     print('results:',np.median(results))
     return np.median(results)
+
 from fetch_model import fetch_classifier
 def select_model(args,source,target):
     J_t = []
     acc = []
-    for i in range(700):
+    for i in range(50): # 699 
         model = fetch_classifier(args)
         model_path = args.save_path + "shoaib_20_120" + str(i) + '.pt'
         print(model_path)
         if os.path.exists(model_path):
+            print(model_path)
             model_dicts = torch.load(model_path)
             model.load_state_dict(model_dicts)
             model = model.to(torch.device('cuda'))
             model.eval()
             # test_acc,test_F1 = eval(model,args, target)
             # acc.append([test_acc,model_path])
-            J_t_median = eval_gram(model,args, source, target)
+            J_t_median = eval_gram(model,args, target)
             J_t.append([J_t_median,model_path])
             # print(f'J_t_median:{J_t_median}')
     # acc_list = sorted(acc,key=lambda x:x[0])

@@ -40,24 +40,16 @@ def filter_domain_user_list(labels, source_domain, target_domain, label_user_ind
     return user_domain_mapping[index, 0].astype(np.int)
 
 def set_arg(): 
-    parser = argparse.ArgumentParser(description='Phar tta_imu')
+    parser = argparse.ArgumentParser(description='Phar tta_imu') 
+    parser.add_argument('--dataset', type=str, help='Dataset name.')
     parser.add_argument('--model', type=str, help='The model you want to useodel.')
-    parser.add_argument('--dataset', type=str, help='Dataset name.', choices=['hhar_20_120', 'motion_20_120', 'uci_20_120', 'shoaib_20_120'])
+    parser.add_argument('--cd', type=str, default="SigDom", help='Whether the source damain and target domain in a same dataset.')
+    # parser.add_argument('--dataset', type=str, help='Dataset name.', choices=['hhar_20_120', 'motion_20_120', 'uci_20_120', 'shoaib_20_120'])
     parser.add_argument('--source_dataset', type=str, default="Dataset without target!", help='source model name', choices=['hhar_20_120', 'motion_20_120', 'uci_20_120', 'shoaib_20_120', 'Dataset without target!'])
-    # parser.add_argument('dataset_version', type=str, help='Dataset version')
-    # parser.add_argument('-d', '--domain', type=int, default=0, help='The domain index.')
-    # parser.add_argument('-td', '--target_domain', type=int, default=0, help='The target domain index')
-    # parser.add_argument('-e', '--encoder', type=str, default=None, help='Pretrain encoder and decoder file.')
-    # parser.add_argument('-c', '--classifier', type=str, default=None, help='Trained classifier file.')
-    # parser.add_argument('-g', '--gpu', type=str, default=None, help='Set specific GPU.')
-    # parser.add_argument('-t', '--cfg_train', type=str, default='./config/' + config_train, help='Training config json file path')
-    # parser.add_argument('-m', '--cfg_mask', type=str, default='./config/mask.json', help='Mask strategy json file path')
-    # parser.add_argument('-l', '--label_index', type=int, default=0, help='Label Index')
-    # parser.add_argument('-n', '--label_number', type=int, default=1000, help='Label number')
-    # parser.add_argument('-rda', '--remove_data_augmentation', type=int, default=0, help='Specify whether adopting data augmentations.')
-    # parser.add_argument('-s', '--save_name', type=str, default='model', help='The saved model name')
-    # parser.add_argument('-pt', '--print_time', type=int, default=0, help='Label number')
-    # parser.add_argument('--eval', action='store_true', help='Specify evaluation mode.')
+    parser.add_argument('--SDom', type=str, help='Source domain.', choices=['aet0', 'hhar1', 'uci2', 'motion3', 'shoaib4', 'usc5', 'ku6'])
+    parser.add_argument('--TDom', type=str, help='Target domain.', choices=['hhar1', 'uci2', 'motion3', 'shoaib4', 'usc5', 'ku6'])
+    parser.add_argument('-g', '--gpu', type=str, default=None, help='Set specific GPU.')
+    
     args = parser.parse_args()
     json_data_path = '/mnt/home/xuemeng/ttaIMU/IMU_Hete/config/dataset.json'
     json_model_path = '/mnt/home/xuemeng/ttaIMU/IMU_Hete/config/model.json'

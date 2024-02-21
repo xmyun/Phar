@@ -33,6 +33,9 @@ def eval(model,args, data_loader_test):
 
 def pretrain(args):
         data_loader_train ,data_loader_valid,data_loader_test,_ = load_dataset(args)
+        print("Exit for code debug.")
+        exit()
+        
         criterion = nn.CrossEntropyLoss()
         """ Train Loop """
         # self.load(model_file, load_self)
@@ -79,4 +82,6 @@ def pretrain(args):
 
 if __name__ == "__main__":
     args = set_arg()
+    # print(args.dataset)
+    # print(args.cd)
     pretrain(args)

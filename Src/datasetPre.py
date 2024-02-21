@@ -5,6 +5,7 @@ import math
 import os
 import numpy as np
 import torch
+import re
 
 from scipy import signal, interpolate
 from scipy.stats import special_ortho_group
@@ -482,26 +483,28 @@ def load_dataset(args):
     path_data = os.path.join("/data_" + "20_120" + ".npy") 
     path_label = "/mnt/home/xuemeng/ttaIMU/IMU_Hete/Datasets/Merge/UniHarData" + path_label # UniHarData
     path_data = "/mnt/home/xuemeng/ttaIMU/IMU_Hete/Datasets/Merge/UniHarData" + path_data # 
-    print(path_label)
+    # print(path_label)
     label = np.load(path_label).astype(np.float32)
     data = np.load(path_data).astype(np.float32)
     user_label_index = 1
     # ["Hhar", "Uci", "Motion", "Shoaib"] 
     # domain 1_9: 0-8; 2_30: 9-38; 3_24: 39-62; 4_10: 63-72 ; 0_73: 0-72
-    UserN= check_domain_user_num(label, 2, label_user_index=1, label_domain_index=2, domain_num=4) #domian=0, 表示读取全部的数据；
-    print(UserN) 
-    
-    if ("uci" in args.dataset): # Inner single dataset.  
-        Domain_index = 3 
+    # UserN= check_domain_user_num(label, 2, label_user_index=1, label_domain_index=2, domain_num=4) #domian=0, 表示读取全部的数据；
+    # print(UserN) 
+
+    Domain_sd = re.findall('\d+', args.SDom)
+    Domain_td = re.findall('\d+', args.TDom)
+    print("Source domain: ", Domain_sd[0], "Target domain: ", Domain_td[0])
+    if (args.cd == "SigDom" ): # Inner single dataset.  
+        Domain_index = int(Domain_sd[0]) 
         data_set, label_set = load_Uci_users(data, label, Domain_index) # Dataset index. 
         result_tvt= separate_user_tvt(data, data_set, label_set)
         splitTrain_again = 1 
         data_train, label_train, data_vali, label_vali, data_test, label_test \
             = further_split_train(data, splitTrain_again, result_tvt)
-        
-    elif("shoaib" in args.dataset): # Inter multiple dataset. 
+    elif(args.cd == "MCroDom"): # Inter multiple dataset. 
         # Read user_list for test: 
-        Domain_index_t = 1  # Targe Cross domain; 
+        Domain_index_t = int(Domain_td[0] ) # Targe Cross domain; 
         data_set_1, label_set_1 = load_Uci_users(data, label, Domain_index_t) # 1
         result_tvt_1= separate_user_tvt(data, data_set_1, label_set_1)
         splitTrain_again = 1 
@@ -510,7 +513,7 @@ def load_dataset(args):
             = further_split_train(data, splitTrain_again, result_tvt_1)
         
         # Read user_list for train:
-        Domain_all = 0  # Sourcee domain; 
+        Domain_all = int(Domain_sd[0]) # Sourcee domain; 
         # 创建一个包含0到72的数组
         User_list_2= np.array([i for i in range(0, 72)]) 
         if Domain_index_t == 1: # 使用列表推导式从数组中剔除0到8.  Hhar -- 1_9: 0-8;
