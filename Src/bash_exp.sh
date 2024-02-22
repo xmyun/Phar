@@ -6,7 +6,17 @@
 # Multiple source, single target domain. 
 # Target domain 1, source domain: all expect taregt ; 
 timestamp=$(date +%Y%m%d%H%M%S) 
-GPUNum="3"
+GPUNum="0"
+CroTyp="SCroDom" # The cross dataset manner. 
+SrouceDomain="uci2" 
+TargetDomain="hhar1"  # 'aet0', 'hhar1', 'uci2', 'motion3', 'shoaib4', 'usc5', 'ku6'
+PretrainLogFileName="saved/log/Pretrain_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
+AdaptLogFileName="saved/log/Adapt_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
+nohup python -u pretrain.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $PretrainLogFileName && python -u cotta.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $AdaptLogFileName &
+
+# Target domain 1, source domain: all expect taregt ; 
+timestamp=$(date +%Y%m%d%H%M%S) 
+GPUNum="0"
 CroTyp="SCroDom" # The cross dataset manner. 
 SrouceDomain="uci2" 
 TargetDomain="motion3"  # 'aet0', 'hhar1', 'uci2', 'motion3', 'shoaib4', 'usc5', 'ku6'
@@ -14,24 +24,74 @@ PretrainLogFileName="saved/log/Pretrain_"$SrouceDomain$TargetDomain"_"$timestamp
 AdaptLogFileName="saved/log/Adapt_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
 nohup python -u pretrain.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $PretrainLogFileName && python -u cotta.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $AdaptLogFileName &
 
+# Target domain 1, source domain: all expect taregt ; 
+timestamp=$(date +%Y%m%d%H%M%S) 
+GPUNum="0"
+CroTyp="SCroDom" # The cross dataset manner. 
+SrouceDomain="uci2" 
+TargetDomain="shoaib4"  # 'aet0', 'hhar1', 'uci2', 'motion3', 'shoaib4', 'usc5', 'ku6'
+PretrainLogFileName="saved/log/Pretrain_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
+AdaptLogFileName="saved/log/Adapt_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
+nohup python -u pretrain.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $PretrainLogFileName && python -u cotta.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $AdaptLogFileName &
 
-# # Target domain 5, source domain: all expect taregt; 
-# timestamp=$(date +%Y%m%d%H%M%S)
-# SrouceDomain="aet0"
-# TargetDomain="usc5"
-# PretrainLogFileName="saved/log/Pretrain_"$SrouceDomain$TargetDomain"_"$timestamp".log"
-# AdaptLogFileName="saved/log/Adapt_"$SrouceDomain$TargetDomain"_"$timestamp".log"
-# nohup python pretrain.py --model dcnn_v1 -g 0 --dataset shoaib_20_120 --SDom $SrouceDomain --TDom $TargetDomain > $PretrainLogFileName &&\
-# python cotta.py --model dcnn_v1 -g 0 --dataset shoaib_20_120 --SDom $SrouceDomain --TDom $TargetDomain > $AdaptLogFileName &
+#########################
+# Target domain 1, source domain: all expect taregt ; 
+timestamp=$(date +%Y%m%d%H%M%S) 
+GPUNum="0"
+CroTyp="SCroDom" # The cross dataset manner. 
+SrouceDomain="hhar1" 
+TargetDomain="uci2"  # 'aet0', 'hhar1', 'uci2', 'motion3', 'shoaib4', 'usc5', 'ku6'
+PretrainLogFileName="saved/log/Pretrain_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
+AdaptLogFileName="saved/log/Adapt_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
+nohup python -u pretrain.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $PretrainLogFileName && python -u cotta.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $AdaptLogFileName &
 
-# ###############################################
-# ###############################################
+# Target domain 1, source domain: all expect taregt ; 
+timestamp=$(date +%Y%m%d%H%M%S) 
+GPUNum="0"
+CroTyp="SCroDom" # The cross dataset manner. 
+SrouceDomain="hhar1" 
+TargetDomain="motion3"  # 'aet0', 'hhar1', 'uci2', 'motion3', 'shoaib4', 'usc5', 'ku6'
+PretrainLogFileName="saved/log/Pretrain_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
+AdaptLogFileName="saved/log/Adapt_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
+nohup python -u pretrain.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $PretrainLogFileName && python -u cotta.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $AdaptLogFileName &
 
-# # Target domain 1, source domain: 5 ; 
-# timestamp=$(date +%Y%m%d%H%M%S)
-# SrouceDomain="hhar1"
-# TargetDomain="usc5"
-# PretrainLogFileName="saved/log/Pretrain_"$SrouceDomain$TargetDomain"_"$timestamp".log"
-# AdaptLogFileName="saved/log/Adapt_"$SrouceDomain$TargetDomain"_"$timestamp".log"
-# nohup python pretrain.py --model dcnn_v1 --dataset shoaib_20_120 --SDom $SrouceDomain --TDom $TargetDomain > $PretrainLogFileName &&\
-# python cotta.py --model dcnn_v1 --dataset shoaib_20_120 --SDom $SrouceDomain --TDom $TargetDomain > $AdaptLogFileName &
+# Target domain 1, source domain: all expect taregt ; 
+timestamp=$(date +%Y%m%d%H%M%S) 
+GPUNum="0"
+CroTyp="SCroDom" # The cross dataset manner. 
+SrouceDomain="hhar1"  
+TargetDomain="shoaib4"  # 'aet0', 'hhar1', 'uci2', 'motion3', 'shoaib4', 'usc5', 'ku6'
+PretrainLogFileName="saved/log/Pretrain_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
+AdaptLogFileName="saved/log/Adapt_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
+nohup python -u pretrain.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $PretrainLogFileName && python -u cotta.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $AdaptLogFileName &
+
+#########################
+# Target domain 1, source domain: all expect taregt ; 
+timestamp=$(date +%Y%m%d%H%M%S) 
+GPUNum="0"
+CroTyp="SCroDom" # The cross dataset manner. 
+SrouceDomain="motion3" 
+TargetDomain="hhar1"  # 'aet0', 'hhar1', 'uci2', 'motion3', 'shoaib4', 'usc5', 'ku6'
+PretrainLogFileName="saved/log/Pretrain_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
+AdaptLogFileName="saved/log/Adapt_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
+nohup python -u pretrain.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $PretrainLogFileName && python -u cotta.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $AdaptLogFileName &
+
+# Target domain 1, source domain: all expect taregt ; 
+timestamp=$(date +%Y%m%d%H%M%S) 
+GPUNum="0"
+CroTyp="SCroDom" # The cross dataset manner. 
+SrouceDomain="motion3" 
+TargetDomain="uci2"  # 'aet0', 'hhar1', 'uci2', 'motion3', 'shoaib4', 'usc5', 'ku6'
+PretrainLogFileName="saved/log/Pretrain_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
+AdaptLogFileName="saved/log/Adapt_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
+nohup python -u pretrain.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $PretrainLogFileName && python -u cotta.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $AdaptLogFileName &
+
+# Target domain 1, source domain: all expect taregt ; 
+timestamp=$(date +%Y%m%d%H%M%S) 
+GPUNum="0"
+CroTyp="SCroDom" # The cross dataset manner. 
+SrouceDomain="motion3"  
+TargetDomain="shoaib4"  # 'aet0', 'hhar1', 'uci2', 'motion3', 'shoaib4', 'usc5', 'ku6'
+PretrainLogFileName="saved/log/Pretrain_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
+AdaptLogFileName="saved/log/Adapt_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
+nohup python -u pretrain.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $PretrainLogFileName && python -u cotta.py --dataset new_20_120 --model dcnn_v1 --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $AdaptLogFileName &
