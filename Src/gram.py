@@ -229,14 +229,15 @@ class Feature_Correlations:
 def eval(model,args, data_loader_test):
     """ Evaluation Loop """
     model.eval() # evaluation mode
-    model = model.to(args.device)
+    device = get_device(args.g)
+    model = model.to(device)
     if args.data_parallel: # use Data Parallelism with Multi-GPU 
         model = nn.DataParallel(model)
     results = [] # prediction results 
     labels = []
     time_sum = 0.0
     for batch in data_loader_test:
-        batch = [t.to(args.device) for t in batch]
+        batch = [t.to(device) for t in batch]
         with torch.no_grad(): # evaluation without gradient calculation 
             start_time = time.time()
             inputs, label = batch
@@ -252,14 +253,15 @@ def eval_gram(model,args, data_loader_validate):
     """ Evaluation Loop """
     transforms = tta_transform(args)
     model.eval() # evaluation mode
-    model = model.to(args.device)
+    device = get_device(args.g)
+    model = model.to(device)
     if args.data_parallel: # use Data Parallelism with Multi-GPU
         model = nn.DataParallel(model)
     results = [] # prediction results
     labels = []
     time_sum = 0.0
     for batch_valid in data_loader_validate:
-        batch_valid = [t.to(args.device) for t in batch_valid]
+        batch_valid = [t.to(device) for t in batch_valid]
         with torch.no_grad(): # evaluation without gradient calculation
             start_time = time.time()
             inputs_t, label_t = batch_valid
@@ -293,13 +295,14 @@ def select_model(args,source,target):
     
     for i in range(50): # 699, 100
         model = fetch_classifier(args)
+        device = get_device(args.g)
         model_path = subexpFloder + "new_20_120" + str(i) + '.pt' 
         print(model_path)
         if os.path.exists(model_path):
             print(model_path)
             model_dicts = torch.load(model_path)
             model.load_state_dict(model_dicts)
-            model = model.to(torch.device('cuda'))
+            model = model.to(device)
             model.eval()
             # test_acc,test_F1 = eval(model,args, target)
             # acc.append([test_acc,model_path])

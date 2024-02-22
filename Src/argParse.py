@@ -48,7 +48,7 @@ def set_arg():
     parser.add_argument('--source_dataset', type=str, default="Dataset without target!", help='source model name', choices=['hhar_20_120', 'motion_20_120', 'uci_20_120', 'shoaib_20_120', 'new_20_120', 'Dataset without target!'])
     parser.add_argument('--SDom', type=str, help='Source domain.', choices=['aet0', 'hhar1', 'uci2', 'motion3', 'shoaib4', 'usc5', 'ku6'])
     parser.add_argument('--TDom', type=str, help='Target domain.', choices=['hhar1', 'uci2', 'motion3', 'shoaib4', 'usc5', 'ku6'])
-    parser.add_argument('-g', '--gpu', type=str, default=None, help='Set specific GPU.')
+    parser.add_argument('--g', type=str, default=None, help='Set specific GPU.')
     
     args = parser.parse_args()
     json_data_path = '/mnt/home/xuemeng/ttaIMU/IMU_Hete/config/dataset.json'

@@ -12,14 +12,15 @@ from model import *
 def eval(model,args, data_loader_test):
     """ Evaluation Loop """
     model.eval() # evaluation mode
-    model = model.to(args.device)
+    device = get_device(args.g)
+    model = model.to(device)
     if args.data_parallel: # use Data Parallelism with Multi-GPU
         model = nn.DataParallel(model)
     results = [] # prediction results
     labels = []
     time_sum = 0.0
     for batch in data_loader_test:
-        batch = [t.to(args.device) for t in batch]
+        batch = [t.to(device) for t in batch]
         with torch.no_grad(): # evaluation without gradient calculation
             start_time = time.time()
             inputs, label = batch
@@ -36,11 +37,13 @@ def pretrain(args):
         # print("Exit for code debug.")
         # exit()
         criterion = nn.CrossEntropyLoss()
+        device = get_device(args.g)
+        print(device)
         """ Train Loop """
         # self.load(model_file, load_self)
         model = fetch_classifier(args)
         optimizer = torch.optim.Adam(params=model.parameters(), lr=args.lr)  # , weight_decay=0.95
-        model = model.to(args.g)
+        model = model.to(device)
         if args.data_parallel: # use Data Parallelism with Multi-GPU
             model = nn.DataParallel(model)
         global_step = 0 # global iteration steps regardless of epochs
@@ -48,8 +51,6 @@ def pretrain(args):
         model_best = model.state_dict()
         loss_list = []
         
-        device = get_device(args.g)
-        print(device)
         subexp=args.SDom +args.TDom
         subexpFolder= args.save_path+"/"+subexp
         if not os.path.exists(subexpFolder):
