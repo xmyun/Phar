@@ -19,7 +19,12 @@ def set_seeds(seed):
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
+    
+    # New add, Trade speed to fix the program's results. 
+    torch.multiprocessing.set_start_method('spawn', force=True)
+    torch.backends.cudnn.deterministic = True
 
 def stat_acc_f1(label, results_estimated):
     label_estimated = np.argmax(results_estimated, 1)

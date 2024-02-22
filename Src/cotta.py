@@ -72,4 +72,6 @@ def cotta(args):
 
 if __name__ == "__main__":
     args = set_arg()
+    set_seeds(args.seed)
+    print("Seed number in Adapt:", args.seed)
     cotta(args)

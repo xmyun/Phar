@@ -404,7 +404,7 @@ def User_select(totalUser):
     print("Train Users:", train_values,len(train_values))
     return test_values, val_values, train_values
 
-# 将用户分割 为 Train/valid/test
+# 将用户分割 为 Train/valid/test 
 def separate_user_tvt(data, data_set, label_set, seed=None):
     print("selected users", len(label_set))
     test_G, val_G, train_G = User_select(len(label_set))
@@ -467,6 +467,21 @@ def separate_user_tvt(data, data_set, label_set, seed=None):
                 result[i] = np.concatenate(result[i])
     return result
 
+def further_split_train_merge(data, splitTrain_again, result_tvt, seq_len=0):
+    data_train, label_train, data_vali, label_vali, data_test, label_test = result_tvt
+    training_size = splitTrain_again
+    if training_size == 1.0:
+        data_train_label, label_train_label = data_train, label_train
+    else:
+        data_train_label, _, label_train_label, _ = train_test_split(data_train, label_train, train_size=training_size, random_state=seed)
+    [data_train_label, data_vali, data_test] = reshape_data([data_train_label, data_vali, data_test], seq_len)
+    [label_train_label, label_vali, label_test] = reshape_label([label_train_label, label_vali, label_test], data.shape[1],
+                                                          seq_len)
+    # Merge the uses in the total datasets.  
+    data_train_label = np.concatenate((data_train_label, data_vali, data_test), axis=0)
+    label_train_label = np.concatenate((label_train_label, label_vali, label_test), axis=0)
+    return data_train_label, label_train_label, data_vali, label_vali, data_test, label_test
+
 def further_split_train(data, splitTrain_again, result_tvt, seq_len=0):
     data_train, label_train, data_vali, label_vali, data_test, label_test = result_tvt
     training_size = splitTrain_again
@@ -481,8 +496,8 @@ def further_split_train(data, splitTrain_again, result_tvt, seq_len=0):
 
 def load_dataset(args):
     # print(args)
-    set_seeds(args.seed)
-    print("种子的数值")
+    # set_seeds(args.seed)
+    # print("种子的数值")
     path_label = os.path.join("/label_" + "20_120" + ".npy") 
     path_data = os.path.join("/data_" + "20_120" + ".npy") 
     path_label = "/mnt/home/xuemeng/ttaIMU/IMU_Hete/Datasets/Merge/OurData" + path_label # UniHarData
@@ -492,12 +507,12 @@ def load_dataset(args):
     data = np.load(path_data).astype(np.float32)
     user_label_index = 1
     # ["Hhar", "Uci", "Motion", "Shoaib"] 
-    # domain 1_9: 0-8; 2_30: 9-38; 3_24: 39-62; 4_10: 63-72 ; 0_73: 0-72
+    # domain 1_9: 0-8; 2_30: 9-38; 3_24: 39-62; 4_10: 63-72 ; 0_73: 0-72 
     # UserN= check_domain_user_num(label, 2, label_user_index=1, label_domain_index=2, domain_num=4) #domian=0, 表示读取全部的数据；
     # print(UserN) 
 
-    Domain_sd = re.findall('\d+', args.SDom)
-    Domain_td = re.findall('\d+', args.TDom)
+    Domain_sd = re.findall('\d+', args.SDom) 
+    Domain_td = re.findall('\d+', args.TDom) 
     print("Source domain: ", Domain_sd[0], "Target domain: ", Domain_td[0])
     if (args.cd == "SigDom" ): # Inner single dataset.  
         Domain_index = int(Domain_sd[0]) 
@@ -569,8 +584,8 @@ def load_dataset(args):
         data_set_test = FFTDataset(data_test, label_test, pipeline=pipeline)
         data_set_vali = FFTDataset(data_vali, label_vali, pipeline=pipeline)
         
-    data_loader_train = DataLoader(data_set_train, shuffle=True, batch_size=args.batch_size)
-    data_loader_test = DataLoader(data_set_test, shuffle=False, batch_size=args.batch_size)
-    data_loader_vali = DataLoader(data_set_vali, shuffle=False, batch_size=args.batch_size)
-    data_loader_tta = DataLoader(data_set_tta, shuffle=False, batch_size=args.batch_size)
+    data_loader_train = DataLoader(data_set_train, shuffle=True, batch_size=args.batch_size, drop_last=True)
+    data_loader_test = DataLoader(data_set_test, shuffle=False, batch_size=args.batch_size, drop_last=True)
+    data_loader_vali = DataLoader(data_set_vali, shuffle=False, batch_size=args.batch_size, drop_last=True)
+    data_loader_tta = DataLoader(data_set_tta, shuffle=False, batch_size=args.batch_size, drop_last=True)
     return data_loader_train, data_loader_vali, data_loader_test, data_loader_tta

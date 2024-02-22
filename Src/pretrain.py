@@ -52,7 +52,7 @@ def pretrain(args):
         loss_list = []
         
         subexp=args.SDom +args.TDom
-        subexpFolder= args.save_path+"/"+subexp+"/"
+        subexpFolder= args.save_path + "/" + subexp + args.g + "/"
         if not os.path.exists(subexpFolder):
             # not exit folder, create it!
             os.makedirs(subexpFolder)
@@ -91,4 +91,6 @@ def pretrain(args):
 
 if __name__ == "__main__":
     args = set_arg()
+    set_seeds(args.seed)
+    print("Seed number in Train:", args.seed)
     pretrain(args)
