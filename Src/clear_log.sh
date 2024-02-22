@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rm saved/log/*
+# rm saved/log/*
 rm checkpoint/*

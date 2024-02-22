@@ -230,14 +230,14 @@ def eval(model,args, data_loader_test):
     """ Evaluation Loop """
     model.eval() # evaluation mode
     model = model.to(args.device)
-    if args.data_parallel: # use Data Parallelism with Multi-GPU
+    if args.data_parallel: # use Data Parallelism with Multi-GPU 
         model = nn.DataParallel(model)
-    results = [] # prediction results
+    results = [] # prediction results 
     labels = []
     time_sum = 0.0
     for batch in data_loader_test:
         batch = [t.to(args.device) for t in batch]
-        with torch.no_grad(): # evaluation without gradient calculation
+        with torch.no_grad(): # evaluation without gradient calculation 
             start_time = time.time()
             inputs, label = batch
             result = model(inputs, False) 
@@ -283,9 +283,17 @@ from fetch_model import fetch_classifier
 def select_model(args,source,target):
     J_t = []
     acc = []
-    for i in range(50): # 699 
+    subexp=args.SDom +args.TDom
+    subexpFloder= args.save_path+"/"+subexp
+    # 检查文件夹是否存在
+    if not os.path.exists(subexpFloder):
+        # 文件夹不存在，创建文件夹
+        # os.makedirs(subexpFloder)
+        print("There is no pretrained model!")
+    
+    for i in range(50): # 699, 100
         model = fetch_classifier(args)
-        model_path = args.save_path + "new_20_120" + str(i) + '.pt'
+        model_path = subexpFloder + "new_20_120" + str(i) + '.pt' 
         print(model_path)
         if os.path.exists(model_path):
             print(model_path)

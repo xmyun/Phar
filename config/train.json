@@ -8,6 +8,5 @@
     "total_steps": 500000000,
     "lambda1": 0.0,
     "lambda2": 0.005,
-    "device": "cuda:0",
     "data_parallel": false
 }

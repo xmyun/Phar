@@ -16,7 +16,8 @@ from fetch_model import fetch_classifier
 def eval(model, args, data_loader_test, data_loader_tta, epoch):
     """ Evaluation Loop """
     model.train() # evaluation mode
-    model = model.to(args.device)
+    device = get_device(args.g)
+    model = model.to(device)
     if args.data_parallel: # use Data Parallelism with Multi-GPU 
         model = nn.DataParallel(model)
     results = [] # prediction results
@@ -24,8 +25,8 @@ def eval(model, args, data_loader_test, data_loader_tta, epoch):
     time_sum = 0.0 
     for batch in data_loader_test: # Same dataset data_loader_tta 
     # for batch, batch_tta in zip(data_loader_test, data_loader_test): # Same dataset data_loader_tta 
-        batch = [t.to(args.device) for t in batch]
-        # batch_tta = [t.to(args.device) for t in batch_tta]
+        batch = [t.to(device) for t in batch]
+        # batch_tta = [t.to(device) for t in batch_tta]
         with torch.no_grad(): # evaluation without gradient calculation
             start_time = time.time()
             inputs, label = batch
@@ -54,7 +55,8 @@ def cotta(args):
         optimizer = torch.optim.Adam(params=base_model.parameters(), lr=args.lr)  # , weight_decay=0.95
         cotta_model = CoTTA_attack(model=base_model,optimizer=optimizer,arg=args) # from CoTTA to CoTTA_attack;  CoTTA_attack_softmatch
         # cotta_model = base_model 
-        cotta_model = cotta_model.to(args.device)
+        device = get_device(args.g)
+        cotta_model = cotta_model.to(device)
         if args.data_parallel: # use Data Parallelism with Multi-GPU 
             cotta_model = nn.DataParallel(cotta_model)
         

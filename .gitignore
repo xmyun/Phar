@@ -6,6 +6,7 @@ Datasets/Uci/
 Datasets/KU/
 Datasets/Usc/
 Src/checkpoint/
+Src/checkpoint_bak/
 Src/checkpoint_ucik/
 Src/checkpoint_motionk/
 Src/checkpoint_shoaibk/

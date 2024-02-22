@@ -40,19 +40,28 @@ def pretrain(args):
         # self.load(model_file, load_self)
         model = fetch_classifier(args)
         optimizer = torch.optim.Adam(params=model.parameters(), lr=args.lr)  # , weight_decay=0.95
-        model = model.to(args.device)
+        model = model.to(args.g)
         if args.data_parallel: # use Data Parallelism with Multi-GPU
             model = nn.DataParallel(model)
         global_step = 0 # global iteration steps regardless of epochs
         best_stat = None
         model_best = model.state_dict()
         loss_list = []
+        
+        device = get_device(args.g)
+        print(device)
+        subexp=args.SDom +args.TDom
+        subexpFolder= args.save_path+"/"+subexp
+        if not os.path.exists(subexpFolder):
+            # not exit folder, create it!
+            os.makedirs(subexpFolder)
+        
         for e in range(args.epoch):
             loss_sum = 0.0 # the sum of iteration losses to get average loss in every epoch
             time_sum = 0.0
             model.train()
             for i, batch in enumerate(data_loader_train):
-                batch = [t.to(args.device) for t in batch]
+                batch = [t.to(device) for t in batch]
                 start_time = time.time()
                 optimizer.zero_grad()
                 inputs, label = batch
@@ -74,7 +83,7 @@ def pretrain(args):
                   % (e+1, args.epoch, loss_sum / len(data_loader_train), train_acc, vali_acc, test_acc, train_f1, vali_f1, test_f1))
             best_stat = (train_acc, vali_acc, test_acc, train_f1, vali_f1, test_f1)
             model_best = copy.deepcopy(model.state_dict())
-            torch.save(model.state_dict(),  args.save_path + args.dataset+ str(rank) + '.pt')
+            torch.save(model.state_dict(),  subexpFolder + args.dataset+ str(rank) + '.pt') # args.save_path
         model.load_state_dict(model_best)
         print('The Total Epoch have been reached.')
         print('Best Accuracy: %0.3f/%0.3f/%0.3f, F1: %0.3f/%0.3f/%0.3f' % best_stat)

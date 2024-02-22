@@ -4,7 +4,7 @@
 		"seq_len": 20,
 		"input": 6,
 		"flat_num": 1,
-		"save_path": "checkpoint/dcnn_v1"
+		"save_path": "checkpoint/"
 	},
 	"deepsense_v1":
 	{
