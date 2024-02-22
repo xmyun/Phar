@@ -60,13 +60,13 @@ def cotta(args):
         if args.data_parallel: # use Data Parallelism with Multi-GPU 
             cotta_model = nn.DataParallel(cotta_model)
         
-        for e in range(args.epoch):
+        for e in range(args.Ada_epoch): 
             # train_acc, train_f1 = eval(cotta_model,args, data_loader_train)
             # valid是同一个数据集，以保证训练; test是跨数据集，来测试跨数据集的效果；
             test_acc, test_f1 = eval(cotta_model,args, data_loader_test, data_loader_tta, e)
             # vali_acc, vali_f1 = eval(cotta_model,args, data_loader_valid)
             print('Epoch %d/%d , Accuracy: %0.3f, F1: %0.3f'
-                  % (e+1, args.epoch, test_acc,  test_f1)) 
+                  % (e+1, args.Ada_epoch, test_acc,  test_f1)) 
         print('The Total Epoch have been reached.')
         # print('Best Accuracy: %0.3f/%0.3f/%0.3f, F1: %0.3f/%0.3f/%0.3f' % best_stat)
 

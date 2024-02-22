@@ -296,7 +296,7 @@ def select_model(args,source,target):
     for i in range(50): # 699, 100
         model = fetch_classifier(args)
         device = get_device(args.g)
-        model_path = subexpFloder + "new_20_120" + str(i) + '.pt' 
+        model_path = subexpFloder + args.dataset+ str(i) + '.pt' 
         print(model_path)
         if os.path.exists(model_path):
             print(model_path)

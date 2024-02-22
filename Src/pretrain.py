@@ -57,7 +57,7 @@ def pretrain(args):
             # not exit folder, create it!
             os.makedirs(subexpFolder)
         
-        for e in range(args.epoch):
+        for e in range(args.Pre_epoch):
             loss_sum = 0.0 # the sum of iteration losses to get average loss in every epoch
             time_sum = 0.0
             model.train()
@@ -81,7 +81,7 @@ def pretrain(args):
             test_acc, test_f1 = eval(model,args, data_loader_test)
             vali_acc, vali_f1 = eval(model,args, data_loader_valid)
             print('Epoch %d/%d : Average Loss %5.4f, Accuracy: %0.3f/%0.3f/%0.3f, F1: %0.3f/%0.3f/%0.3f'
-                  % (e+1, args.epoch, loss_sum / len(data_loader_train), train_acc, vali_acc, test_acc, train_f1, vali_f1, test_f1))
+                  % (e+1, args.Pre_epoch, loss_sum / len(data_loader_train), train_acc, vali_acc, test_acc, train_f1, vali_f1, test_f1))
             best_stat = (train_acc, vali_acc, test_acc, train_f1, vali_f1, test_f1)
             model_best = copy.deepcopy(model.state_dict())
             torch.save(model.state_dict(),  subexpFolder + args.dataset+ str(rank) + '.pt') # args.save_path
