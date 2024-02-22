@@ -265,7 +265,7 @@ def eval_gram(model,args, data_loader_validate):
         with torch.no_grad(): # evaluation without gradient calculation
             start_time = time.time()
             inputs_t, label_t = batch_valid
-            all_Jt = []
+            all_Jt = [] 
             for transform in transforms:
                 input = transform(inputs_t.clone())
                 J_t_median = J_t(model, inputs_t, input)
@@ -286,7 +286,7 @@ def select_model(args,source,target):
     J_t = []
     acc = []
     subexp=args.SDom +args.TDom
-    subexpFloder= args.save_path+"/"+subexp
+    subexpFloder= args.save_path+"/"+subexp+"/"
     # 检查文件夹是否存在
     if not os.path.exists(subexpFloder):
         # 文件夹不存在，创建文件夹

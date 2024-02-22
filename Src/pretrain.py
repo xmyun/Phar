@@ -52,7 +52,7 @@ def pretrain(args):
         loss_list = []
         
         subexp=args.SDom +args.TDom
-        subexpFolder= args.save_path+"/"+subexp
+        subexpFolder= args.save_path+"/"+subexp+"/"
         if not os.path.exists(subexpFolder):
             # not exit folder, create it!
             os.makedirs(subexpFolder)
