@@ -813,9 +813,9 @@ class CoTTA(nn.Module):
             for nm, m  in self.model.named_modules():
                 for npp, p in m.named_parameters():
                     if npp in ['weight', 'bias'] and p.requires_grad:
-                        mask = (torch.rand(p.shape)<self.rst).float().cuda(self.device) 
+                        mask = (torch.rand(p.shape)<self.rst).float().cuda() 
                         with torch.no_grad():
-                            p.data = self.model_state[f"{nm}.{npp}"].cuda(self.device) * mask + p * (1.-mask)
+                            p.data = self.model_state[f"{nm}.{npp}"].cuda() * mask + p * (1.-mask)
         return outputs_ema
 
 
@@ -845,6 +845,7 @@ class CoTTA_attack(nn.Module):
         self.model = model
         self.device = get_device(arg.g)
         self.model.to(self.device)
+        self.args = arg
         self.optimizer = optimizer
         self.steps = steps
         assert steps > 0, "cotta requires >= 1 step(s) to forward and update"
@@ -941,7 +942,7 @@ class CoTTA_attack(nn.Module):
             # print(J_t_median)
             inputs.append([input,J_t_median])
         x_attack = self.attack(x,outputs)
-        x_attack = x_attack.to(self.device)
+        # x_attack = x_attack.to(self.args)
         inputs.append([x_attack,J_t(self.model, x, x_attack)])
         J_list = sorted(inputs,key=lambda x:x[1])
         # inputs = min(inputs,key=lambda x:x[1])
@@ -1132,7 +1133,7 @@ class CoTTA_attack_softmatch(nn.Module):
             J_t_median = J_t(self.model, x, input)
             inputs.append([input,J_t_median])
         x_attack = self.attack(x,outputs)
-        x_attack = x_attack.to('cuda')
+        x_attack = x_attack.to(self.device)
         inputs.append([x_attack,J_t(self.model, x, x_attack)])
         J_list = sorted(inputs,key=lambda x:x[1])
         with self.amp_cm():
@@ -1214,7 +1215,7 @@ class CoTTA_attack_softmatch(nn.Module):
                         # mask = (torch.rand(p.shape)<self.rst).float().cuda() 
                         mask=0.05
                         with torch.no_grad():
-                            p.data = self.model_state[f"{nm}.{npp}"].cuda() * mask + p * (1.-mask)
+                            p.data = self.model_state[f"{nm}.{npp}"].cuda(self.device) * mask + p * (1.-mask)
         # return outputs_ema 
         return standard_ema
 @torch.jit.script

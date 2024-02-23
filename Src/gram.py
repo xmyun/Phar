@@ -7,18 +7,12 @@ from torch import nn
 from datasetPre import * 
 from argParse import *
 from utils import Preprocess4Sample_t,Preprocess4Rotation_t,Preprocess4Normalization_t, Preprocess4Noise_t, Preprocess4Permute_t
+from torchattacks import PGD
 def kmmd_dist(x1, x2):
     X_total = torch.cat([x1,x2],0)
     Gram_matrix = gaussian_kernel(X_total,X_total,kernel_mul=2.0, kernel_num=2, fix_sigma=0, mean_sigma=0)
     n = int(x1.shape[0])
     m = int(x2.shape[0])
-    # print(n,m)
-    # print("gram",Gram_matrix)
-    # x1x1 = Gram_matrix[:n, :n]
-    # x2x2 = Gram_matrix[n:, n:]
-    # x1x2 = Gram_matrix[:n, n:]
-    # x2x1 = Gram_matrix[n:, :n]  # Gram_matrix is symmetric
-    # diff = torch.mean(x1x1) + torch.mean(x2x2) - 2 * torch.mean(x1x2)
     diff = (m*n)/(m+n)*Gram_matrix
     return diff
 
@@ -45,23 +39,14 @@ def gaussian_kernel(x1, x2, kernel_mul=2.0, kernel_num=5, fix_sigma=0, mean_sigm
     tile_x1 = torch.unsqueeze(x1, 1).repeat(x1_tile_shape)
     tile_x2 = torch.unsqueeze(x2, 0).repeat(x2_tile_shape)
     L2_distance = torch.square(tile_x1 - tile_x2).sum(dim=norm_shape)
-    # print("l2",L2_distance)
-    # bandwidth inference
-    # print(L2_distance.shape)
     if fix_sigma:
         bandwidth = fix_sigma
     elif mean_sigma:
         bandwidth = torch.mean(L2_distance)
     else:  ## median distance
-        # bandwidth = torch.median(L2_distance.reshape(L2_distance.shape[0],-1))
-        # print("L2",L2_distance.shape)
-        # bandwidth = torch.median(L2_distance.reshape(L2_distance.shape[0],-1))
         bandwidth = torch.mean(L2_distance)
     bandwidth /= kernel_mul ** (kernel_num // 2)
     bandwidth_list = [bandwidth * (kernel_mul ** i) for i in range(kernel_num)]
-    # print('list',bandwidth_list)
-    #print(torch.cat(bandwidth_list,0).to(torch.device('cpu')).numpy())
-    ## gaussian_RBF = exp(-|x-y|/bandwith)
     kernel_val = [torch.exp(-L2_distance / bandwidth_temp) for bandwidth_temp in bandwidth_list]
     return sum(kernel_val)  #L2_distance #
 
@@ -80,33 +65,34 @@ def J_t(model, source, target):
     hook = model.lin1.register_forward_hook(hook_fn)
     original_feature = []
     augmented_feature = []
-    original_feature=model(source).to(torch.device('cpu'))
-    augmented_feature=model(target).to(torch.device('cpu'))
+    original_feature = model(source)
+    augmented_feature = model(target)
     # print(original_feature[0].shape)
-    feature_test = torch.cat([original_feature,augmented_feature],0)
-    original_label_test = np.zeros((original_feature.shape[0],))
-    augmented_label_test = np.ones((augmented_feature.shape[0],))
-    label_test = np.concatenate([original_label_test,augmented_label_test],0)
-    ood_detection = Feature_Correlations(POWER_list=np.arange(1,9),mode='mad')
+    feature_test = torch.cat([original_feature, augmented_feature], 0)
+    original_label_test = torch.zeros((original_feature.shape[0],), device=source.device)
+    augmented_label_test = torch.ones((augmented_feature.shape[0],), device=source.device)
+    label_test = torch.cat([original_label_test, augmented_label_test], 0)
+    ood_detection = Feature_Correlations(POWER_list=torch.arange(1, 9), mode='mad')
     ood_detection.train(in_data=[original_feature])
-    original_deviations_sort = np.sort(ood_detection.get_deviations_([original_feature]),0)
-    augmented_deviations_sort = np.sort(ood_detection.get_deviations_([augmented_feature]),0)
-    percentile_95 = np.where(augmented_deviations_sort > original_deviations_sort[int(len(original_deviations_sort)*0.95)], 1, 0)
+    original_deviations_sort = torch.sort(ood_detection.get_deviations_([original_feature]), 0)[0]
+    augmented_deviations_sort = torch.sort(ood_detection.get_deviations_([augmented_feature]), 0)[0]
+    percentile_95 = torch.where(augmented_deviations_sort > original_deviations_sort[int(len(original_deviations_sort) * 0.95)], 1, 0)
     # print(f'percentile_95:{clean_deviations_sort[int(len(clean_deviations_sort)*0.95)]},TP95:{percentile_95.sum()/len(bd_deviations_sort)}')
-    percentile_99 = np.where(augmented_deviations_sort > original_deviations_sort[int(len(original_deviations_sort)*0.99)], 1, 0)
+    percentile_99 = torch.where(augmented_deviations_sort > original_deviations_sort[int(len(original_deviations_sort) * 0.99)], 1, 0)
     # print(f'percentile_99:{clean_deviations_sort[int(len(clean_deviations_sort)*0.99)]},TP99:{percentile_99.sum()/len(bd_deviations_sort)}')
+    # print('original_feature:',len(original_feature))
     threshold_95, threshold_99 = threshold_determine(original_feature, ood_detection)
     test_deviations = ood_detection.get_deviations_([feature_test])
-    ood_label_95 = np.where(test_deviations > threshold_95, 1, 0).squeeze()
-    ood_label_99 = np.where(test_deviations > threshold_99, 1, 0).squeeze()
-    false_negetive_95 = np.where(label_test - ood_label_95 > 0, 1, 0).squeeze()
-    false_negetive_99 = np.where(label_test - ood_label_99 > 0, 1, 0).squeeze()
-    false_positive_95 = np.where(label_test - ood_label_95 < 0, 1, 0).squeeze()
-    false_positive_99 = np.where(label_test - ood_label_99 < 0, 1, 0).squeeze()
+    ood_label_95 = torch.where(test_deviations > threshold_95, 1, 0).squeeze()
+    ood_label_99 = torch.where(test_deviations > threshold_99, 1, 0).squeeze()
+    false_negetive_95 = torch.where(label_test - ood_label_95 > 0, 1, 0).squeeze()
+    false_negetive_99 = torch.where(label_test - ood_label_99 > 0, 1, 0).squeeze()
+    false_positive_95 = torch.where(label_test - ood_label_95 < 0, 1, 0).squeeze()
+    false_positive_99 = torch.where(label_test - ood_label_99 < 0, 1, 0).squeeze()
     # print(f'false_negetive_95:{false_negetive_95.sum()},false_negetive_99:{false_negetive_99.sum()}')
     # print(f'false_positive_95:{false_positive_95.sum()},false_positive_99：{false_positive_99.sum()}')
-    clean_feature_group = feature_test[np.where(ood_label_95==0)]
-    bd_feature_group = feature_test[np.where(ood_label_95==1)]
+    clean_feature_group = feature_test[ood_label_95 == 0]
+    bd_feature_group = feature_test[ood_label_95 == 1]
     # clean_feature_flat = torch.mean(clean_feature_group,dim=(2,3))
     # bd_feature_flat = torch.mean(bd_feature_group,dim=(2,3))
     # print(clean_feature_group.shape)
@@ -124,21 +110,27 @@ def J_t(model, source, target):
     # J_MAD = np.median(np.abs(J_t - J_t_median))
     # J_star = np.abs(J_t - J_t_median)/1.4826/(J_MAD+1e-6)
     # print('J_t_median:',J_t_median)
-    return kmmd
+    return kmmd.to(source.device)
 
 def threshold_determine(clean_feature_target, ood_detection):
     test_deviations_list = []
     step = 5
+    # print(len(clean_feature_target))
     for i in range(step):
         index_mask = np.ones((len(clean_feature_target),))
         index_mask[i*int(len(clean_feature_target)//step):(i+1)*int(len(clean_feature_target)//step)] = 0
         clean_feature_target_train= clean_feature_target[np.where(index_mask == 1)]
         clean_feature_target_test = clean_feature_target[np.where(index_mask == 0)]
+        # print(clean_feature_target_test)
+        if len(clean_feature_target_test) < 1:
+            continue
         ood_detection.train(in_data=[clean_feature_target_train],)
         test_deviations = ood_detection.get_deviations_([clean_feature_target_test])
         test_deviations_list.append(test_deviations)
-    test_deviations = np.concatenate(test_deviations_list,0)
-    test_deviations_sort = np.sort(test_deviations,0)
+    # test_deviations = np.concatenate(test_deviations_list,0)
+    test_deviations = torch.cat(test_deviations_list,0)
+    test_deviations_sort = torch.sort(test_deviations,0)
+
     percentile_95 = test_deviations_sort[int(len(test_deviations_sort)*0.95)][0]
     percentile_99 = test_deviations_sort[int(len(test_deviations_sort)*0.99)][0]
     # print(f'percentile_95:{percentile_95}')
@@ -174,6 +166,7 @@ class Feature_Correlations:
     def G_p(self, ob, p):
         temp = ob.detach()
         temp = temp**p
+        # print(temp.shape)
         temp = temp.reshape(temp.shape[0],temp.shape[1],-1)
         temp = ((torch.matmul(temp,temp.transpose(dim0=2,dim1=1))))
         temp = temp.triu()
@@ -206,10 +199,12 @@ class Feature_Correlations:
                 g_p = self.G_p(feat_L,P)
                 dev +=  (F.relu(self.mins[L][p]-g_p)/torch.abs(self.mins[L][p]+10**-6)).sum(dim=1,keepdim=True)
                 dev +=  (F.relu(g_p-self.maxs[L][p])/torch.abs(self.maxs[L][p]+10**-6)).sum(dim=1,keepdim=True)
-            batch_deviations.append(dev.cpu().detach().numpy())
-        batch_deviations = np.concatenate(batch_deviations,axis=1)
+            batch_deviations.append(dev)
+        # batch_deviations = np.concatenate(batch_deviations,axis=1)
+        batch_deviations = torch.cat(batch_deviations, dim=1)
         deviations.append(batch_deviations)
-        deviations = np.concatenate(deviations,axis=0) /self.num_feature /len(self.power)
+        # deviations = np.concatenate(deviations,axis=0) /self.num_feature /len(self.power)
+        deviations = torch.cat(deviations, dim=0) / (self.num_feature * len(self.power))
         return deviations
 
     def get_deviations(self, feat_list):
@@ -231,14 +226,14 @@ def eval(model,args, data_loader_test):
     model.eval() # evaluation mode
     device = get_device(args.g)
     model = model.to(device)
-    if args.data_parallel: # use Data Parallelism with Multi-GPU 
+    if args.data_parallel: # use Data Parallelism with Multi-GPU
         model = nn.DataParallel(model)
-    results = [] # prediction results 
+    results = [] # prediction results
     labels = []
     time_sum = 0.0
     for batch in data_loader_test:
         batch = [t.to(device) for t in batch]
-        with torch.no_grad(): # evaluation without gradient calculation 
+        with torch.no_grad(): # evaluation without gradient calculation
             start_time = time.time()
             inputs, label = batch
             result = model(inputs, False) 
@@ -249,37 +244,38 @@ def eval(model,args, data_loader_test):
     predict = torch.cat(results, 0)
     return stat_acc_f1(label.cpu().numpy(), predict.cpu().numpy())
 
-def eval_gram(model,args, data_loader_validate):
+def eval_gram(model, args, data_loader_validate):
     """ Evaluation Loop """
     transforms = tta_transform(args)
-    model.eval() # evaluation mode
+    model.eval()  # evaluation mode
     device = get_device(args.g)
     model = model.to(device)
-    if args.data_parallel: # use Data Parallelism with Multi-GPU
+    if args.data_parallel:  # use Data Parallelism with Multi-GPU
         model = nn.DataParallel(model)
-    results = [] # prediction results
-    labels = []
+    results = []  # prediction results
     time_sum = 0.0
+    attack = PGD(model, eps=0.04, alpha=1 / 255, steps=10)
     for batch_valid in data_loader_validate:
+        all_Jt = []
         batch_valid = [t.to(device) for t in batch_valid]
-        with torch.no_grad(): # evaluation without gradient calculation
+        inputs_t, label_t = batch_valid
+        input = attack(inputs_t, label_t)
+        J_t_median = J_t(model, inputs_t, input)
+        all_Jt.append(J_t_median.to(device))
+        with torch.no_grad():  # evaluation without gradient calculation
             start_time = time.time()
-            inputs_t, label_t = batch_valid
-            all_Jt = [] 
             for transform in transforms:
                 input = transform(inputs_t.clone())
                 J_t_median = J_t(model, inputs_t, input)
-                all_Jt.append(J_t_median)
-            J_t_median = min(all_Jt)
-            # result = model(inputs, False) 
+                all_Jt.append(J_t_median.to(device))
+            all_Jt = torch.tensor(all_Jt)
+            J_t_median = torch.min(all_Jt)
             time_sum += time.time() - start_time
-            # print('J_t_median:',J_t_median.detach().numpy())
-            results.append(J_t_median.detach().numpy().item())
-            # labels.append(label)
-    # label = torch.cat(labels, 0)
-    # predict = torch.cat(results, 0)
-    print('results:',np.median(results))
-    return np.median(results)
+            results.append(J_t_median.detach())
+    results_tensor = torch.tensor(results)
+    median_result = torch.median(results_tensor)
+    print('results:', median_result.item())
+    return median_result.item()
 
 from fetch_model import fetch_classifier
 def select_model(args,source,target):
@@ -292,8 +288,8 @@ def select_model(args,source,target):
         # 文件夹不存在，创建文件夹
         # os.makedirs(subexpFloder)
         print("There is no pretrained model!")
-    
-    for i in range(50): # 699, 100
+        
+    for i in range(50): # 699 
         model = fetch_classifier(args)
         device = get_device(args.g)
         model_path = subexpFloder + args.dataset+ str(i) + '.pt' 
