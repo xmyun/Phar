@@ -16,13 +16,13 @@ from sklearn.metrics import f1_score
 
 def set_seeds(seed):
     "set random seeds"
-    random.seed(seed)
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed(seed)
-    torch.cuda.manual_seed_all(seed)
+    random.seed(seed) 
+    np.random.seed(seed) 
+    torch.manual_seed(seed) 
+    torch.cuda.manual_seed(seed) 
+    torch.cuda.manual_seed_all(seed) 
     
-    # New add, Trade speed to fix the program's results. 
+    # # New add, Trade speed to fix the program's results. 
     torch.multiprocessing.set_start_method('spawn', force=True)
     torch.backends.cudnn.deterministic = True
 

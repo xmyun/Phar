@@ -942,13 +942,10 @@ class CoTTA_attack(nn.Module):
             # print(J_t_median)
             inputs.append([input,J_t_median])
         x_attack = self.attack(x,outputs)
-        # x_attack = x_attack.to(self.args)
         inputs.append([x_attack,J_t(self.model, x, x_attack)])
         J_list = sorted(inputs,key=lambda x:x[1])
-        # inputs = min(inputs,key=lambda x:x[1])
         inputs = J_list[round(np.exp(epoch*0.01))-1]
         inputs_nwd = torch.cat((x, inputs[0]), dim=0)
-        # f = self.model(inputs_nwd)
         discrepancy_loss = -discrepancy(inputs_nwd)
         discrepancy_loss = discrepancy_loss.to(self.device)
         if inputs[1]<np.exp(epoch*0.1): # epoch * 0.1
@@ -968,12 +965,6 @@ class CoTTA_attack(nn.Module):
                 # outputs_emas.append(outputs5_*0.1)
                 outputs_  = self.model_ema(inputs[0]).detach()
                 "here is very important"
-                # for proc in self.transform:
-                #     x = proc(x)
-                # x_attack = self.attack(x,label)
-                # outputs_ = self.model_ema(x_attack).detach()
-                # outputs_  = self.model_ema(x_attack*0.5).detach()
-                # outputs_  = self.model_ema(x).detach()
                 outputs_emas.append(outputs_)
             # Threshold choice discussed in supplementary
             if anchor_prob.mean(0)<self.ap:
@@ -983,15 +974,9 @@ class CoTTA_attack(nn.Module):
             # Student update
             optimizer.zero_grad()
             a=0.01
-            # loss = (softmax_entropy(outputs, outputs_ema)).mean(0)+inputs[1]+a
             gram_loss = inputs[1]
             gram_loss = gram_loss.to(self.device)
-            # print('gramloss:',gram_loss)
-            # print('cross:',((softmax_entropy(outputs, outputs_ema)).mean(0)))
-            # loss = (softmax_entropy(outputs, outputs_ema)).mean(0)+0.1*gram_loss
             loss = discrepancy_loss
-            # loss = gram_loss
-            # print(loss)
             loss.backward()
             optimizer.step()
             # Teacher update
@@ -1001,11 +986,10 @@ class CoTTA_attack(nn.Module):
             for nm, m  in self.model.named_modules():
                 for npp, p in m.named_parameters():
                     if npp in ['weight', 'bias'] and p.requires_grad:
-                        # mask = (torch.rand(p.shape)<self.rst).float().cuda() 
-                        mask=0.05
+                        mask = (torch.rand(p.shape)<self.rst).float().cuda(self.device) 
+                        # mask=0.05
                         with torch.no_grad():
                             p.data = self.model_state[f"{nm}.{npp}"].cuda(self.device) * mask + p * (1.-mask)
-        # return outputs_ema 
         return standard_ema   
 
 

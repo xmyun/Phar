@@ -10,13 +10,13 @@ from datasetPre import *
 from model import *
 
 def eval(model,args, data_loader_test):
-    """ Evaluation Loop """
-    model.eval() # evaluation mode
-    device = get_device(args.g)
-    model = model.to(device)
-    if args.data_parallel: # use Data Parallelism with Multi-GPU
+    """ Evaluation Loop """ 
+    model.eval() # evaluation mode 
+    device = get_device(args.g) 
+    model = model.to(device) 
+    if args.data_parallel: # use Data Parallelism with Multi-GPU 
         model = nn.DataParallel(model)
-    results = [] # prediction results
+    results = [] # prediction results 
     labels = []
     time_sum = 0.0
     for batch in data_loader_test:
@@ -32,10 +32,10 @@ def eval(model,args, data_loader_test):
     predict = torch.cat(results, 0)
     return stat_acc_f1(label.cpu().numpy(), predict.cpu().numpy())
 
-def pretrain(args):
+def pretrain(args): 
         data_loader_train ,data_loader_valid,data_loader_test,_ = load_dataset(args)
-        # print("Exit for code debug.")
-        # exit()
+        # print("Exit for code debug.") 
+        # exit() 
         criterion = nn.CrossEntropyLoss()
         device = get_device(args.g)
         print(device)
@@ -77,9 +77,9 @@ def pretrain(args):
             loss_list.append(loss_sum)
             sorted_list = sorted(loss_list)
             rank = sorted_list.index(loss_sum)+1
-            train_acc, train_f1 = eval(model,args, data_loader_train)
-            test_acc, test_f1 = eval(model,args, data_loader_test)
-            vali_acc, vali_f1 = eval(model,args, data_loader_valid)
+            train_acc, train_f1 = eval(model,args, data_loader_train) 
+            test_acc, test_f1 = eval(model,args, data_loader_test) 
+            vali_acc, vali_f1 = eval(model,args, data_loader_valid) 
             print('Epoch %d/%d : Average Loss %5.4f, Accuracy: %0.3f/%0.3f/%0.3f, F1: %0.3f/%0.3f/%0.3f'
                   % (e+1, args.Pre_epoch, loss_sum / len(data_loader_train), train_acc, vali_acc, test_acc, train_f1, vali_f1, test_f1))
             best_stat = (train_acc, vali_acc, test_acc, train_f1, vali_f1, test_f1)

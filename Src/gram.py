@@ -89,27 +89,16 @@ def J_t(model, source, target):
     false_negetive_99 = torch.where(label_test - ood_label_99 > 0, 1, 0).squeeze()
     false_positive_95 = torch.where(label_test - ood_label_95 < 0, 1, 0).squeeze()
     false_positive_99 = torch.where(label_test - ood_label_99 < 0, 1, 0).squeeze()
-    # print(f'false_negetive_95:{false_negetive_95.sum()},false_negetive_99:{false_negetive_99.sum()}')
-    # print(f'false_positive_95:{false_positive_95.sum()},false_positive_99：{false_positive_99.sum()}')
     clean_feature_group = feature_test[ood_label_95 == 0]
     bd_feature_group = feature_test[ood_label_95 == 1]
-    # clean_feature_flat = torch.mean(clean_feature_group,dim=(2,3))
-    # bd_feature_flat = torch.mean(bd_feature_group,dim=(2,3))
-    # print(clean_feature_group.shape)
     clean_feature_flat = torch.mean(clean_feature_group,dim=1)
     bd_feature_flat = torch.mean(bd_feature_group,dim=1)
     if bd_feature_flat.shape[0] < 1:
         kmmd = torch.Tensor([0])
         kmmd.requires_grad = True
-        # kmmd.grad_fn = torch.mul(kmmd, 1)
     else:
         kmmd = kmmd_dist(clean_feature_flat, bd_feature_flat)
-    # J_t.append(kmmd.item())
-    # J_t = np.asarray(J_t)
-    # J_t_median = np.median(J_t)
-    # J_MAD = np.median(np.abs(J_t - J_t_median))
-    # J_star = np.abs(J_t - J_t_median)/1.4826/(J_MAD+1e-6)
-    # print('J_t_median:',J_t_median)
+    
     return kmmd.to(source.device)
 
 def threshold_determine(clean_feature_target, ood_detection):
