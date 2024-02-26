@@ -345,16 +345,18 @@ class ClassifierLSTM(nn.Module):
         return h
 
 
-class ClassifierGRU(nn.Module):
-    def __init__(self, cfg, input=None, output=None, feats=False):
+class ClassifierGRU(BaseModule):
+    def __init__(self, cfg, input=None, output=None):
         super().__init__()
         for i in range(cfg.num_rnn):
             if input is not None and i == 0:
-                self.__setattr__('gru' + str(i), nn.GRU(input, cfg.rnn_io[i][1], num_layers=cfg.num_layers[i], batch_first=True))
+                self.__setattr__('gru' + str(i),
+                                 nn.GRU(input, cfg.rnn_io[i][1], num_layers=cfg.num_layers[i]
+                                        , bidirectional=cfg.rnn_bidirection[i], batch_first=True))
             else:
                 self.__setattr__('gru' + str(i),
-                                 nn.GRU(cfg.rnn_io[i][0], cfg.rnn_io[i][1], num_layers=cfg.num_layers[i],
-                                         batch_first=True))
+                                 nn.GRU(cfg.rnn_io[i][0], cfg.rnn_io[i][1], num_layers=cfg.num_layers[i]
+                                        , bidirectional=cfg.rnn_bidirection[i], batch_first=True))
         for i in range(cfg.num_linear):
             if output is not None and i == cfg.num_linear - 1:
                 self.__setattr__('lin' + str(i), nn.Linear(cfg.linear_io[i][0], output))
@@ -364,7 +366,7 @@ class ClassifierGRU(nn.Module):
         self.dropout = cfg.dropout
         self.num_rnn = cfg.num_rnn
         self.num_linear = cfg.num_linear
-        self.bidirectional = any(cfg.rnn_bidirection) # yn
+        self.bidirectional = any(cfg.rnn_bidirection)
 
     def forward(self, input_seqs, training=False, embed=False):
         h = input_seqs
@@ -373,6 +375,12 @@ class ClassifierGRU(nn.Module):
             h, _ = rnn(h)
             if self.activ:
                 h = F.relu(h)
+        # if self.bidirectional:
+        #     h = h.view(h.size(0), h.size(1), 2, -1)
+        #     h = torch.cat([h[:, -1, 0], h[:, 0, 1]], dim=1)
+        # else:
+        # Our experiments shows h = h[:, -1, :] can achieve better performance than the above codes
+        # even though the GRU layers are bidirectional.
         h = h[:, -1, :]
         if embed:
             return h
@@ -1377,7 +1385,7 @@ def fetch_classifier(args, input=None, output=None):
     if 'lstm' in args.model:
         model = ClassifierLSTM(args, input=args.input, output=args.output)
     elif 'gru' in args.model:
-        model = ClassifierGRU(args.model_cfg, input=args.feature_num, output=args.activity_label_size) #  args.output feature_num args.input
+        model = ClassifierGRU(args.model_cfg, input=args.encoder_cfg.hidden, output=args.activity_label_size) #  args.output feature_num args.input   args.encoder_cfg.hidden
     elif 'dcnn' in args.model:
         # print("dcnn")
         print(args)

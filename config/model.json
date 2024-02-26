@@ -32,13 +32,13 @@
 	"gru_v1":
 	{
 		"seq_len": 20,
-		"feature_num": 36,
+		"feature_num": 6,
 		"num_rnn": 1,
 		"num_layers": [1],
-		"rnn_io": [[6,10]],
+		"rnn_io": [[6, 10]],
 		"rnn_bidirection": [true],
 		"num_linear": 1,
-		"linear_io": [[10, 3]],
+		"linear_io": [[20, 3]],
 		"activ": false,
 		"dropout": true,
 		"save_path": "checkpoint/",

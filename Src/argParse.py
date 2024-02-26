@@ -46,6 +46,20 @@ def filter_domain_user_list(labels, source_domain, target_domain, label_user_ind
     index = np.isin(user_domain_mapping[:, 1], np.array(domain_other) - 1)
     return user_domain_mapping[index, 0].astype(np.int)
 
+class MaskConfig(NamedTuple):
+    """ Hyperparameters for training """
+    mask_ratio: float = 0  # masking probability
+    mask_alpha: int = 0  # How many tokens to form a group.
+    max_gram: int = 0  # number of max n-gram to masking
+    mask_prob: float = 1.0
+    replace_prob: float = 0.0
+
+    @classmethod
+    def from_json(cls, file): # load config from json file
+        return cls(**json.load(open(file, "r")))
+
+
+
 def set_arg(): 
     parser = argparse.ArgumentParser(description='Phar tta_imu') 
     parser.add_argument('--dataset', type=str, help='Dataset name.')
@@ -65,6 +79,8 @@ def set_arg():
     json_model_path = '/mnt/home/xuemeng/ttaIMU/IMU_Hete/config/model.json'
     json_train_path = '/mnt/home/xuemeng/ttaIMU/IMU_Hete/config/train.json'
     json_mask_path = '/mnt/home/xuemeng/ttaIMU/IMU_Hete/config/mask.json'
+    
+    
     with open(json_model_path) as f:
         json_data = json.load(f)
         model_config = json_data.get(args.model)
@@ -73,12 +89,11 @@ def set_arg():
         data_config = json_data.get(args.dataset)
     with open(json_train_path) as f:
         train_config = json.load(f)
-    with open(json_mask_path) as f:
-        mask_config = json.load(f)
     args.__dict__.update(train_config)
     args.__dict__.update(data_config)
     args.__dict__.update(model_config)
-    args.__dict__.update(mask_config)
+    
+    args.mask_cfg = MaskConfig.from_json(json_mask_path)
     return args
 
 def manual_models_path(args, target, models):

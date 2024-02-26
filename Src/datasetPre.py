@@ -13,7 +13,7 @@ from sklearn.model_selection import train_test_split
 from torch.utils.data import Dataset, DataLoader
 
 from dataAug import IMUDataset, IMUTTADataset, FFTDataset
-from dataAug import Preprocess4Normalization, Preprocess4Sample, Preprocess4Rotation, Preprocess4Noise, Preprocess4Permute
+from dataAug import Preprocess4Normalization, Preprocess4Sample, Preprocess4Rotation, Preprocess4Noise, Preprocess4Permute, Preprocess4Mask
 from argParse import set_seeds
 
 
@@ -581,7 +581,11 @@ def load_dataset(args):
         # 注意不同数据集的 搭配，特别是 训练模型的指标
     
 
-    pipeline=[Preprocess4Sample(args.seq_len, temporal=0.4)]
+    # pipeline=[Preprocess4Sample(args.seq_len, temporal=0.4)]
+    
+    pipeline = [Preprocess4Normalization(args.model_cfg.feature_num), Preprocess4Sample(args.seq_len, temporal=0.4)
+            , Preprocess4Rotation()] # , Preprocess4Mask(args.mask_cfg, full_sequence=True)
+    
     pipeline_tta = [Preprocess4Normalization(args.feature_num),Preprocess4Sample(args.seq_len, temporal=0.4)
             , Preprocess4Rotation(), Preprocess4Noise(), Preprocess4Permute()] #feature_num  input
     if args.model != 'deepsense':

@@ -46,6 +46,55 @@ class Pipeline:
         raise NotImplementedError
 
 
+# mask
+class Preprocess4Mask:
+
+    def __init__(self, mask_cfg, full_sequence=False):
+        self.mask_ratio = mask_cfg.mask_ratio  # masking probability
+        self.mask_alpha = mask_cfg.mask_alpha
+        self.max_gram = mask_cfg.max_gram
+        self.mask_prob = mask_cfg.mask_prob
+        self.replace_prob = mask_cfg.replace_prob
+        self.full_sequence = full_sequence
+
+    def gather(self, data, position1, position2):
+        result = []
+        for i in range(position1.shape[0]):
+            result.append(data[position1[i], position2[i]])
+        return np.array(result)
+
+    def mask(self, data, position1, position2):
+        for i in range(position1.shape[0]):
+            data[position1[i], position2[i]] = np.zeros(position2[i].size)
+        return data
+
+    def replace(self, data, position1, position2):
+        for i in range(position1.shape[0]):
+            data[position1[i], position2[i]] = np.random.random(position2[i].size)
+        return data
+
+    def __call__(self, instance):
+        shape = instance.shape
+
+        # the number of prediction is sometimes less than max_pred when sequence is short
+        n_pred = max(1, int(round(shape[0] * self.mask_ratio)))
+
+        # For masked Language Models
+        # mask_pos = bert_mask(shape[0], n_pred)
+        mask_pos = span_mask(shape[0], self.max_gram,  goal_num_predict=n_pred)
+
+        instance_mask = instance.copy()
+        if np.random.rand() < self.mask_prob:
+            instance_mask[mask_pos, :] = np.zeros((len(mask_pos), shape[1]))
+        elif np.random.rand() < self.mask_prob + self.replace_prob:
+            instance_mask[mask_pos, :] = np.random.random((len(mask_pos), shape[1]))
+        seq = instance[mask_pos, :]
+        if self.full_sequence:
+            return instance, instance_mask, np.array(mask_pos), np.array(seq)
+        else:
+            return instance_mask, np.array(mask_pos), np.array(seq)
+
+
 class Preprocess4Normalization(Pipeline):
 
     def __init__(self, feature_len, norm_acc=True, norm_mag=True, gamma=1.0):
@@ -237,7 +286,10 @@ class IMUDataset(Dataset):
         # print(len(self.data))
         for proc in self.pipeline:
             instance = proc(instance)
+        # return torch.from_numpy(np.array(instance)).float(), torch.from_numpy(np.array(self.labels[index])).long()
         return torch.from_numpy(instance).float(), torch.from_numpy(np.array(self.labels[index])).long()
+    
+    
         # instance = self.data[index]
         # for proc in self.pipeline:
         #     instance = proc(instance)
@@ -249,6 +301,31 @@ class IMUDataset(Dataset):
         # if self.labels is not None:
         #     result.append(np.array(self.labels[index]))
         # return narray_to_tensor(list(result))
+
+    def __len__(self):
+        return len(self.data)
+
+
+class IMUDataset_old(Dataset):
+
+    def __init__(self, data, labels=None, pipeline=[]):
+        super().__init__()
+        self.pipeline = pipeline
+        self.data = data
+        self.labels = labels.astype(np.int32) if labels is not None else labels #np.int
+ 
+    def __getitem__(self, index):
+        instance = self.data[index]
+        for proc in self.pipeline:
+            instance = proc(instance)
+        result = []
+        if isinstance(instance, tuple):
+            result += list(instance)
+        else:
+            result += [instance]
+        if self.labels is not None:
+            result.append(np.array(self.labels[index]))
+        return narray_to_tensor(list(result))
 
     def __len__(self):
         return len(self.data)

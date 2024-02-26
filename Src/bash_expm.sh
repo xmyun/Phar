@@ -4,10 +4,10 @@
 # # # Target domain 1, source domain: all expect taregt ; 
 timestamp=$(date +%Y%m%d%H%M%S)  
 CroTyp="MCroDom"  
-GPUNum="2"  
+GPUNum="3"  
 modelP="gru_v1" 
 SrouceDomain="aet0"  
-TargetDomain="hhar1"  #'aet0', 'hhar1', 'uci2', 'motion3', 'shoaib4', 'usc5', 'ku6' 
+TargetDomain="shoaib4"  #'aet0', 'hhar1', 'uci2', 'motion3', 'shoaib4', 'usc5', 'ku6' 
 PretrainLogFileName="saved/log/Pretrain_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
 AdaptLogFileName="saved/log/Adapt_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
 nohup python -u pretrain.py --dataset new_20_120 --model $modelP --g $GPUNum --cd $CroTyp --SDom $SrouceDomain --TDom $TargetDomain > $PretrainLogFileName &
