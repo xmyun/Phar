@@ -5,8 +5,8 @@
 timestamp=$(date +%Y%m%d%H%M%S)  
 CroTyp="MCroDom"  
 GPUNum="2"  
-modelP="gru_v1"
-SrouceDomain="aet0" 
+modelP="gru_v1" 
+SrouceDomain="aet0"  
 TargetDomain="hhar1"  #'aet0', 'hhar1', 'uci2', 'motion3', 'shoaib4', 'usc5', 'ku6' 
 PretrainLogFileName="saved/log/Pretrain_"$SrouceDomain$TargetDomain"_"$timestamp".log" 
 AdaptLogFileName="saved/log/Adapt_"$SrouceDomain$TargetDomain"_"$timestamp".log" 

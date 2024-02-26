@@ -1,13 +1,14 @@
 {
     "seed": 3431, 
-    "batch_size": 128, 
+    "batch_size": 64, 
     "lr": 1e-3,  
-    "Pre_epoch": 700,  
+    "Pre_epoch": 500,  
     "Ada_epoch": 50,  
     "warmup": 0.1, 
     "save_steps": 100, 
     "total_steps": 500000000, 
     "lambda1": 0.0, 
-    "lambda2": 0.005, 
+    "lambda2": 0.0, 
+    "alpha":0.6,
     "data_parallel": false
 }

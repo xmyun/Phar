@@ -45,7 +45,7 @@ def pretrain(args):
         
         # classifier_cfg = args.model_cfg
         classifier = fetch_classifier(args, input=args.encoder_cfg.hidden, output=args.activity_label_size) # output=label_num
-        model = CompositeClassifierDA(args.encoder_cfg, classifier=classifier) 
+        model = CompositeClassifier(args.encoder_cfg, classifier=classifier) 
         
         optimizer = torch.optim.Adam(params=model.parameters(), lr=args.lr)  # , weight_decay=0.95
         model = model.to(device)

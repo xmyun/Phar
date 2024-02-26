@@ -95,6 +95,26 @@ class ReverseLayerF(Function):
         output = grad_output.neg() * ctx.alpha
         return output, None
 
+class CompositeClassifier(BaseModule):
+
+    def __init__(self, encoder_cfg, classifier=None, freeze_encoder=False, freeze_decoder=False, freeze_classifier=False):
+        super().__init__()
+        self.encoder = Transformer(encoder_cfg)
+        if freeze_encoder:
+            freeze(self.encoder)
+        self.decoder = Decoder(encoder_cfg)
+        if freeze_decoder:
+            freeze(self.decoder)
+        self.classifier = classifier
+        if freeze_classifier:
+            freeze(self.classifier)
+
+    def forward(self, input_seqs, training=False):
+        input_seqs = input_seqs[:,0:20,:]
+        h = self.encoder(input_seqs)
+        h = self.classifier(h, training)
+        return h
+    
 
 class CompositeClassifierDA(BaseModule):
 
