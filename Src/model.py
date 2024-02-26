@@ -110,7 +110,7 @@ class CompositeClassifier(BaseModule):
             freeze(self.classifier)
 
     def forward(self, input_seqs, training=False):
-        input_seqs = input_seqs[:,0:20,:]
+        # input_seqs = input_seqs[:,0:20,:]
         h = self.encoder(input_seqs)
         h = self.classifier(h, training)
         return h

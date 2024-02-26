@@ -581,7 +581,7 @@ def load_dataset(args):
         # 注意不同数据集的 搭配，特别是 训练模型的指标
     
 
-    pipeline=[]
+    pipeline=[Preprocess4Sample(args.seq_len, temporal=0.4)]
     pipeline_tta = [Preprocess4Normalization(args.feature_num),Preprocess4Sample(args.seq_len, temporal=0.4)
             , Preprocess4Rotation(), Preprocess4Noise(), Preprocess4Permute()] #feature_num  input
     if args.model != 'deepsense':
