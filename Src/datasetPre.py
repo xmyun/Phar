@@ -52,9 +52,9 @@ def filter_dataset(data, label, filter_index=[0, 1]):
     label_new = []
     for i in range(label.shape[0]):
         temp_label = np.unique(label[i, :, filter_index], axis=1)
-        # if temp_label.shape == (2, 1): # This will filter out some datas.  
-        index[i] = True
-        label_new.append(label[i, 0, :]) 
+        if temp_label.shape == (2, 1): # This will filter out some datas.  
+            index[i] = True
+            label_new.append(label[i, 0, :]) 
     # print('Before Merge: %d, After Merge: %d' % (data.shape[0], np.sum(index)))
     return data[index], np.array(label_new) 
 
@@ -536,7 +536,7 @@ def load_dataset(args):
             = further_split_train(data, splitTrain_again, result_tvt_t)
         
     elif(args.cd == "MCroDom"): # Inter multiple dataset. 
-        # Read user_list for test: 
+        # Read user_list for test:  
         Domain_index_t = int(Domain_td[0]) # Targe Cross domain; 
         data_set_1, label_set_1 = load_Uci_users(data, label, Domain_index_t) # 1
         result_tvt_1= separate_user_tvt(data, data_set_1, label_set_1)
@@ -551,26 +551,26 @@ def load_dataset(args):
         User_list_2= np.array([i for i in range(0, 166)]) # 72 166 
         if Domain_index_t == 1: # 使用列表推导式从数组中剔除0到8.  Hhar -- 1_9: 0-8; 
             User_list_2 = np.array([i for i in User_list_2 if not (0 <= i <= 8)]) 
-            # User_list_2 = np.array([i for i in User_list_2 if not (73 <= i <= 86)])  # get rid of domain 5.   
+            User_list_2 = np.array([i for i in User_list_2 if not (73 <= i <= 86)])  # get rid of domain 5.   
             User_list_2 = np.array([i for i in User_list_2 if not (87 <= i <= 166)])  # get rid of domain 6.  
         elif Domain_index_t == 2: # 使用列表推导式从数组中剔除9到38. Uci -- 2_30: 9-38 
             User_list_2 = np.array([i for i in User_list_2 if not (9 <= i <= 38)]) 
-            # User_list_2 = np.array([i for i in User_list_2 if not (73 <= i <= 86)])  # get rid of domain 5. 
+            User_list_2 = np.array([i for i in User_list_2 if not (73 <= i <= 86)])  # get rid of domain 5. 
             User_list_2 = np.array([i for i in User_list_2 if not (87 <= i <= 166)])  # get rid of domain 6. 
         elif Domain_index_t == 3: # 使用列表推导式从数组中剔除39到62. Motion -- 3_24: 39-62; 
             User_list_2 = np.array([i for i in User_list_2 if not (39 <= i <= 62)]) 
-            # User_list_2 = np.array([i for i in User_list_2 if not (73 <= i <= 86)])  # get rid of domain 5. 
+            User_list_2 = np.array([i for i in User_list_2 if not (73 <= i <= 86)])  # get rid of domain 5. 
             User_list_2 = np.array([i for i in User_list_2 if not (87 <= i <= 166)])  # get rid of domain 6. 
         elif Domain_index_t == 4: # 使用列表推导式从数组中剔除63到72. Shoaib -- 4_10: 63-72
             User_list_2 = np.array([i for i in User_list_2 if not (63 <= i <= 72)])  
-            # User_list_2 = np.array([i for i in User_list_2 if not (73 <= i <= 86)])  # get rid of domain 5. 
+            User_list_2 = np.array([i for i in User_list_2 if not (73 <= i <= 86)])  # get rid of domain 5. 
             User_list_2 = np.array([i for i in User_list_2 if not (87 <= i <= 166)])  # get rid of domain 6. 
         elif Domain_index_t == 5: # 使用列表推导式从数组中剔除73到87. usc -- 5_14: 63-72 
-            # User_list_2 = np.array([i for i in User_list_2 if not (73 <= i <= 86)])  
+            User_list_2 = np.array([i for i in User_list_2 if not (73 <= i <= 86)])  
             User_list_2 = np.array([i for i in User_list_2 if not (87 <= i <= 166)])  # get rid of domain 6. 
         elif Domain_index_t == 6: # 使用列表推导式从数组中剔除87到166. ku -- 6_80: 87-166
             User_list_2 = np.array([i for i in User_list_2 if not (87 <= i <= 166)])  
-            # User_list_2 = np.array([i for i in User_list_2 if not (73 <= i <= 86)])  # get rid of domain 5. 
+            User_list_2 = np.array([i for i in User_list_2 if not (73 <= i <= 86)])  # get rid of domain 5. 
         else:
             print("Dataset wrong!!!")
         data_set_2, label_set_2 = load_Across_users(User_list_2, data, label, Domain_all)
@@ -582,8 +582,8 @@ def load_dataset(args):
     
 
     pipeline=[]
-    pipeline_tta = [Preprocess4Normalization(args.input),Preprocess4Sample(args.seq_len, temporal=0.4)
-            , Preprocess4Rotation(), Preprocess4Noise(), Preprocess4Permute()]
+    pipeline_tta = [Preprocess4Normalization(args.feature_num),Preprocess4Sample(args.seq_len, temporal=0.4)
+            , Preprocess4Rotation(), Preprocess4Noise(), Preprocess4Permute()] #feature_num  input
     if args.model != 'deepsense':
         data_set_train = IMUDataset(data_train, label_train, pipeline=pipeline)
         data_set_test = IMUDataset(data_test, label_test, pipeline=pipeline)

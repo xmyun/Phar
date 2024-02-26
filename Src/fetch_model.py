@@ -2,8 +2,8 @@ from model import *
 def fetch_classifier(args):
     if 'lstm' in args.model:
         model = ClassifierLSTM(args, input=args.input, output=args.output)
-    elif 'gru' in args.model:
-        model = ClassifierGRU(args, input=args.input, output=args.output)
+    elif 'gru' in args.model: 
+        model = ClassifierGRU(args, input=args.input, output=args.activity_label_size) # Model we use.
     elif 'dcnn' in args.model:
         # print("dcnn")
         print(args)

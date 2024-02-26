@@ -32,15 +32,17 @@
 	"gru_v1":
 	{
 		"seq_len": 20,
-		"input": 6,
-		"num_rnn": 2,
-		"num_layers": [2, 1],
-		"rnn_io": [[6,20], [20, 10]],
+		"feature_num": 6,
+		"num_rnn": 1,
+		"num_layers": [1],
+		"rnn_io": [[6,10]],
+		"rnn_bidirection": [true],
 		"num_linear": 1,
-		"linear_io": [[10, 3]],
+		"linear_io": [[20, 3]],
 		"activ": false,
-		"dropout": false,
-		"save_path": "checkpoint/gru_v1"
+		"dropout": true,
+		"save_path": "checkpoint/",
+		"encoder": "unihar_bert"
 	},
 	"gru_v2":
 	{
@@ -53,7 +55,7 @@
 		"linear_io": [[10, 3]],
 		"activ": false,
 		"dropout": true,
-		"save_path": "checkpoint/gru_v2"
+		"save_path": "checkpoint/"
 	},
 	"cnn2_v1":
 	{

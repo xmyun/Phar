@@ -12,6 +12,8 @@ from scipy.stats import special_ortho_group
 from sklearn.model_selection import train_test_split
 from torch.utils.data import Dataset
 from sklearn.metrics import f1_score
+from typing import NamedTuple
+import sys
 
 
 def set_seeds(seed):
@@ -56,6 +58,9 @@ def set_arg():
     parser.add_argument('--g', type=str, default=None, help='Set specific GPU.')
     
     args = parser.parse_args()
+    args = load_model_config(args, args.model)
+    
+    
     json_data_path = '/mnt/home/xuemeng/ttaIMU/IMU_Hete/config/dataset.json'
     json_model_path = '/mnt/home/xuemeng/ttaIMU/IMU_Hete/config/model.json'
     json_train_path = '/mnt/home/xuemeng/ttaIMU/IMU_Hete/config/train.json'
@@ -96,6 +101,82 @@ def load_data(args):
 
 def count_model_parameters(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
+
+class PretrainModelConfig(NamedTuple):
+
+    feature_num: int = 0  #
+    hidden: int = 0  # Dimension of Hidden Layer in Transformer Encoder
+    hidden_ff: int = 0  # Dimension of Intermediate Layers in Positionwise Feedforward Net
+    n_layers: int = 0  # Numher of Hidden Layers
+    n_heads: int = 0  # Numher of Heads in Multi-Headed Attention Layers
+    seq_len: int = 0  # Maximum Length for Positional Embeddings
+    emb_norm: bool = False
+
+    @classmethod
+    def from_json(cls, js):
+        return cls(**js)
+
+class ClassifierModelConfig(NamedTuple):
+    "Configuration for classifier model"
+    seq_len: int = 0
+    feature_num: int = 0
+
+    num_rnn: int = 0
+    num_layers: int = 0
+    rnn_io: list = []
+    rnn_bidirection: list = []
+
+    num_cnn: int = 0
+    conv_io: list = []
+    pool: list = []
+    flat_num: int = 0
+
+    num_attn: int = 0
+    num_head: int = 0
+    atten_hidden: int = 0
+
+    num_linear: int = 0
+    linear_io: list = []
+
+    activ: bool = False
+    dropout: bool = False
+
+    encoder: str = None
+    encoder_cfg: object = PretrainModelConfig
+    
+    input: int= 6
+    save_path: str=None
+
+
+    @classmethod
+    def from_json(cls, js):
+        return cls(**js)
+
+    @classmethod
+    def from_encoder_cfg(cls, js, encoder_cfg):
+
+        cfg = cls(**js)
+        cfg.encoder_cfg = encoder_cfg
+        return cfg
+
+
+def load_model_config(args, model, path_bert='/mnt/home/xuemeng/ttaIMU/IMU_Hete/config/encoder.json', path_classifier='/mnt/home/xuemeng/ttaIMU/IMU_Hete/config/model.json'):
+    model_cfg = None
+    model_config_all = json.load(open(path_classifier, "r"))
+    if model in model_config_all:
+        model_cfg = ClassifierModelConfig.from_json(model_config_all[model])
+        if model_cfg.encoder is not None:
+            model_encoder_config_all = json.load(open(path_bert, "r"))
+            if model_cfg.encoder in model_encoder_config_all:
+                encoder_cfg = PretrainModelConfig.from_json(model_encoder_config_all[model_cfg.encoder])
+                args.encoder_cfg = encoder_cfg
+            else:
+                print("Unable to find model encoder config!")
+    if model_cfg is None:
+        print("Unable to find model config!")
+        sys.exit()
+    args.model_cfg = model_cfg
+    return args
 
 
 def print_stat(stats, labels, source_domain, domain_size):

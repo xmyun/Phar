@@ -17,6 +17,8 @@ import contextlib
 from gram import J_t
 
 from datasetPre import get_device
+
+from torch.autograd import Function
 # from utils import Preprocess4Normalization, Preprocess4Sample, Preprocess4Rotation, Preprocess4Noise, Preprocess4Permute
 # pipeline_tta = [Preprocess4Normalization(args.input),Preprocess4Sample(args.seq_len, temporal=0.4)
 #             , Preprocess4Rotation(), Preprocess4Noise(), Preprocess4Permute()]
@@ -44,6 +46,99 @@ class LayerNorm(nn.Module):
         x = (x - u) / torch.sqrt(s + self.variance_epsilon)
         return self.gamma * x + self.beta
         # return x
+
+
+class BaseModule(nn.Module):
+
+    def load_self(self, model_file, map_location=None):
+        state_dict = self.state_dict()
+        model_dicts = torch.load(model_file, map_location=map_location).items()
+        for k, v in model_dicts:
+            # if k in state_dict:
+            if k.replace('transformer', 'encoder') in state_dict:
+                # state_dict.update({k: v})
+                state_dict.update({k.replace('transformer','encoder'):v})
+        self.load_state_dict(state_dict)
+
+def freeze(model):
+    for p in model.parameters():
+        p.requires_grad = False
+
+
+def unfreeze(model):
+    for p in model.parameters():
+        p.requires_grad = True
+
+class Decoder(nn.Module):
+
+    def __init__(self, cfg):
+        super().__init__()
+        self.linear = nn.Linear(cfg.hidden, cfg.hidden)
+        self.norm = LayerNorm(cfg)
+        self.pred = nn.Linear(cfg.hidden, cfg.feature_num)
+
+    def forward(self, input_seqs):
+        h_masked = gelu(self.linear(input_seqs))
+        h_masked = self.norm(h_masked)
+        return self.pred(h_masked)
+
+
+class ReverseLayerF(Function):
+
+    @staticmethod
+    def forward(ctx, x, alpha=1.0):
+        ctx.alpha = alpha
+        return x.view_as(x)
+
+    @staticmethod
+    def backward(ctx, grad_output):
+        output = grad_output.neg() * ctx.alpha
+        return output, None
+
+
+class CompositeClassifierDA(BaseModule):
+
+    def __init__(self, ae_cfg, classifier=None, output_embed=False, freeze_encoder=False, freeze_decoder=False,
+                 freeze_classifier=False):
+        super().__init__()
+        self.encoder = Transformer(ae_cfg)
+        if freeze_encoder:
+            freeze(self.encoder)
+        self.decoder = Decoder(ae_cfg)
+        if freeze_decoder:
+            freeze(self.decoder)
+        self.classifier = classifier
+        if freeze_classifier:
+            freeze(self.classifier)
+        self.output_embed = output_embed
+        self.domain_classifier = self.init_domain_classifier()
+
+    def forward(self, input_seqs, training=False, output_clf=True, masked_pos=None, embed=False, lam=1.0):
+        h = self.encoder(input_seqs)
+        if masked_pos is not None:
+            masked_pos = masked_pos[:, :, None].expand(-1, -1, h.size(-1))
+            h = torch.gather(h, 1, masked_pos)
+        h_features = self.classifier(h, embed=True)
+        if embed:
+            return h_features
+        if output_clf:
+            class_output = self.classifier(h, training)
+            if training:
+                h_reverse = ReverseLayerF.apply(h_features, lam)
+                domain_output = self.domain_classifier(h_reverse)
+                return class_output, domain_output
+            else:
+                return class_output
+        else:
+            r = self.decoder(h)
+            return r
+
+    def init_domain_classifier(self):
+        domain_classifier = nn.Sequential()
+        domain_classifier.add_module('gru_d_fc1', nn.Linear(20, 72))
+        domain_classifier.add_module('gru_d_relu1', nn.ReLU())
+        domain_classifier.add_module('gru_d_fc2', nn.Linear(72, 2))
+        return domain_classifier
 
 
 class Embeddings(nn.Module):
@@ -139,13 +234,13 @@ class PositionWiseFeedForward(nn.Module):
 
 class Transformer(nn.Module):
     """ Transformer with Self-Attentive Blocks"""
-    def __init__(self, cfg):
+    def __init__(self, cfg, embed=None):
         super().__init__()
-        self.embed = Embeddings(cfg)
-        # Original BERT not used parameter-sharing strategies
-        # self.blocks = nn.ModuleList([Block(cfg) for _ in range(cfg.n_layers)])
-
-        # To used parameter-sharing strategies
+        if embed is None:
+            self.embed = Embeddings(cfg)
+        else:
+            self.embed = embed
+        
         self.n_layers = cfg.n_layers
         self.attn = MultiHeadedSelfAttention(cfg)
         self.proj = nn.Linear(cfg.hidden, cfg.hidden)
@@ -249,8 +344,9 @@ class ClassifierGRU(nn.Module):
         self.dropout = cfg.dropout
         self.num_rnn = cfg.num_rnn
         self.num_linear = cfg.num_linear
+        self.bidirectional = any(cfg.rnn_bidirection) # yn
 
-    def forward(self, input_seqs, training=False):
+    def forward(self, input_seqs, training=False, embed=False):
         h = input_seqs
         for i in range(self.num_rnn):
             rnn = self.__getattr__('gru' + str(i))
@@ -258,6 +354,8 @@ class ClassifierGRU(nn.Module):
             if self.activ:
                 h = F.relu(h)
         h = h[:, -1, :]
+        if embed:
+            return h
         if self.dropout:
             h = F.dropout(h, training=training)
         for i in range(self.num_linear):
@@ -941,8 +1039,8 @@ class CoTTA_attack(nn.Module):
             J_t_median = J_t(self.model, x, input)
             # print(J_t_median)
             inputs.append([input,J_t_median])
-        x_attack = self.attack(x,outputs)
-        inputs.append([x_attack,J_t(self.model, x, x_attack)])
+        # x_attack = self.attack(x,outputs) # Reduce attack
+        # inputs.append([x_attack,J_t(self.model, x, x_attack)]) # Reduce attack
         J_list = sorted(inputs,key=lambda x:x[1])
         inputs = J_list[round(np.exp(epoch*0.01))-1]
         inputs_nwd = torch.cat((x, inputs[0]), dim=0)
@@ -1254,11 +1352,12 @@ def check_model(model):
                                "check which require grad"
     has_bn = any([isinstance(m, nn.BatchNorm2d) for m in model.modules()])
     assert has_bn, "tent needs normalization for its optimization"
-def fetch_classifier(args):
+def fetch_classifier(args, input=None, output=None):
+    print(args)
     if 'lstm' in args.model:
         model = ClassifierLSTM(args, input=args.input, output=args.output)
     elif 'gru' in args.model:
-        model = ClassifierGRU(args, input=args.input, output=args.output)
+        model = ClassifierGRU(args.model_cfg, input=args.feature_num, output=args.activity_label_size) #  args.output feature_num args.input
     elif 'dcnn' in args.model:
         # print("dcnn")
         print(args)

@@ -56,13 +56,15 @@ def tta_transform(arg):
     
 def J_t(model, source, target):
     J_t = []
-    def hook_fn(module, input, output):
-        # print("Hook called!")
-        # print("Module:", module)
-        # print("Input:", input)
-        # print("Output:", output)
-        return
-    hook = model.lin1.register_forward_hook(hook_fn)
+    
+    # def hook_fn(module, input, output):
+    #     # print("Hook called!")
+    #     # print("Module:", module)
+    #     # print("Input:", input)
+    #     # print("Output:", output)
+    #     return
+    # hook = model.lin1.register_forward_hook(hook_fn)
+    
     original_feature = []
     augmented_feature = []
     original_feature = model(source)
@@ -243,14 +245,14 @@ def eval_gram(model, args, data_loader_validate):
         model = nn.DataParallel(model)
     results = []  # prediction results
     time_sum = 0.0
-    attack = PGD(model, eps=0.04, alpha=1 / 255, steps=10)
+    # attack = PGD(model, eps=0.04, alpha=1 / 255, steps=10) #  aes
     for batch_valid in data_loader_validate:
         all_Jt = []
         batch_valid = [t.to(device) for t in batch_valid]
         inputs_t, label_t = batch_valid
-        input = attack(inputs_t, label_t)
-        J_t_median = J_t(model, inputs_t, input)
-        all_Jt.append(J_t_median.to(device))
+        # input = attack(inputs_t, label_t)  #  aes
+        # J_t_median = J_t(model, inputs_t, input) #  aes
+        # all_Jt.append(J_t_median.to(device)) #  aes
         with torch.no_grad():  # evaluation without gradient calculation
             start_time = time.time()
             for transform in transforms:
@@ -288,7 +290,7 @@ def select_model(args,source,target):
             model_dicts = torch.load(model_path)
             model.load_state_dict(model_dicts)
             model = model.to(device)
-            model.eval()
+            model.train() # eval
             # test_acc,test_F1 = eval(model,args, target)
             # acc.append([test_acc,model_path])
             J_t_median = eval_gram(model,args, target)

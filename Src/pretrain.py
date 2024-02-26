@@ -41,11 +41,19 @@ def pretrain(args):
         print(device)
         """ Train Loop """
         # self.load(model_file, load_self)
-        model = fetch_classifier(args)
+        # model = fetch_classifier(args)
+        
+        # classifier_cfg = args.model_cfg
+        classifier = fetch_classifier(args, input=args.encoder_cfg.hidden, output=args.activity_label_size) # output=label_num
+        model = CompositeClassifierDA(args.encoder_cfg, classifier=classifier) 
+        
         optimizer = torch.optim.Adam(params=model.parameters(), lr=args.lr)  # , weight_decay=0.95
         model = model.to(device)
-        if args.data_parallel: # use Data Parallelism with Multi-GPU
-            model = nn.DataParallel(model)
+        
+        # if args.data_parallel: # use Data Parallelism with Multi-GPU
+        #     model = nn.DataParallel(model)
+        
+        
         global_step = 0 # global iteration steps regardless of epochs
         best_stat = None
         model_best = model.state_dict()
@@ -91,6 +99,7 @@ def pretrain(args):
 
 if __name__ == "__main__":
     args = set_arg()
+    print(args)
     set_seeds(args.seed)
     print("Seed number in Train:", args.seed)
     pretrain(args)
