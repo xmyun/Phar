@@ -1,3 +1,3 @@
-The code is in the branch of xuem. 
+The code is in the "xuem" branch.
 
-We will organize the main branch and add the checkpoints of models. 
+We will organize the main branch and add model checkpoints.
