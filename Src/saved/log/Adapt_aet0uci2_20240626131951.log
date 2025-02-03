@@ -1,0 +1,1872 @@
+Seed number in Adapt: 3431
+Source domain:  0 Target domain:  2
+[ 9. 10. 11. 12. 13. 14. 15. 16. 17. 18. 19. 20. 21. 22. 23. 24. 25. 26.
+ 27. 28. 29. 30. 31. 32. 33. 34. 35. 36. 37. 38.]
+(2088, 120, 6)
+(2088, 3)
+(30,)
+User list wanted to extract [ 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32
+ 33 34 35 36 37]
+Extracted user: 9
+[9.] (array([0]),)
+Extracted user: 10
+[10.] (array([1]),)
+Extracted user: 11
+[11.] (array([2]),)
+Extracted user: 12
+[12.] (array([3]),)
+Extracted user: 13
+[13.] (array([4]),)
+Extracted user: 14
+[14.] (array([5]),)
+Extracted user: 15
+[15.] (array([6]),)
+Extracted user: 16
+[16.] (array([7]),)
+Extracted user: 17
+[17.] (array([8]),)
+Extracted user: 18
+[18.] (array([9]),)
+Extracted user: 19
+[19.] (array([10]),)
+Extracted user: 20
+[20.] (array([11]),)
+Extracted user: 21
+[21.] (array([12]),)
+Extracted user: 22
+[22.] (array([13]),)
+Extracted user: 23
+[23.] (array([14]),)
+Extracted user: 24
+[24.] (array([15]),)
+Extracted user: 25
+[25.] (array([16]),)
+Extracted user: 26
+[26.] (array([17]),)
+Extracted user: 27
+[27.] (array([18]),)
+Extracted user: 28
+[28.] (array([19]),)
+Extracted user: 29
+[29.] (array([20]),)
+Extracted user: 30
+[30.] (array([21]),)
+Extracted user: 31
+[31.] (array([22]),)
+Extracted user: 32
+[32.] (array([23]),)
+Extracted user: 33
+[33.] (array([24]),)
+Extracted user: 34
+[34.] (array([25]),)
+Extracted user: 35
+[35.] (array([26]),)
+Extracted user: 36
+[36.] (array([27]),)
+Extracted user: 37
+[37.] (array([28]),)
+selected users 29
+Test Users: [ 0 23 20] 3
+Validation Users: [ 6 28 16] 3
+Train Users: [ 1  2  3  4  5  7  8  9 10 11 12 13 14 15 17 18 19 21 22 24 25 26 27] 23
+第 0 个人中，多少比例的数据用于训练/验证/测试
+Test Users: 0
+第 1 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 1
+第 2 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 2
+第 3 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 3
+第 4 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 4
+第 5 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 5
+第 6 个人中，多少比例的数据用于训练/验证/测试
+Validation Users: 6
+第 7 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 7
+第 8 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 8
+第 9 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 9
+第 10 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 10
+第 11 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 11
+第 12 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 12
+第 13 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 13
+第 14 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 14
+第 15 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 15
+第 16 个人中，多少比例的数据用于训练/验证/测试
+Validation Users: 16
+第 17 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 17
+第 18 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 18
+第 19 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 19
+第 20 个人中，多少比例的数据用于训练/验证/测试
+Test Users: 20
+第 21 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 21
+第 22 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 22
+第 23 个人中，多少比例的数据用于训练/验证/测试
+Test Users: 23
+第 24 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 24
+第 25 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 25
+第 26 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 26
+第 27 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 27
+第 28 个人中，多少比例的数据用于训练/验证/测试
+Validation Users: 28
+[  0.   1.   2.   3.   4.   5.   6.   7.   8.   9.  10.  11.  12.  13.
+  14.  15.  16.  17.  18.  19.  20.  21.  22.  23.  24.  25.  26.  27.
+  28.  29.  30.  31.  32.  33.  34.  35.  36.  37.  38.  39.  40.  41.
+  42.  43.  44.  45.  46.  47.  48.  49.  50.  51.  52.  53.  54.  55.
+  56.  57.  58.  59.  60.  61.  62.  63.  64.  65.  66.  67.  68.  69.
+  70.  71.  72.  73.  74.  75.  76.  77.  78.  79.  80.  81.  82.  83.
+  84.  85.  86.  87.  88.  89.  90.  91.  92.  93.  94.  95.  96.  97.
+  98.  99. 100. 101. 102. 103. 104. 105. 106. 107. 108. 109. 110. 111.
+ 112. 113. 114. 115. 116. 117. 118. 119. 120. 121. 122. 123. 124. 125.
+ 126. 127. 128. 129. 130. 131. 132. 133. 134. 135. 136. 137. 138. 139.
+ 140. 141. 142. 143. 144. 145. 146. 147. 148. 149. 150. 151. 152. 153.
+ 154. 155. 156. 157. 158. 159. 160. 161. 162. 163. 164. 165. 166.]
+(29227, 120, 6)
+(29227, 3)
+(167,)
+User list wanted to extract [ 0  1  2  3  4  5  6  7  8 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53
+ 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72]
+Extracted user: 0
+[0.] (array([0]),)
+Extracted user: 1
+[1.] (array([1]),)
+Extracted user: 2
+[2.] (array([2]),)
+Extracted user: 3
+[3.] (array([3]),)
+Extracted user: 4
+[4.] (array([4]),)
+Extracted user: 5
+[5.] (array([5]),)
+Extracted user: 6
+[6.] (array([6]),)
+Extracted user: 7
+[7.] (array([7]),)
+Extracted user: 8
+[8.] (array([8]),)
+Extracted user: 39
+[39.] (array([39]),)
+Extracted user: 40
+[40.] (array([40]),)
+Extracted user: 41
+[41.] (array([41]),)
+Extracted user: 42
+[42.] (array([42]),)
+Extracted user: 43
+[43.] (array([43]),)
+Extracted user: 44
+[44.] (array([44]),)
+Extracted user: 45
+[45.] (array([45]),)
+Extracted user: 46
+[46.] (array([46]),)
+Extracted user: 47
+[47.] (array([47]),)
+Extracted user: 48
+[48.] (array([48]),)
+Extracted user: 49
+[49.] (array([49]),)
+Extracted user: 50
+[50.] (array([50]),)
+Extracted user: 51
+[51.] (array([51]),)
+Extracted user: 52
+[52.] (array([52]),)
+Extracted user: 53
+[53.] (array([53]),)
+Extracted user: 54
+[54.] (array([54]),)
+Extracted user: 55
+[55.] (array([55]),)
+Extracted user: 56
+[56.] (array([56]),)
+Extracted user: 57
+[57.] (array([57]),)
+Extracted user: 58
+[58.] (array([58]),)
+Extracted user: 59
+[59.] (array([59]),)
+Extracted user: 60
+[60.] (array([60]),)
+Extracted user: 61
+[61.] (array([61]),)
+Extracted user: 62
+[62.] (array([62]),)
+Extracted user: 63
+[63.] (array([63]),)
+Extracted user: 64
+[64.] (array([64]),)
+Extracted user: 65
+[65.] (array([65]),)
+Extracted user: 66
+[66.] (array([66]),)
+Extracted user: 67
+[67.] (array([67]),)
+Extracted user: 68
+[68.] (array([68]),)
+Extracted user: 69
+[69.] (array([69]),)
+Extracted user: 70
+[70.] (array([70]),)
+Extracted user: 71
+[71.] (array([71]),)
+Extracted user: 72
+[72.] (array([72]),)
+selected users 43
+Test Users: [12 30 40 36 18] 5
+Validation Users: [42 17 13  5 29] 5
+Train Users: [ 0  1  2  3  4  6  7  8  9 10 11 14 15 16 19 20 21 22 23 24 25 26 27 28
+ 31 32 33 34 35 37 38 39 41] 33
+第 0 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 0
+第 1 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 1
+第 2 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 2
+第 3 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 3
+第 4 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 4
+第 5 个人中，多少比例的数据用于训练/验证/测试
+Validation Users: 5
+第 6 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 6
+第 7 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 7
+第 8 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 8
+第 9 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 9
+第 10 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 10
+第 11 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 11
+第 12 个人中，多少比例的数据用于训练/验证/测试
+Test Users: 12
+第 13 个人中，多少比例的数据用于训练/验证/测试
+Validation Users: 13
+第 14 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 14
+第 15 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 15
+第 16 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 16
+第 17 个人中，多少比例的数据用于训练/验证/测试
+Validation Users: 17
+第 18 个人中，多少比例的数据用于训练/验证/测试
+Test Users: 18
+第 19 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 19
+第 20 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 20
+第 21 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 21
+第 22 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 22
+第 23 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 23
+第 24 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 24
+第 25 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 25
+第 26 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 26
+第 27 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 27
+第 28 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 28
+第 29 个人中，多少比例的数据用于训练/验证/测试
+Validation Users: 29
+第 30 个人中，多少比例的数据用于训练/验证/测试
+Test Users: 30
+第 31 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 31
+第 32 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 32
+第 33 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 33
+第 34 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 34
+第 35 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 35
+第 36 个人中，多少比例的数据用于训练/验证/测试
+Test Users: 36
+第 37 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 37
+第 38 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 38
+第 39 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 39
+第 40 个人中，多少比例的数据用于训练/验证/测试
+Test Users: 40
+第 41 个人中，多少比例的数据用于训练/验证/测试
+Train Users: 41
+第 42 个人中，多少比例的数据用于训练/验证/测试
+Validation Users: 42
+Namespace(dataset='new_20_120', model='gru_v3', cd='MCroDom', source_dataset='Dataset without target!', SDom='aet0', TDom='uci2', g='0', e=None, encoder_cfg=PretrainModelConfig(feature_num=6, hidden=72, hidden_ff=144, n_layers=4, n_heads=4, seq_len=120, emb_norm=True), model_cfg=ClassifierModelConfig(seq_len=20, feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_cnn=0, conv_io=[], pool=[], flat_num=0, num_attn=0, num_head=0, atten_hidden=0, num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, encoder='limu_bert', encoder_cfg=<class 'argParse.PretrainModelConfig'>, input=6, save_path='checkpoint/'), seed=3431, batch_size=64, lr=0.001, Pre_epoch=500, Ada_epoch=50, warmup=0.1, save_steps=100, total_steps=500000000, lambda1=0.0, lambda2=0.0, alpha=0.6, data_parallel=False, sr=20, seq_len=20, dimension=6, activity_label_index=0, activity_label_size=6, activity_label=['still', 'walking', 'upstairs', 'downstairs', 'jogging', 'biking'], user_label_index=1, user_label_size=167, domain_label_index=2, domain_label_size=6, size=34530, note='hhar+uci+motion+shoaib+usc+ku', feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, save_path='checkpoint/', encoder='limu_bert', mask_cfg=MaskConfig(mask_ratio=0.15, mask_alpha=4, max_gram=10, mask_prob=0.8, replace_prob=0.0))
+Namespace(dataset='new_20_120', model='gru_v3', cd='MCroDom', source_dataset='Dataset without target!', SDom='aet0', TDom='uci2', g='0', e=None, encoder_cfg=PretrainModelConfig(feature_num=6, hidden=72, hidden_ff=144, n_layers=4, n_heads=4, seq_len=120, emb_norm=True), model_cfg=ClassifierModelConfig(seq_len=20, feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_cnn=0, conv_io=[], pool=[], flat_num=0, num_attn=0, num_head=0, atten_hidden=0, num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, encoder='limu_bert', encoder_cfg=<class 'argParse.PretrainModelConfig'>, input=6, save_path='checkpoint/'), seed=3431, batch_size=64, lr=0.001, Pre_epoch=500, Ada_epoch=50, warmup=0.1, save_steps=100, total_steps=500000000, lambda1=0.0, lambda2=0.0, alpha=0.6, data_parallel=False, sr=20, seq_len=20, dimension=6, activity_label_index=0, activity_label_size=6, activity_label=['still', 'walking', 'upstairs', 'downstairs', 'jogging', 'biking'], user_label_index=1, user_label_size=167, domain_label_index=2, domain_label_size=6, size=34530, note='hhar+uci+motion+shoaib+usc+ku', feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, save_path='checkpoint/', encoder='limu_bert', mask_cfg=MaskConfig(mask_ratio=0.15, mask_alpha=4, max_gram=10, mask_prob=0.8, replace_prob=0.0))
+cuda:0 (6 GPUs)
+checkpoint/aet0uci20/new_20_12011.pt
+checkpoint/aet0uci20/new_20_12011.pt
+cuda:0 (6 GPUs)
+diff xuemeng tensor(78.6516, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(59.2342, device='cuda:0')
+diff xuemeng tensor(65.9691, device='cuda:0')
+diff xuemeng tensor(84.7087, device='cuda:0')
+diff xuemeng tensor(59.1099, device='cuda:0')
+diff xuemeng tensor(84.0912, device='cuda:0')
+diff xuemeng tensor(0.0239, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(-0.7224, device='cuda:0')
+diff xuemeng tensor(-0.9666, device='cuda:0')
+diff xuemeng tensor(1.7930, device='cuda:0')
+diff xuemeng tensor(-1.4260, device='cuda:0')
+diff xuemeng tensor(-1.2081, device='cuda:0')
+diff xuemeng tensor(84.9442, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(65.9053, device='cuda:0')
+diff xuemeng tensor(58.9112, device='cuda:0')
+diff xuemeng tensor(85.3937, device='cuda:0')
+diff xuemeng tensor(50.4382, device='cuda:0')
+diff xuemeng tensor(87.1368, device='cuda:0')
+diff xuemeng tensor(99.2851, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(81.2311, device='cuda:0')
+diff xuemeng tensor(71.5773, device='cuda:0')
+diff xuemeng tensor(103.0457, device='cuda:0')
+diff xuemeng tensor(63.1522, device='cuda:0')
+diff xuemeng tensor(92.1020, device='cuda:0')
+diff xuemeng tensor(92.5105, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(74.2878, device='cuda:0')
+diff xuemeng tensor(64.3912, device='cuda:0')
+diff xuemeng tensor(105.0761, device='cuda:0')
+diff xuemeng tensor(71.0554, device='cuda:0')
+diff xuemeng tensor(79.1037, device='cuda:0')
+diff xuemeng tensor(92.2073, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(75.8047, device='cuda:0')
+diff xuemeng tensor(96.0031, device='cuda:0')
+diff xuemeng tensor(111.4849, device='cuda:0')
+diff xuemeng tensor(66.0968, device='cuda:0')
+diff xuemeng tensor(107.9623, device='cuda:0')
+diff xuemeng tensor(59.2796, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(56.2194, device='cuda:0')
+diff xuemeng tensor(37.8579, device='cuda:0')
+diff xuemeng tensor(60.6620, device='cuda:0')
+diff xuemeng tensor(37.3553, device='cuda:0')
+diff xuemeng tensor(58.3036, device='cuda:0')
+diff xuemeng tensor(40.6863, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(28.6226, device='cuda:0')
+diff xuemeng tensor(53.1279, device='cuda:0')
+diff xuemeng tensor(78.9832, device='cuda:0')
+diff xuemeng tensor(47.7701, device='cuda:0')
+diff xuemeng tensor(63.4050, device='cuda:0')
+diff xuemeng tensor(0.1215, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(1.4894, device='cuda:0')
+diff xuemeng tensor(0.4470, device='cuda:0')
+diff xuemeng tensor(3.1537, device='cuda:0')
+diff xuemeng tensor(0.5229, device='cuda:0')
+diff xuemeng tensor(0.0862, device='cuda:0')
+diff xuemeng tensor(30.3196, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(4.6702, device='cuda:0')
+diff xuemeng tensor(12.3710, device='cuda:0')
+diff xuemeng tensor(16.1821, device='cuda:0')
+diff xuemeng tensor(10.3728, device='cuda:0')
+diff xuemeng tensor(21.7218, device='cuda:0')
+diff xuemeng tensor(37.6480, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(29.2846, device='cuda:0')
+diff xuemeng tensor(49.2093, device='cuda:0')
+diff xuemeng tensor(77.8188, device='cuda:0')
+diff xuemeng tensor(49.3167, device='cuda:0')
+diff xuemeng tensor(58.4283, device='cuda:0')
+diff xuemeng tensor(104.9640, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(99.8426, device='cuda:0')
+diff xuemeng tensor(49.7450, device='cuda:0')
+diff xuemeng tensor(55.4718, device='cuda:0')
+diff xuemeng tensor(80.6404, device='cuda:0')
+diff xuemeng tensor(56.7377, device='cuda:0')
+diff xuemeng tensor(95.8777, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(76.9993, device='cuda:0')
+diff xuemeng tensor(81.8588, device='cuda:0')
+diff xuemeng tensor(111.8845, device='cuda:0')
+diff xuemeng tensor(70.0906, device='cuda:0')
+diff xuemeng tensor(111.4388, device='cuda:0')
+diff xuemeng tensor(68.3245, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(20.9977, device='cuda:0')
+diff xuemeng tensor(44.8698, device='cuda:0')
+diff xuemeng tensor(65.3015, device='cuda:0')
+diff xuemeng tensor(48.9778, device='cuda:0')
+diff xuemeng tensor(61.5204, device='cuda:0')
+diff xuemeng tensor(102.9927, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(85.6479, device='cuda:0')
+diff xuemeng tensor(91.4299, device='cuda:0')
+diff xuemeng tensor(91.6598, device='cuda:0')
+diff xuemeng tensor(73.8855, device='cuda:0')
+diff xuemeng tensor(92.7725, device='cuda:0')
+diff xuemeng tensor(103.9247, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(88.8754, device='cuda:0')
+diff xuemeng tensor(92.1706, device='cuda:0')
+diff xuemeng tensor(94.1103, device='cuda:0')
+diff xuemeng tensor(72.5650, device='cuda:0')
+diff xuemeng tensor(95.0007, device='cuda:0')
+diff xuemeng tensor(107.5735, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(89.1246, device='cuda:0')
+diff xuemeng tensor(80.9286, device='cuda:0')
+diff xuemeng tensor(89.0144, device='cuda:0')
+diff xuemeng tensor(75.5000, device='cuda:0')
+diff xuemeng tensor(89.2320, device='cuda:0')
+diff xuemeng tensor(8.1857, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(7.2245, device='cuda:0')
+diff xuemeng tensor(8.2517, device='cuda:0')
+diff xuemeng tensor(9.1200, device='cuda:0')
+diff xuemeng tensor(7.8272, device='cuda:0')
+diff xuemeng tensor(10.9387, device='cuda:0')
+diff xuemeng tensor(20.5762, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(16.2559, device='cuda:0')
+diff xuemeng tensor(41.7198, device='cuda:0')
+diff xuemeng tensor(57.3661, device='cuda:0')
+diff xuemeng tensor(44.1478, device='cuda:0')
+diff xuemeng tensor(48.7008, device='cuda:0')
+diff xuemeng tensor(98.6284, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(91.1371, device='cuda:0')
+diff xuemeng tensor(89.4396, device='cuda:0')
+diff xuemeng tensor(95.9344, device='cuda:0')
+diff xuemeng tensor(74.3064, device='cuda:0')
+diff xuemeng tensor(95.4762, device='cuda:0')
+diff xuemeng tensor(40.0864, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(21.3477, device='cuda:0')
+diff xuemeng tensor(36.8572, device='cuda:0')
+diff xuemeng tensor(53.6248, device='cuda:0')
+diff xuemeng tensor(39.7698, device='cuda:0')
+diff xuemeng tensor(49.2668, device='cuda:0')
+diff xuemeng tensor(96.0822, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(85.8659, device='cuda:0')
+diff xuemeng tensor(77.5987, device='cuda:0')
+diff xuemeng tensor(102.3417, device='cuda:0')
+diff xuemeng tensor(66.4097, device='cuda:0')
+diff xuemeng tensor(95.5274, device='cuda:0')
+results: 1324.2945556640625
+Namespace(dataset='new_20_120', model='gru_v3', cd='MCroDom', source_dataset='Dataset without target!', SDom='aet0', TDom='uci2', g='0', e=None, encoder_cfg=PretrainModelConfig(feature_num=6, hidden=72, hidden_ff=144, n_layers=4, n_heads=4, seq_len=120, emb_norm=True), model_cfg=ClassifierModelConfig(seq_len=20, feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_cnn=0, conv_io=[], pool=[], flat_num=0, num_attn=0, num_head=0, atten_hidden=0, num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, encoder='limu_bert', encoder_cfg=<class 'argParse.PretrainModelConfig'>, input=6, save_path='checkpoint/'), seed=3431, batch_size=64, lr=0.001, Pre_epoch=500, Ada_epoch=50, warmup=0.1, save_steps=100, total_steps=500000000, lambda1=0.0, lambda2=0.0, alpha=0.6, data_parallel=False, sr=20, seq_len=20, dimension=6, activity_label_index=0, activity_label_size=6, activity_label=['still', 'walking', 'upstairs', 'downstairs', 'jogging', 'biking'], user_label_index=1, user_label_size=167, domain_label_index=2, domain_label_size=6, size=34530, note='hhar+uci+motion+shoaib+usc+ku', feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, save_path='checkpoint/', encoder='limu_bert', mask_cfg=MaskConfig(mask_ratio=0.15, mask_alpha=4, max_gram=10, mask_prob=0.8, replace_prob=0.0))
+cuda:0 (6 GPUs)
+checkpoint/aet0uci20/new_20_12012.pt
+checkpoint/aet0uci20/new_20_12012.pt
+cuda:0 (6 GPUs)
+diff xuemeng tensor(75.4127, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(66.1595, device='cuda:0')
+diff xuemeng tensor(82.7007, device='cuda:0')
+diff xuemeng tensor(100.5275, device='cuda:0')
+diff xuemeng tensor(50.1732, device='cuda:0')
+diff xuemeng tensor(99.2159, device='cuda:0')
+diff xuemeng tensor(29.3610, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(44.7182, device='cuda:0')
+diff xuemeng tensor(16.3839, device='cuda:0')
+diff xuemeng tensor(13.8753, device='cuda:0')
+diff xuemeng tensor(11.5674, device='cuda:0')
+diff xuemeng tensor(20.0971, device='cuda:0')
+diff xuemeng tensor(74.1269, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(54.3550, device='cuda:0')
+diff xuemeng tensor(50.7198, device='cuda:0')
+diff xuemeng tensor(71.6221, device='cuda:0')
+diff xuemeng tensor(47.0799, device='cuda:0')
+diff xuemeng tensor(77.3623, device='cuda:0')
+diff xuemeng tensor(45.3900, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(29.9348, device='cuda:0')
+diff xuemeng tensor(50.3208, device='cuda:0')
+diff xuemeng tensor(88.1587, device='cuda:0')
+diff xuemeng tensor(43.3719, device='cuda:0')
+diff xuemeng tensor(56.6186, device='cuda:0')
+diff xuemeng tensor(90.6937, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(75.2772, device='cuda:0')
+diff xuemeng tensor(85.8509, device='cuda:0')
+diff xuemeng tensor(109.9993, device='cuda:0')
+diff xuemeng tensor(59.8322, device='cuda:0')
+diff xuemeng tensor(94.1898, device='cuda:0')
+diff xuemeng tensor(93.8488, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(75.9044, device='cuda:0')
+diff xuemeng tensor(100.7118, device='cuda:0')
+diff xuemeng tensor(114.0093, device='cuda:0')
+diff xuemeng tensor(67.4006, device='cuda:0')
+diff xuemeng tensor(110.9571, device='cuda:0')
+diff xuemeng tensor(36.3812, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(25.5778, device='cuda:0')
+diff xuemeng tensor(54.8719, device='cuda:0')
+diff xuemeng tensor(89.3783, device='cuda:0')
+diff xuemeng tensor(53.6086, device='cuda:0')
+diff xuemeng tensor(62.9960, device='cuda:0')
+diff xuemeng tensor(59.5465, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(53.3497, device='cuda:0')
+diff xuemeng tensor(33.1312, device='cuda:0')
+diff xuemeng tensor(40.4214, device='cuda:0')
+diff xuemeng tensor(27.4112, device='cuda:0')
+diff xuemeng tensor(45.7828, device='cuda:0')
+diff xuemeng tensor(1.1648, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(1.1702, device='cuda:0')
+diff xuemeng tensor(11.1191, device='cuda:0')
+diff xuemeng tensor(11.8400, device='cuda:0')
+diff xuemeng tensor(3.2465, device='cuda:0')
+diff xuemeng tensor(3.6238, device='cuda:0')
+diff xuemeng tensor(68.6503, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(67.9552, device='cuda:0')
+diff xuemeng tensor(66.3522, device='cuda:0')
+diff xuemeng tensor(98.3779, device='cuda:0')
+diff xuemeng tensor(55.9157, device='cuda:0')
+diff xuemeng tensor(70.4225, device='cuda:0')
+diff xuemeng tensor(110.8832, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(100.7896, device='cuda:0')
+diff xuemeng tensor(45.5984, device='cuda:0')
+diff xuemeng tensor(49.8088, device='cuda:0')
+diff xuemeng tensor(76.8176, device='cuda:0')
+diff xuemeng tensor(49.2424, device='cuda:0')
+diff xuemeng tensor(101.6809, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(80.7338, device='cuda:0')
+diff xuemeng tensor(92.8210, device='cuda:0')
+diff xuemeng tensor(109.8436, device='cuda:0')
+diff xuemeng tensor(68.5450, device='cuda:0')
+diff xuemeng tensor(107.8919, device='cuda:0')
+diff xuemeng tensor(0.6082, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(1.3036, device='cuda:0')
+diff xuemeng tensor(4.7241, device='cuda:0')
+diff xuemeng tensor(7.6525, device='cuda:0')
+diff xuemeng tensor(4.4289, device='cuda:0')
+diff xuemeng tensor(8.5466, device='cuda:0')
+diff xuemeng tensor(109.1474, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(83.0712, device='cuda:0')
+diff xuemeng tensor(90.9398, device='cuda:0')
+diff xuemeng tensor(106.7218, device='cuda:0')
+diff xuemeng tensor(72.4190, device='cuda:0')
+diff xuemeng tensor(100.4916, device='cuda:0')
+diff xuemeng tensor(104.0241, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(90.0369, device='cuda:0')
+diff xuemeng tensor(96.3358, device='cuda:0')
+diff xuemeng tensor(95.2398, device='cuda:0')
+diff xuemeng tensor(73.4799, device='cuda:0')
+diff xuemeng tensor(95.8330, device='cuda:0')
+diff xuemeng tensor(110.2222, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(92.3801, device='cuda:0')
+diff xuemeng tensor(83.3621, device='cuda:0')
+diff xuemeng tensor(84.7118, device='cuda:0')
+diff xuemeng tensor(77.5755, device='cuda:0')
+diff xuemeng tensor(85.5462, device='cuda:0')
+diff xuemeng tensor(24.3908, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(19.8511, device='cuda:0')
+diff xuemeng tensor(9.4924, device='cuda:0')
+diff xuemeng tensor(12.9837, device='cuda:0')
+diff xuemeng tensor(9.1721, device='cuda:0')
+diff xuemeng tensor(14.2332, device='cuda:0')
+diff xuemeng tensor(9.3265, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(10.4167, device='cuda:0')
+diff xuemeng tensor(18.6660, device='cuda:0')
+diff xuemeng tensor(21.8904, device='cuda:0')
+diff xuemeng tensor(14.1402, device='cuda:0')
+diff xuemeng tensor(14.9649, device='cuda:0')
+diff xuemeng tensor(98.9476, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(91.0194, device='cuda:0')
+diff xuemeng tensor(87.9961, device='cuda:0')
+diff xuemeng tensor(95.8751, device='cuda:0')
+diff xuemeng tensor(76.4278, device='cuda:0')
+diff xuemeng tensor(96.4938, device='cuda:0')
+diff xuemeng tensor(83.2316, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(83.0832, device='cuda:0')
+diff xuemeng tensor(66.5124, device='cuda:0')
+diff xuemeng tensor(94.9505, device='cuda:0')
+diff xuemeng tensor(66.1804, device='cuda:0')
+diff xuemeng tensor(85.8159, device='cuda:0')
+diff xuemeng tensor(99.1658, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(88.2163, device='cuda:0')
+diff xuemeng tensor(87.7567, device='cuda:0')
+diff xuemeng tensor(97.1443, device='cuda:0')
+diff xuemeng tensor(70.7222, device='cuda:0')
+diff xuemeng tensor(95.9013, device='cuda:0')
+results: 1306.441650390625
+Namespace(dataset='new_20_120', model='gru_v3', cd='MCroDom', source_dataset='Dataset without target!', SDom='aet0', TDom='uci2', g='0', e=None, encoder_cfg=PretrainModelConfig(feature_num=6, hidden=72, hidden_ff=144, n_layers=4, n_heads=4, seq_len=120, emb_norm=True), model_cfg=ClassifierModelConfig(seq_len=20, feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_cnn=0, conv_io=[], pool=[], flat_num=0, num_attn=0, num_head=0, atten_hidden=0, num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, encoder='limu_bert', encoder_cfg=<class 'argParse.PretrainModelConfig'>, input=6, save_path='checkpoint/'), seed=3431, batch_size=64, lr=0.001, Pre_epoch=500, Ada_epoch=50, warmup=0.1, save_steps=100, total_steps=500000000, lambda1=0.0, lambda2=0.0, alpha=0.6, data_parallel=False, sr=20, seq_len=20, dimension=6, activity_label_index=0, activity_label_size=6, activity_label=['still', 'walking', 'upstairs', 'downstairs', 'jogging', 'biking'], user_label_index=1, user_label_size=167, domain_label_index=2, domain_label_size=6, size=34530, note='hhar+uci+motion+shoaib+usc+ku', feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, save_path='checkpoint/', encoder='limu_bert', mask_cfg=MaskConfig(mask_ratio=0.15, mask_alpha=4, max_gram=10, mask_prob=0.8, replace_prob=0.0))
+cuda:0 (6 GPUs)
+checkpoint/aet0uci20/new_20_12013.pt
+checkpoint/aet0uci20/new_20_12013.pt
+cuda:0 (6 GPUs)
+diff xuemeng tensor(85.2078, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(72.3107, device='cuda:0')
+diff xuemeng tensor(77.9945, device='cuda:0')
+diff xuemeng tensor(108.2966, device='cuda:0')
+diff xuemeng tensor(64.5238, device='cuda:0')
+diff xuemeng tensor(97.2881, device='cuda:0')
+diff xuemeng tensor(19.6164, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(44.1868, device='cuda:0')
+diff xuemeng tensor(33.6636, device='cuda:0')
+diff xuemeng tensor(34.9932, device='cuda:0')
+diff xuemeng tensor(15.5593, device='cuda:0')
+diff xuemeng tensor(26.9323, device='cuda:0')
+diff xuemeng tensor(73.4281, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(66.5190, device='cuda:0')
+diff xuemeng tensor(56.9915, device='cuda:0')
+diff xuemeng tensor(71.0845, device='cuda:0')
+diff xuemeng tensor(50.1143, device='cuda:0')
+diff xuemeng tensor(57.6427, device='cuda:0')
+diff xuemeng tensor(107.4308, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(84.4439, device='cuda:0')
+diff xuemeng tensor(88.5845, device='cuda:0')
+diff xuemeng tensor(98.4702, device='cuda:0')
+diff xuemeng tensor(67.3970, device='cuda:0')
+diff xuemeng tensor(99.8849, device='cuda:0')
+diff xuemeng tensor(83.5676, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(73.0828, device='cuda:0')
+diff xuemeng tensor(70.6209, device='cuda:0')
+diff xuemeng tensor(99.4162, device='cuda:0')
+diff xuemeng tensor(59.4188, device='cuda:0')
+diff xuemeng tensor(71.8034, device='cuda:0')
+diff xuemeng tensor(81.4603, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(76.1219, device='cuda:0')
+diff xuemeng tensor(89.0118, device='cuda:0')
+diff xuemeng tensor(107.0874, device='cuda:0')
+diff xuemeng tensor(60.8964, device='cuda:0')
+diff xuemeng tensor(106.4602, device='cuda:0')
+diff xuemeng tensor(61.4650, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(42.3953, device='cuda:0')
+diff xuemeng tensor(46.2134, device='cuda:0')
+diff xuemeng tensor(68.7351, device='cuda:0')
+diff xuemeng tensor(49.7016, device='cuda:0')
+diff xuemeng tensor(51.7829, device='cuda:0')
+diff xuemeng tensor(90.0592, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(78.1814, device='cuda:0')
+diff xuemeng tensor(70.5998, device='cuda:0')
+diff xuemeng tensor(106.8260, device='cuda:0')
+diff xuemeng tensor(73.2253, device='cuda:0')
+diff xuemeng tensor(97.2630, device='cuda:0')
+diff xuemeng tensor(4.0945, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(3.2778, device='cuda:0')
+diff xuemeng tensor(8.5016, device='cuda:0')
+diff xuemeng tensor(13.8198, device='cuda:0')
+diff xuemeng tensor(7.7430, device='cuda:0')
+diff xuemeng tensor(7.7595, device='cuda:0')
+diff xuemeng tensor(30.2060, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(29.7089, device='cuda:0')
+diff xuemeng tensor(65.9612, device='cuda:0')
+diff xuemeng tensor(95.0338, device='cuda:0')
+diff xuemeng tensor(65.9112, device='cuda:0')
+diff xuemeng tensor(53.1799, device='cuda:0')
+diff xuemeng tensor(97.3215, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(80.1895, device='cuda:0')
+diff xuemeng tensor(77.0229, device='cuda:0')
+diff xuemeng tensor(108.6922, device='cuda:0')
+diff xuemeng tensor(74.1264, device='cuda:0')
+diff xuemeng tensor(78.4104, device='cuda:0')
+diff xuemeng tensor(94.3188, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(99.1792, device='cuda:0')
+diff xuemeng tensor(55.8379, device='cuda:0')
+diff xuemeng tensor(59.2408, device='cuda:0')
+diff xuemeng tensor(66.7540, device='cuda:0')
+diff xuemeng tensor(61.3554, device='cuda:0')
+diff xuemeng tensor(97.1249, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(77.6029, device='cuda:0')
+diff xuemeng tensor(84.2684, device='cuda:0')
+diff xuemeng tensor(112.9736, device='cuda:0')
+diff xuemeng tensor(64.9479, device='cuda:0')
+diff xuemeng tensor(107.1112, device='cuda:0')
+diff xuemeng tensor(92.4308, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(80.8970, device='cuda:0')
+diff xuemeng tensor(48.7471, device='cuda:0')
+diff xuemeng tensor(63.6219, device='cuda:0')
+diff xuemeng tensor(46.8102, device='cuda:0')
+diff xuemeng tensor(62.1945, device='cuda:0')
+diff xuemeng tensor(101.1492, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(85.3571, device='cuda:0')
+diff xuemeng tensor(87.5647, device='cuda:0')
+diff xuemeng tensor(96.6611, device='cuda:0')
+diff xuemeng tensor(69.7982, device='cuda:0')
+diff xuemeng tensor(94.8534, device='cuda:0')
+diff xuemeng tensor(99.6485, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(87.2771, device='cuda:0')
+diff xuemeng tensor(91.9175, device='cuda:0')
+diff xuemeng tensor(95.4315, device='cuda:0')
+diff xuemeng tensor(65.3056, device='cuda:0')
+diff xuemeng tensor(95.8775, device='cuda:0')
+diff xuemeng tensor(104.7191, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(91.2893, device='cuda:0')
+diff xuemeng tensor(79.4018, device='cuda:0')
+diff xuemeng tensor(91.9107, device='cuda:0')
+diff xuemeng tensor(69.1834, device='cuda:0')
+diff xuemeng tensor(92.0057, device='cuda:0')
+diff xuemeng tensor(47.5917, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(18.9156, device='cuda:0')
+diff xuemeng tensor(42.3324, device='cuda:0')
+diff xuemeng tensor(61.1896, device='cuda:0')
+diff xuemeng tensor(31.7674, device='cuda:0')
+diff xuemeng tensor(44.4991, device='cuda:0')
+diff xuemeng tensor(14.1019, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(5.2733, device='cuda:0')
+diff xuemeng tensor(30.0256, device='cuda:0')
+diff xuemeng tensor(42.3650, device='cuda:0')
+diff xuemeng tensor(23.8209, device='cuda:0')
+diff xuemeng tensor(26.8620, device='cuda:0')
+diff xuemeng tensor(100.7093, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(89.1932, device='cuda:0')
+diff xuemeng tensor(77.2867, device='cuda:0')
+diff xuemeng tensor(96.5977, device='cuda:0')
+diff xuemeng tensor(68.6847, device='cuda:0')
+diff xuemeng tensor(96.9512, device='cuda:0')
+diff xuemeng tensor(88.0650, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(88.7048, device='cuda:0')
+diff xuemeng tensor(70.9262, device='cuda:0')
+diff xuemeng tensor(92.9644, device='cuda:0')
+diff xuemeng tensor(54.8268, device='cuda:0')
+diff xuemeng tensor(80.9509, device='cuda:0')
+diff xuemeng tensor(96.6702, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(88.3820, device='cuda:0')
+diff xuemeng tensor(75.6630, device='cuda:0')
+diff xuemeng tensor(101.1161, device='cuda:0')
+diff xuemeng tensor(63.7892, device='cuda:0')
+diff xuemeng tensor(96.3651, device='cuda:0')
+results: 1535.0465087890625
+Namespace(dataset='new_20_120', model='gru_v3', cd='MCroDom', source_dataset='Dataset without target!', SDom='aet0', TDom='uci2', g='0', e=None, encoder_cfg=PretrainModelConfig(feature_num=6, hidden=72, hidden_ff=144, n_layers=4, n_heads=4, seq_len=120, emb_norm=True), model_cfg=ClassifierModelConfig(seq_len=20, feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_cnn=0, conv_io=[], pool=[], flat_num=0, num_attn=0, num_head=0, atten_hidden=0, num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, encoder='limu_bert', encoder_cfg=<class 'argParse.PretrainModelConfig'>, input=6, save_path='checkpoint/'), seed=3431, batch_size=64, lr=0.001, Pre_epoch=500, Ada_epoch=50, warmup=0.1, save_steps=100, total_steps=500000000, lambda1=0.0, lambda2=0.0, alpha=0.6, data_parallel=False, sr=20, seq_len=20, dimension=6, activity_label_index=0, activity_label_size=6, activity_label=['still', 'walking', 'upstairs', 'downstairs', 'jogging', 'biking'], user_label_index=1, user_label_size=167, domain_label_index=2, domain_label_size=6, size=34530, note='hhar+uci+motion+shoaib+usc+ku', feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, save_path='checkpoint/', encoder='limu_bert', mask_cfg=MaskConfig(mask_ratio=0.15, mask_alpha=4, max_gram=10, mask_prob=0.8, replace_prob=0.0))
+cuda:0 (6 GPUs)
+checkpoint/aet0uci20/new_20_12014.pt
+checkpoint/aet0uci20/new_20_12014.pt
+cuda:0 (6 GPUs)
+diff xuemeng tensor(82.1707, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(71.2285, device='cuda:0')
+diff xuemeng tensor(86.7919, device='cuda:0')
+diff xuemeng tensor(108.7509, device='cuda:0')
+diff xuemeng tensor(62.3295, device='cuda:0')
+diff xuemeng tensor(109.1050, device='cuda:0')
+diff xuemeng tensor(5.5353, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(7.3151, device='cuda:0')
+diff xuemeng tensor(7.6760, device='cuda:0')
+diff xuemeng tensor(10.4009, device='cuda:0')
+diff xuemeng tensor(7.0010, device='cuda:0')
+diff xuemeng tensor(7.9807, device='cuda:0')
+diff xuemeng tensor(67.4866, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(66.0241, device='cuda:0')
+diff xuemeng tensor(55.4048, device='cuda:0')
+diff xuemeng tensor(62.8904, device='cuda:0')
+diff xuemeng tensor(46.3460, device='cuda:0')
+diff xuemeng tensor(60.1339, device='cuda:0')
+diff xuemeng tensor(100.0333, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(85.2632, device='cuda:0')
+diff xuemeng tensor(70.9058, device='cuda:0')
+diff xuemeng tensor(106.7546, device='cuda:0')
+diff xuemeng tensor(70.8437, device='cuda:0')
+diff xuemeng tensor(85.4334, device='cuda:0')
+diff xuemeng tensor(97.2370, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(75.1116, device='cuda:0')
+diff xuemeng tensor(88.9239, device='cuda:0')
+diff xuemeng tensor(109.9775, device='cuda:0')
+diff xuemeng tensor(65.5539, device='cuda:0')
+diff xuemeng tensor(105.0472, device='cuda:0')
+diff xuemeng tensor(97.6457, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(75.5474, device='cuda:0')
+diff xuemeng tensor(92.7913, device='cuda:0')
+diff xuemeng tensor(111.2744, device='cuda:0')
+diff xuemeng tensor(64.0641, device='cuda:0')
+diff xuemeng tensor(108.7801, device='cuda:0')
+diff xuemeng tensor(81.9662, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(72.2367, device='cuda:0')
+diff xuemeng tensor(65.8946, device='cuda:0')
+diff xuemeng tensor(84.3559, device='cuda:0')
+diff xuemeng tensor(58.5142, device='cuda:0')
+diff xuemeng tensor(74.2133, device='cuda:0')
+diff xuemeng tensor(36.7142, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(20.4545, device='cuda:0')
+diff xuemeng tensor(36.8222, device='cuda:0')
+diff xuemeng tensor(52.4771, device='cuda:0')
+diff xuemeng tensor(36.9614, device='cuda:0')
+diff xuemeng tensor(40.5418, device='cuda:0')
+diff xuemeng tensor(74.4886, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(62.1274, device='cuda:0')
+diff xuemeng tensor(62.2763, device='cuda:0')
+diff xuemeng tensor(78.1291, device='cuda:0')
+diff xuemeng tensor(49.3209, device='cuda:0')
+diff xuemeng tensor(66.4762, device='cuda:0')
+diff xuemeng tensor(5.3806, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(8.2388, device='cuda:0')
+diff xuemeng tensor(7.0571, device='cuda:0')
+diff xuemeng tensor(13.4124, device='cuda:0')
+diff xuemeng tensor(11.3561, device='cuda:0')
+diff xuemeng tensor(12.2309, device='cuda:0')
+diff xuemeng tensor(84.2748, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(75.5952, device='cuda:0')
+diff xuemeng tensor(66.8437, device='cuda:0')
+diff xuemeng tensor(100.7968, device='cuda:0')
+diff xuemeng tensor(67.5225, device='cuda:0')
+diff xuemeng tensor(76.8334, device='cuda:0')
+diff xuemeng tensor(105.5708, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(98.9079, device='cuda:0')
+diff xuemeng tensor(42.2934, device='cuda:0')
+diff xuemeng tensor(49.2501, device='cuda:0')
+diff xuemeng tensor(67.2733, device='cuda:0')
+diff xuemeng tensor(47.1309, device='cuda:0')
+diff xuemeng tensor(89.8396, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(78.1449, device='cuda:0')
+diff xuemeng tensor(74.1931, device='cuda:0')
+diff xuemeng tensor(113.4117, device='cuda:0')
+diff xuemeng tensor(62.4256, device='cuda:0')
+diff xuemeng tensor(104.2160, device='cuda:0')
+diff xuemeng tensor(60.0993, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(49.6940, device='cuda:0')
+diff xuemeng tensor(24.4861, device='cuda:0')
+diff xuemeng tensor(43.6843, device='cuda:0')
+diff xuemeng tensor(30.6270, device='cuda:0')
+diff xuemeng tensor(39.1132, device='cuda:0')
+diff xuemeng tensor(89.4124, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(79.1347, device='cuda:0')
+diff xuemeng tensor(77.1316, device='cuda:0')
+diff xuemeng tensor(94.5411, device='cuda:0')
+diff xuemeng tensor(63.6347, device='cuda:0')
+diff xuemeng tensor(91.3244, device='cuda:0')
+diff xuemeng tensor(96.8067, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(86.1177, device='cuda:0')
+diff xuemeng tensor(93.6731, device='cuda:0')
+diff xuemeng tensor(99.9407, device='cuda:0')
+diff xuemeng tensor(67.5354, device='cuda:0')
+diff xuemeng tensor(96.9105, device='cuda:0')
+diff xuemeng tensor(101.3764, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(89.1203, device='cuda:0')
+diff xuemeng tensor(77.5093, device='cuda:0')
+diff xuemeng tensor(91.5466, device='cuda:0')
+diff xuemeng tensor(65.1504, device='cuda:0')
+diff xuemeng tensor(91.4504, device='cuda:0')
+diff xuemeng tensor(7.4840, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(7.3067, device='cuda:0')
+diff xuemeng tensor(17.3255, device='cuda:0')
+diff xuemeng tensor(19.9972, device='cuda:0')
+diff xuemeng tensor(13.1771, device='cuda:0')
+diff xuemeng tensor(13.5208, device='cuda:0')
+diff xuemeng tensor(84.4795, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(65.8786, device='cuda:0')
+diff xuemeng tensor(71.1960, device='cuda:0')
+diff xuemeng tensor(87.0802, device='cuda:0')
+diff xuemeng tensor(50.6317, device='cuda:0')
+diff xuemeng tensor(77.8697, device='cuda:0')
+diff xuemeng tensor(94.0244, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(91.1931, device='cuda:0')
+diff xuemeng tensor(73.3874, device='cuda:0')
+diff xuemeng tensor(96.7205, device='cuda:0')
+diff xuemeng tensor(64.9947, device='cuda:0')
+diff xuemeng tensor(96.9181, device='cuda:0')
+diff xuemeng tensor(101.1352, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(83.8853, device='cuda:0')
+diff xuemeng tensor(78.3074, device='cuda:0')
+diff xuemeng tensor(85.5450, device='cuda:0')
+diff xuemeng tensor(59.5981, device='cuda:0')
+diff xuemeng tensor(76.7104, device='cuda:0')
+diff xuemeng tensor(98.7544, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(89.2035, device='cuda:0')
+diff xuemeng tensor(77.1903, device='cuda:0')
+diff xuemeng tensor(97.2639, device='cuda:0')
+diff xuemeng tensor(64.4149, device='cuda:0')
+diff xuemeng tensor(95.3252, device='cuda:0')
+results: 1482.078125
+Namespace(dataset='new_20_120', model='gru_v3', cd='MCroDom', source_dataset='Dataset without target!', SDom='aet0', TDom='uci2', g='0', e=None, encoder_cfg=PretrainModelConfig(feature_num=6, hidden=72, hidden_ff=144, n_layers=4, n_heads=4, seq_len=120, emb_norm=True), model_cfg=ClassifierModelConfig(seq_len=20, feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_cnn=0, conv_io=[], pool=[], flat_num=0, num_attn=0, num_head=0, atten_hidden=0, num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, encoder='limu_bert', encoder_cfg=<class 'argParse.PretrainModelConfig'>, input=6, save_path='checkpoint/'), seed=3431, batch_size=64, lr=0.001, Pre_epoch=500, Ada_epoch=50, warmup=0.1, save_steps=100, total_steps=500000000, lambda1=0.0, lambda2=0.0, alpha=0.6, data_parallel=False, sr=20, seq_len=20, dimension=6, activity_label_index=0, activity_label_size=6, activity_label=['still', 'walking', 'upstairs', 'downstairs', 'jogging', 'biking'], user_label_index=1, user_label_size=167, domain_label_index=2, domain_label_size=6, size=34530, note='hhar+uci+motion+shoaib+usc+ku', feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, save_path='checkpoint/', encoder='limu_bert', mask_cfg=MaskConfig(mask_ratio=0.15, mask_alpha=4, max_gram=10, mask_prob=0.8, replace_prob=0.0))
+cuda:0 (6 GPUs)
+checkpoint/aet0uci20/new_20_12015.pt
+checkpoint/aet0uci20/new_20_12015.pt
+cuda:0 (6 GPUs)
+diff xuemeng tensor(90.9908, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(74.5591, device='cuda:0')
+diff xuemeng tensor(92.6162, device='cuda:0')
+diff xuemeng tensor(107.2058, device='cuda:0')
+diff xuemeng tensor(66.9232, device='cuda:0')
+diff xuemeng tensor(105.8936, device='cuda:0')
+diff xuemeng tensor(-0.6316, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(-0.0610, device='cuda:0')
+diff xuemeng tensor(-0.7356, device='cuda:0')
+diff xuemeng tensor(2.5484, device='cuda:0')
+diff xuemeng tensor(-0.6171, device='cuda:0')
+diff xuemeng tensor(1.0243, device='cuda:0')
+diff xuemeng tensor(4.7899, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(8.4770, device='cuda:0')
+diff xuemeng tensor(6.8008, device='cuda:0')
+diff xuemeng tensor(9.8608, device='cuda:0')
+diff xuemeng tensor(7.4984, device='cuda:0')
+diff xuemeng tensor(8.2715, device='cuda:0')
+diff xuemeng tensor(8.6349, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(7.8643, device='cuda:0')
+diff xuemeng tensor(6.8685, device='cuda:0')
+diff xuemeng tensor(15.9483, device='cuda:0')
+diff xuemeng tensor(15.5444, device='cuda:0')
+diff xuemeng tensor(8.4456, device='cuda:0')
+diff xuemeng tensor(8.7845, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(9.5879, device='cuda:0')
+diff xuemeng tensor(8.2866, device='cuda:0')
+diff xuemeng tensor(17.6487, device='cuda:0')
+diff xuemeng tensor(17.0885, device='cuda:0')
+diff xuemeng tensor(12.8619, device='cuda:0')
+diff xuemeng tensor(80.6296, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(86.9670, device='cuda:0')
+diff xuemeng tensor(56.7735, device='cuda:0')
+diff xuemeng tensor(105.3315, device='cuda:0')
+diff xuemeng tensor(61.4620, device='cuda:0')
+diff xuemeng tensor(79.7372, device='cuda:0')
+diff xuemeng tensor(85.9580, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(61.9928, device='cuda:0')
+diff xuemeng tensor(52.9266, device='cuda:0')
+diff xuemeng tensor(91.9873, device='cuda:0')
+diff xuemeng tensor(57.7470, device='cuda:0')
+diff xuemeng tensor(70.5354, device='cuda:0')
+diff xuemeng tensor(93.9965, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(75.6610, device='cuda:0')
+diff xuemeng tensor(84.6546, device='cuda:0')
+diff xuemeng tensor(103.3510, device='cuda:0')
+diff xuemeng tensor(62.2076, device='cuda:0')
+diff xuemeng tensor(102.5100, device='cuda:0')
+diff xuemeng tensor(62.5767, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(62.2964, device='cuda:0')
+diff xuemeng tensor(53.6799, device='cuda:0')
+diff xuemeng tensor(69.8048, device='cuda:0')
+diff xuemeng tensor(44.4011, device='cuda:0')
+diff xuemeng tensor(65.9748, device='cuda:0')
+diff xuemeng tensor(63.1852, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(57.0934, device='cuda:0')
+diff xuemeng tensor(45.6247, device='cuda:0')
+diff xuemeng tensor(57.4840, device='cuda:0')
+diff xuemeng tensor(35.4505, device='cuda:0')
+diff xuemeng tensor(58.9073, device='cuda:0')
+diff xuemeng tensor(11.1305, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(13.5645, device='cuda:0')
+diff xuemeng tensor(12.7239, device='cuda:0')
+diff xuemeng tensor(19.3616, device='cuda:0')
+diff xuemeng tensor(13.0107, device='cuda:0')
+diff xuemeng tensor(14.5255, device='cuda:0')
+diff xuemeng tensor(82.3190, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(81.3459, device='cuda:0')
+diff xuemeng tensor(60.6202, device='cuda:0')
+diff xuemeng tensor(104.6465, device='cuda:0')
+diff xuemeng tensor(60.5239, device='cuda:0')
+diff xuemeng tensor(81.7451, device='cuda:0')
+diff xuemeng tensor(97.1455, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(103.7355, device='cuda:0')
+diff xuemeng tensor(50.2832, device='cuda:0')
+diff xuemeng tensor(48.0218, device='cuda:0')
+diff xuemeng tensor(74.5279, device='cuda:0')
+diff xuemeng tensor(47.0932, device='cuda:0')
+diff xuemeng tensor(93.6432, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(77.4011, device='cuda:0')
+diff xuemeng tensor(77.6019, device='cuda:0')
+diff xuemeng tensor(109.3921, device='cuda:0')
+diff xuemeng tensor(66.5269, device='cuda:0')
+diff xuemeng tensor(108.1201, device='cuda:0')
+diff xuemeng tensor(16.1007, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(16.5337, device='cuda:0')
+diff xuemeng tensor(26.2265, device='cuda:0')
+diff xuemeng tensor(45.1530, device='cuda:0')
+diff xuemeng tensor(26.1175, device='cuda:0')
+diff xuemeng tensor(29.4744, device='cuda:0')
+diff xuemeng tensor(96.9126, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(84.2229, device='cuda:0')
+diff xuemeng tensor(80.0415, device='cuda:0')
+diff xuemeng tensor(89.7040, device='cuda:0')
+diff xuemeng tensor(74.5719, device='cuda:0')
+diff xuemeng tensor(95.2383, device='cuda:0')
+diff xuemeng tensor(104.4530, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(90.5617, device='cuda:0')
+diff xuemeng tensor(92.8633, device='cuda:0')
+diff xuemeng tensor(97.6543, device='cuda:0')
+diff xuemeng tensor(76.2350, device='cuda:0')
+diff xuemeng tensor(96.0829, device='cuda:0')
+diff xuemeng tensor(103.4240, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(95.0117, device='cuda:0')
+diff xuemeng tensor(74.9296, device='cuda:0')
+diff xuemeng tensor(86.8351, device='cuda:0')
+diff xuemeng tensor(73.3081, device='cuda:0')
+diff xuemeng tensor(86.7599, device='cuda:0')
+diff xuemeng tensor(17.3363, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(14.6503, device='cuda:0')
+diff xuemeng tensor(17.8004, device='cuda:0')
+diff xuemeng tensor(28.9169, device='cuda:0')
+diff xuemeng tensor(22.3904, device='cuda:0')
+diff xuemeng tensor(19.1186, device='cuda:0')
+diff xuemeng tensor(21.4992, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(22.2303, device='cuda:0')
+diff xuemeng tensor(28.8753, device='cuda:0')
+diff xuemeng tensor(49.0833, device='cuda:0')
+diff xuemeng tensor(34.0300, device='cuda:0')
+diff xuemeng tensor(37.1944, device='cuda:0')
+diff xuemeng tensor(103.3926, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(92.9384, device='cuda:0')
+diff xuemeng tensor(84.4395, device='cuda:0')
+diff xuemeng tensor(97.7239, device='cuda:0')
+diff xuemeng tensor(73.4333, device='cuda:0')
+diff xuemeng tensor(97.3030, device='cuda:0')
+diff xuemeng tensor(76.6884, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(86.1818, device='cuda:0')
+diff xuemeng tensor(61.3112, device='cuda:0')
+diff xuemeng tensor(90.0109, device='cuda:0')
+diff xuemeng tensor(55.5610, device='cuda:0')
+diff xuemeng tensor(67.2912, device='cuda:0')
+diff xuemeng tensor(110.2526, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(91.9938, device='cuda:0')
+diff xuemeng tensor(75.7135, device='cuda:0')
+diff xuemeng tensor(92.4234, device='cuda:0')
+diff xuemeng tensor(69.9349, device='cuda:0')
+diff xuemeng tensor(96.2175, device='cuda:0')
+results: 1319.5413818359375
+Namespace(dataset='new_20_120', model='gru_v3', cd='MCroDom', source_dataset='Dataset without target!', SDom='aet0', TDom='uci2', g='0', e=None, encoder_cfg=PretrainModelConfig(feature_num=6, hidden=72, hidden_ff=144, n_layers=4, n_heads=4, seq_len=120, emb_norm=True), model_cfg=ClassifierModelConfig(seq_len=20, feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_cnn=0, conv_io=[], pool=[], flat_num=0, num_attn=0, num_head=0, atten_hidden=0, num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, encoder='limu_bert', encoder_cfg=<class 'argParse.PretrainModelConfig'>, input=6, save_path='checkpoint/'), seed=3431, batch_size=64, lr=0.001, Pre_epoch=500, Ada_epoch=50, warmup=0.1, save_steps=100, total_steps=500000000, lambda1=0.0, lambda2=0.0, alpha=0.6, data_parallel=False, sr=20, seq_len=20, dimension=6, activity_label_index=0, activity_label_size=6, activity_label=['still', 'walking', 'upstairs', 'downstairs', 'jogging', 'biking'], user_label_index=1, user_label_size=167, domain_label_index=2, domain_label_size=6, size=34530, note='hhar+uci+motion+shoaib+usc+ku', feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, save_path='checkpoint/', encoder='limu_bert', mask_cfg=MaskConfig(mask_ratio=0.15, mask_alpha=4, max_gram=10, mask_prob=0.8, replace_prob=0.0))
+cuda:0 (6 GPUs)
+checkpoint/aet0uci20/new_20_12016.pt
+checkpoint/aet0uci20/new_20_12016.pt
+cuda:0 (6 GPUs)
+diff xuemeng tensor(73.7186, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(24.1984, device='cuda:0')
+diff xuemeng tensor(67.3186, device='cuda:0')
+diff xuemeng tensor(98.8153, device='cuda:0')
+diff xuemeng tensor(62.7186, device='cuda:0')
+diff xuemeng tensor(87.1588, device='cuda:0')
+diff xuemeng tensor(37.3108, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(8.5838, device='cuda:0')
+diff xuemeng tensor(40.1794, device='cuda:0')
+diff xuemeng tensor(55.5554, device='cuda:0')
+diff xuemeng tensor(37.9645, device='cuda:0')
+diff xuemeng tensor(53.8144, device='cuda:0')
+diff xuemeng tensor(58.4486, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(38.6075, device='cuda:0')
+diff xuemeng tensor(50.5371, device='cuda:0')
+diff xuemeng tensor(57.3791, device='cuda:0')
+diff xuemeng tensor(45.9680, device='cuda:0')
+diff xuemeng tensor(58.9375, device='cuda:0')
+diff xuemeng tensor(26.2158, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(23.3721, device='cuda:0')
+diff xuemeng tensor(34.3893, device='cuda:0')
+diff xuemeng tensor(44.3245, device='cuda:0')
+diff xuemeng tensor(34.4876, device='cuda:0')
+diff xuemeng tensor(51.2626, device='cuda:0')
+diff xuemeng tensor(48.9852, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(35.3123, device='cuda:0')
+diff xuemeng tensor(53.6243, device='cuda:0')
+diff xuemeng tensor(92.2156, device='cuda:0')
+diff xuemeng tensor(65.0058, device='cuda:0')
+diff xuemeng tensor(85.8823, device='cuda:0')
+diff xuemeng tensor(69.4674, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(25.3368, device='cuda:0')
+diff xuemeng tensor(56.8064, device='cuda:0')
+diff xuemeng tensor(104.3378, device='cuda:0')
+diff xuemeng tensor(68.8105, device='cuda:0')
+diff xuemeng tensor(83.9588, device='cuda:0')
+diff xuemeng tensor(88.6605, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(71.9285, device='cuda:0')
+diff xuemeng tensor(78.5673, device='cuda:0')
+diff xuemeng tensor(106.6841, device='cuda:0')
+diff xuemeng tensor(54.4337, device='cuda:0')
+diff xuemeng tensor(104.1022, device='cuda:0')
+diff xuemeng tensor(21.0285, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(23.3429, device='cuda:0')
+diff xuemeng tensor(28.3684, device='cuda:0')
+diff xuemeng tensor(37.8873, device='cuda:0')
+diff xuemeng tensor(35.8761, device='cuda:0')
+diff xuemeng tensor(44.9619, device='cuda:0')
+diff xuemeng tensor(18.4070, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(17.7676, device='cuda:0')
+diff xuemeng tensor(23.5351, device='cuda:0')
+diff xuemeng tensor(29.8283, device='cuda:0')
+diff xuemeng tensor(29.3823, device='cuda:0')
+diff xuemeng tensor(32.1395, device='cuda:0')
+diff xuemeng tensor(9.0673, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(9.8222, device='cuda:0')
+diff xuemeng tensor(8.2006, device='cuda:0')
+diff xuemeng tensor(14.4145, device='cuda:0')
+diff xuemeng tensor(9.1443, device='cuda:0')
+diff xuemeng tensor(7.6454, device='cuda:0')
+diff xuemeng tensor(82.0814, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(73.2818, device='cuda:0')
+diff xuemeng tensor(71.2718, device='cuda:0')
+diff xuemeng tensor(96.9743, device='cuda:0')
+diff xuemeng tensor(71.7442, device='cuda:0')
+diff xuemeng tensor(97.3716, device='cuda:0')
+diff xuemeng tensor(92.4876, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(97.3894, device='cuda:0')
+diff xuemeng tensor(47.6540, device='cuda:0')
+diff xuemeng tensor(58.7755, device='cuda:0')
+diff xuemeng tensor(76.1206, device='cuda:0')
+diff xuemeng tensor(54.6957, device='cuda:0')
+diff xuemeng tensor(84.6409, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(76.6910, device='cuda:0')
+diff xuemeng tensor(74.3189, device='cuda:0')
+diff xuemeng tensor(110.6596, device='cuda:0')
+diff xuemeng tensor(68.4746, device='cuda:0')
+diff xuemeng tensor(105.9555, device='cuda:0')
+diff xuemeng tensor(20.9546, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(19.8158, device='cuda:0')
+diff xuemeng tensor(32.4258, device='cuda:0')
+diff xuemeng tensor(41.9256, device='cuda:0')
+diff xuemeng tensor(32.3158, device='cuda:0')
+diff xuemeng tensor(35.4286, device='cuda:0')
+diff xuemeng tensor(98.8642, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(84.1356, device='cuda:0')
+diff xuemeng tensor(83.3069, device='cuda:0')
+diff xuemeng tensor(89.4515, device='cuda:0')
+diff xuemeng tensor(59.8619, device='cuda:0')
+diff xuemeng tensor(90.2719, device='cuda:0')
+diff xuemeng tensor(96.3540, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(80.7757, device='cuda:0')
+diff xuemeng tensor(88.0874, device='cuda:0')
+diff xuemeng tensor(98.2463, device='cuda:0')
+diff xuemeng tensor(67.6048, device='cuda:0')
+diff xuemeng tensor(96.5643, device='cuda:0')
+diff xuemeng tensor(100.5623, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(88.0410, device='cuda:0')
+diff xuemeng tensor(84.9069, device='cuda:0')
+diff xuemeng tensor(85.5976, device='cuda:0')
+diff xuemeng tensor(74.1010, device='cuda:0')
+diff xuemeng tensor(87.2805, device='cuda:0')
+diff xuemeng tensor(8.6124, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(11.6761, device='cuda:0')
+diff xuemeng tensor(9.1538, device='cuda:0')
+diff xuemeng tensor(17.6119, device='cuda:0')
+diff xuemeng tensor(18.7303, device='cuda:0')
+diff xuemeng tensor(14.5557, device='cuda:0')
+diff xuemeng tensor(13.0884, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(12.9251, device='cuda:0')
+diff xuemeng tensor(15.8870, device='cuda:0')
+diff xuemeng tensor(18.4324, device='cuda:0')
+diff xuemeng tensor(15.9831, device='cuda:0')
+diff xuemeng tensor(14.7939, device='cuda:0')
+diff xuemeng tensor(104.2255, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(87.5544, device='cuda:0')
+diff xuemeng tensor(85.6837, device='cuda:0')
+diff xuemeng tensor(94.0181, device='cuda:0')
+diff xuemeng tensor(71.8209, device='cuda:0')
+diff xuemeng tensor(92.0407, device='cuda:0')
+diff xuemeng tensor(43.3036, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(30.0357, device='cuda:0')
+diff xuemeng tensor(44.5332, device='cuda:0')
+diff xuemeng tensor(65.2160, device='cuda:0')
+diff xuemeng tensor(48.4183, device='cuda:0')
+diff xuemeng tensor(58.7111, device='cuda:0')
+diff xuemeng tensor(94.3402, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(83.5633, device='cuda:0')
+diff xuemeng tensor(79.1816, device='cuda:0')
+diff xuemeng tensor(97.1798, device='cuda:0')
+diff xuemeng tensor(63.5367, device='cuda:0')
+diff xuemeng tensor(96.6587, device='cuda:0')
+results: 1259.1907958984375
+Namespace(dataset='new_20_120', model='gru_v3', cd='MCroDom', source_dataset='Dataset without target!', SDom='aet0', TDom='uci2', g='0', e=None, encoder_cfg=PretrainModelConfig(feature_num=6, hidden=72, hidden_ff=144, n_layers=4, n_heads=4, seq_len=120, emb_norm=True), model_cfg=ClassifierModelConfig(seq_len=20, feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_cnn=0, conv_io=[], pool=[], flat_num=0, num_attn=0, num_head=0, atten_hidden=0, num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, encoder='limu_bert', encoder_cfg=<class 'argParse.PretrainModelConfig'>, input=6, save_path='checkpoint/'), seed=3431, batch_size=64, lr=0.001, Pre_epoch=500, Ada_epoch=50, warmup=0.1, save_steps=100, total_steps=500000000, lambda1=0.0, lambda2=0.0, alpha=0.6, data_parallel=False, sr=20, seq_len=20, dimension=6, activity_label_index=0, activity_label_size=6, activity_label=['still', 'walking', 'upstairs', 'downstairs', 'jogging', 'biking'], user_label_index=1, user_label_size=167, domain_label_index=2, domain_label_size=6, size=34530, note='hhar+uci+motion+shoaib+usc+ku', feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, save_path='checkpoint/', encoder='limu_bert', mask_cfg=MaskConfig(mask_ratio=0.15, mask_alpha=4, max_gram=10, mask_prob=0.8, replace_prob=0.0))
+cuda:0 (6 GPUs)
+checkpoint/aet0uci20/new_20_12017.pt
+checkpoint/aet0uci20/new_20_12017.pt
+cuda:0 (6 GPUs)
+diff xuemeng tensor(-1.5215, device='cuda:0')
+diff xuemeng tensor(8.9826, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(11.0347, device='cuda:0')
+diff xuemeng tensor(11.0810, device='cuda:0')
+diff xuemeng tensor(16.5751, device='cuda:0')
+diff xuemeng tensor(11.4253, device='cuda:0')
+diff xuemeng tensor(15.7092, device='cuda:0')
+diff xuemeng tensor(21.3874, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(19.2089, device='cuda:0')
+diff xuemeng tensor(35.2533, device='cuda:0')
+diff xuemeng tensor(48.3147, device='cuda:0')
+diff xuemeng tensor(26.7558, device='cuda:0')
+diff xuemeng tensor(32.4551, device='cuda:0')
+diff xuemeng tensor(64.0142, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(64.9305, device='cuda:0')
+diff xuemeng tensor(72.9000, device='cuda:0')
+diff xuemeng tensor(99.8703, device='cuda:0')
+diff xuemeng tensor(58.5582, device='cuda:0')
+diff xuemeng tensor(93.9777, device='cuda:0')
+diff xuemeng tensor(67.2423, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(72.3725, device='cuda:0')
+diff xuemeng tensor(64.1954, device='cuda:0')
+diff xuemeng tensor(106.8750, device='cuda:0')
+diff xuemeng tensor(67.4819, device='cuda:0')
+diff xuemeng tensor(97.6204, device='cuda:0')
+diff xuemeng tensor(92.8350, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(78.9386, device='cuda:0')
+diff xuemeng tensor(96.2164, device='cuda:0')
+diff xuemeng tensor(113.3047, device='cuda:0')
+diff xuemeng tensor(70.1979, device='cuda:0')
+diff xuemeng tensor(109.1938, device='cuda:0')
+diff xuemeng tensor(83.4645, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(73.3978, device='cuda:0')
+diff xuemeng tensor(81.9253, device='cuda:0')
+diff xuemeng tensor(105.5741, device='cuda:0')
+diff xuemeng tensor(63.3263, device='cuda:0')
+diff xuemeng tensor(101.1063, device='cuda:0')
+diff xuemeng tensor(39.9608, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(67.3159, device='cuda:0')
+diff xuemeng tensor(61.2150, device='cuda:0')
+diff xuemeng tensor(94.5330, device='cuda:0')
+diff xuemeng tensor(58.8658, device='cuda:0')
+diff xuemeng tensor(81.6801, device='cuda:0')
+diff xuemeng tensor(19.6025, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(23.1772, device='cuda:0')
+diff xuemeng tensor(31.4741, device='cuda:0')
+diff xuemeng tensor(49.9959, device='cuda:0')
+diff xuemeng tensor(31.8827, device='cuda:0')
+diff xuemeng tensor(33.2649, device='cuda:0')
+diff xuemeng tensor(36.7787, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(35.4533, device='cuda:0')
+diff xuemeng tensor(40.4429, device='cuda:0')
+diff xuemeng tensor(64.2252, device='cuda:0')
+diff xuemeng tensor(43.9082, device='cuda:0')
+diff xuemeng tensor(40.9340, device='cuda:0')
+diff xuemeng tensor(82.6776, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(82.1059, device='cuda:0')
+diff xuemeng tensor(88.8835, device='cuda:0')
+diff xuemeng tensor(109.9089, device='cuda:0')
+diff xuemeng tensor(66.2557, device='cuda:0')
+diff xuemeng tensor(105.1877, device='cuda:0')
+diff xuemeng tensor(90.7697, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(97.9790, device='cuda:0')
+diff xuemeng tensor(40.9219, device='cuda:0')
+diff xuemeng tensor(48.5191, device='cuda:0')
+diff xuemeng tensor(80.1984, device='cuda:0')
+diff xuemeng tensor(47.6543, device='cuda:0')
+diff xuemeng tensor(91.3362, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(77.9209, device='cuda:0')
+diff xuemeng tensor(89.7432, device='cuda:0')
+diff xuemeng tensor(113.7750, device='cuda:0')
+diff xuemeng tensor(73.4223, device='cuda:0')
+diff xuemeng tensor(108.0039, device='cuda:0')
+diff xuemeng tensor(54.6361, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(80.9251, device='cuda:0')
+diff xuemeng tensor(53.2080, device='cuda:0')
+diff xuemeng tensor(76.3290, device='cuda:0')
+diff xuemeng tensor(50.9986, device='cuda:0')
+diff xuemeng tensor(73.9769, device='cuda:0')
+diff xuemeng tensor(95.3547, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(84.3256, device='cuda:0')
+diff xuemeng tensor(84.8329, device='cuda:0')
+diff xuemeng tensor(89.2579, device='cuda:0')
+diff xuemeng tensor(67.6365, device='cuda:0')
+diff xuemeng tensor(93.5613, device='cuda:0')
+diff xuemeng tensor(93.7569, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(81.0822, device='cuda:0')
+diff xuemeng tensor(90.7958, device='cuda:0')
+diff xuemeng tensor(97.2019, device='cuda:0')
+diff xuemeng tensor(71.9066, device='cuda:0')
+diff xuemeng tensor(96.5129, device='cuda:0')
+diff xuemeng tensor(93.2003, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(90.0402, device='cuda:0')
+diff xuemeng tensor(82.8908, device='cuda:0')
+diff xuemeng tensor(92.2434, device='cuda:0')
+diff xuemeng tensor(74.1966, device='cuda:0')
+diff xuemeng tensor(92.4320, device='cuda:0')
+diff xuemeng tensor(11.2267, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(15.2692, device='cuda:0')
+diff xuemeng tensor(22.4449, device='cuda:0')
+diff xuemeng tensor(20.9376, device='cuda:0')
+diff xuemeng tensor(12.6227, device='cuda:0')
+diff xuemeng tensor(16.6268, device='cuda:0')
+diff xuemeng tensor(26.9741, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(29.0090, device='cuda:0')
+diff xuemeng tensor(39.4401, device='cuda:0')
+diff xuemeng tensor(60.7158, device='cuda:0')
+diff xuemeng tensor(29.7388, device='cuda:0')
+diff xuemeng tensor(43.7185, device='cuda:0')
+diff xuemeng tensor(95.6089, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(86.9977, device='cuda:0')
+diff xuemeng tensor(67.7574, device='cuda:0')
+diff xuemeng tensor(98.0142, device='cuda:0')
+diff xuemeng tensor(76.0373, device='cuda:0')
+diff xuemeng tensor(98.8146, device='cuda:0')
+diff xuemeng tensor(70.9998, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(83.7185, device='cuda:0')
+diff xuemeng tensor(63.9869, device='cuda:0')
+diff xuemeng tensor(95.2322, device='cuda:0')
+diff xuemeng tensor(59.3306, device='cuda:0')
+diff xuemeng tensor(93.6305, device='cuda:0')
+diff xuemeng tensor(96.6583, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(84.4211, device='cuda:0')
+diff xuemeng tensor(81.3006, device='cuda:0')
+diff xuemeng tensor(96.2265, device='cuda:0')
+diff xuemeng tensor(75.8895, device='cuda:0')
+diff xuemeng tensor(91.9143, device='cuda:0')
+results: 1402.119873046875
+Namespace(dataset='new_20_120', model='gru_v3', cd='MCroDom', source_dataset='Dataset without target!', SDom='aet0', TDom='uci2', g='0', e=None, encoder_cfg=PretrainModelConfig(feature_num=6, hidden=72, hidden_ff=144, n_layers=4, n_heads=4, seq_len=120, emb_norm=True), model_cfg=ClassifierModelConfig(seq_len=20, feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_cnn=0, conv_io=[], pool=[], flat_num=0, num_attn=0, num_head=0, atten_hidden=0, num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, encoder='limu_bert', encoder_cfg=<class 'argParse.PretrainModelConfig'>, input=6, save_path='checkpoint/'), seed=3431, batch_size=64, lr=0.001, Pre_epoch=500, Ada_epoch=50, warmup=0.1, save_steps=100, total_steps=500000000, lambda1=0.0, lambda2=0.0, alpha=0.6, data_parallel=False, sr=20, seq_len=20, dimension=6, activity_label_index=0, activity_label_size=6, activity_label=['still', 'walking', 'upstairs', 'downstairs', 'jogging', 'biking'], user_label_index=1, user_label_size=167, domain_label_index=2, domain_label_size=6, size=34530, note='hhar+uci+motion+shoaib+usc+ku', feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, save_path='checkpoint/', encoder='limu_bert', mask_cfg=MaskConfig(mask_ratio=0.15, mask_alpha=4, max_gram=10, mask_prob=0.8, replace_prob=0.0))
+cuda:0 (6 GPUs)
+checkpoint/aet0uci20/new_20_12018.pt
+checkpoint/aet0uci20/new_20_12018.pt
+cuda:0 (6 GPUs)
+diff xuemeng tensor(66.3495, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(53.2516, device='cuda:0')
+diff xuemeng tensor(64.9837, device='cuda:0')
+diff xuemeng tensor(82.9306, device='cuda:0')
+diff xuemeng tensor(54.2457, device='cuda:0')
+diff xuemeng tensor(70.0357, device='cuda:0')
+diff xuemeng tensor(67.5732, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(51.2537, device='cuda:0')
+diff xuemeng tensor(52.0200, device='cuda:0')
+diff xuemeng tensor(80.0767, device='cuda:0')
+diff xuemeng tensor(49.3259, device='cuda:0')
+diff xuemeng tensor(78.8145, device='cuda:0')
+diff xuemeng tensor(51.7109, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(28.4749, device='cuda:0')
+diff xuemeng tensor(56.5380, device='cuda:0')
+diff xuemeng tensor(97.5979, device='cuda:0')
+diff xuemeng tensor(73.2016, device='cuda:0')
+diff xuemeng tensor(65.9989, device='cuda:0')
+diff xuemeng tensor(78.8977, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(66.8774, device='cuda:0')
+diff xuemeng tensor(73.5538, device='cuda:0')
+diff xuemeng tensor(98.9010, device='cuda:0')
+diff xuemeng tensor(69.5328, device='cuda:0')
+diff xuemeng tensor(69.1868, device='cuda:0')
+diff xuemeng tensor(81.9055, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(69.3522, device='cuda:0')
+diff xuemeng tensor(75.1421, device='cuda:0')
+diff xuemeng tensor(99.3564, device='cuda:0')
+diff xuemeng tensor(50.4759, device='cuda:0')
+diff xuemeng tensor(94.6192, device='cuda:0')
+diff xuemeng tensor(35.3487, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(28.0542, device='cuda:0')
+diff xuemeng tensor(43.3874, device='cuda:0')
+diff xuemeng tensor(80.0666, device='cuda:0')
+diff xuemeng tensor(53.8045, device='cuda:0')
+diff xuemeng tensor(53.4304, device='cuda:0')
+diff xuemeng tensor(4.1820, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(7.1800, device='cuda:0')
+diff xuemeng tensor(8.0769, device='cuda:0')
+diff xuemeng tensor(12.6591, device='cuda:0')
+diff xuemeng tensor(9.7680, device='cuda:0')
+diff xuemeng tensor(13.6223, device='cuda:0')
+diff xuemeng tensor(5.2578, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(7.1918, device='cuda:0')
+diff xuemeng tensor(5.8602, device='cuda:0')
+diff xuemeng tensor(8.3996, device='cuda:0')
+diff xuemeng tensor(6.6944, device='cuda:0')
+diff xuemeng tensor(11.4782, device='cuda:0')
+diff xuemeng tensor(51.8664, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(37.9326, device='cuda:0')
+diff xuemeng tensor(70.6920, device='cuda:0')
+diff xuemeng tensor(106.5877, device='cuda:0')
+diff xuemeng tensor(77.3617, device='cuda:0')
+diff xuemeng tensor(70.3606, device='cuda:0')
+diff xuemeng tensor(96.2870, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(94.6182, device='cuda:0')
+diff xuemeng tensor(52.1428, device='cuda:0')
+diff xuemeng tensor(58.6678, device='cuda:0')
+diff xuemeng tensor(67.3847, device='cuda:0')
+diff xuemeng tensor(58.5194, device='cuda:0')
+diff xuemeng tensor(85.9643, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(73.0938, device='cuda:0')
+diff xuemeng tensor(72.7901, device='cuda:0')
+diff xuemeng tensor(99.5553, device='cuda:0')
+diff xuemeng tensor(65.3247, device='cuda:0')
+diff xuemeng tensor(85.3928, device='cuda:0')
+diff xuemeng tensor(14.1137, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(6.8752, device='cuda:0')
+diff xuemeng tensor(11.8107, device='cuda:0')
+diff xuemeng tensor(31.2105, device='cuda:0')
+diff xuemeng tensor(23.9878, device='cuda:0')
+diff xuemeng tensor(21.8437, device='cuda:0')
+diff xuemeng tensor(91.4637, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(75.9271, device='cuda:0')
+diff xuemeng tensor(75.8304, device='cuda:0')
+diff xuemeng tensor(90.8882, device='cuda:0')
+diff xuemeng tensor(60.4114, device='cuda:0')
+diff xuemeng tensor(86.6775, device='cuda:0')
+diff xuemeng tensor(93.9088, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(81.6552, device='cuda:0')
+diff xuemeng tensor(90.5143, device='cuda:0')
+diff xuemeng tensor(89.4684, device='cuda:0')
+diff xuemeng tensor(63.8377, device='cuda:0')
+diff xuemeng tensor(88.0909, device='cuda:0')
+diff xuemeng tensor(97.2218, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(88.3483, device='cuda:0')
+diff xuemeng tensor(75.4072, device='cuda:0')
+diff xuemeng tensor(80.5674, device='cuda:0')
+diff xuemeng tensor(67.2094, device='cuda:0')
+diff xuemeng tensor(81.0470, device='cuda:0')
+diff xuemeng tensor(6.0194, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(4.4494, device='cuda:0')
+diff xuemeng tensor(6.7722, device='cuda:0')
+diff xuemeng tensor(10.2164, device='cuda:0')
+diff xuemeng tensor(9.1313, device='cuda:0')
+diff xuemeng tensor(5.3888, device='cuda:0')
+diff xuemeng tensor(10.6381, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(14.5163, device='cuda:0')
+diff xuemeng tensor(14.4097, device='cuda:0')
+diff xuemeng tensor(25.8618, device='cuda:0')
+diff xuemeng tensor(17.1929, device='cuda:0')
+diff xuemeng tensor(14.8896, device='cuda:0')
+diff xuemeng tensor(96.7912, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(84.0516, device='cuda:0')
+diff xuemeng tensor(79.9454, device='cuda:0')
+diff xuemeng tensor(93.7837, device='cuda:0')
+diff xuemeng tensor(66.7673, device='cuda:0')
+diff xuemeng tensor(91.8303, device='cuda:0')
+diff xuemeng tensor(59.4951, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(45.5594, device='cuda:0')
+diff xuemeng tensor(60.4044, device='cuda:0')
+diff xuemeng tensor(97.6729, device='cuda:0')
+diff xuemeng tensor(69.0087, device='cuda:0')
+diff xuemeng tensor(72.6290, device='cuda:0')
+diff xuemeng tensor(93.0032, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(84.8967, device='cuda:0')
+diff xuemeng tensor(74.4603, device='cuda:0')
+diff xuemeng tensor(93.7921, device='cuda:0')
+diff xuemeng tensor(61.9174, device='cuda:0')
+diff xuemeng tensor(89.3860, device='cuda:0')
+results: 1155.7308349609375
+Namespace(dataset='new_20_120', model='gru_v3', cd='MCroDom', source_dataset='Dataset without target!', SDom='aet0', TDom='uci2', g='0', e=None, encoder_cfg=PretrainModelConfig(feature_num=6, hidden=72, hidden_ff=144, n_layers=4, n_heads=4, seq_len=120, emb_norm=True), model_cfg=ClassifierModelConfig(seq_len=20, feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_cnn=0, conv_io=[], pool=[], flat_num=0, num_attn=0, num_head=0, atten_hidden=0, num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, encoder='limu_bert', encoder_cfg=<class 'argParse.PretrainModelConfig'>, input=6, save_path='checkpoint/'), seed=3431, batch_size=64, lr=0.001, Pre_epoch=500, Ada_epoch=50, warmup=0.1, save_steps=100, total_steps=500000000, lambda1=0.0, lambda2=0.0, alpha=0.6, data_parallel=False, sr=20, seq_len=20, dimension=6, activity_label_index=0, activity_label_size=6, activity_label=['still', 'walking', 'upstairs', 'downstairs', 'jogging', 'biking'], user_label_index=1, user_label_size=167, domain_label_index=2, domain_label_size=6, size=34530, note='hhar+uci+motion+shoaib+usc+ku', feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, save_path='checkpoint/', encoder='limu_bert', mask_cfg=MaskConfig(mask_ratio=0.15, mask_alpha=4, max_gram=10, mask_prob=0.8, replace_prob=0.0))
+cuda:0 (6 GPUs)
+checkpoint/aet0uci20/new_20_12019.pt
+checkpoint/aet0uci20/new_20_12019.pt
+cuda:0 (6 GPUs)
+diff xuemeng tensor(74.7754, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(45.5004, device='cuda:0')
+diff xuemeng tensor(71.0019, device='cuda:0')
+diff xuemeng tensor(85.1883, device='cuda:0')
+diff xuemeng tensor(46.9992, device='cuda:0')
+diff xuemeng tensor(90.7417, device='cuda:0')
+diff xuemeng tensor(4.1093, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(1.5934, device='cuda:0')
+diff xuemeng tensor(0.2354, device='cuda:0')
+diff xuemeng tensor(4.5360, device='cuda:0')
+diff xuemeng tensor(0.7941, device='cuda:0')
+diff xuemeng tensor(-0.2233, device='cuda:0')
+diff xuemeng tensor(41.2206, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(25.7780, device='cuda:0')
+diff xuemeng tensor(49.2106, device='cuda:0')
+diff xuemeng tensor(71.6301, device='cuda:0')
+diff xuemeng tensor(44.8218, device='cuda:0')
+diff xuemeng tensor(45.0786, device='cuda:0')
+diff xuemeng tensor(49.5786, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(24.2077, device='cuda:0')
+diff xuemeng tensor(48.1862, device='cuda:0')
+diff xuemeng tensor(87.7408, device='cuda:0')
+diff xuemeng tensor(59.5417, device='cuda:0')
+diff xuemeng tensor(59.4359, device='cuda:0')
+diff xuemeng tensor(85.6840, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(74.0355, device='cuda:0')
+diff xuemeng tensor(80.1631, device='cuda:0')
+diff xuemeng tensor(104.5090, device='cuda:0')
+diff xuemeng tensor(61.0851, device='cuda:0')
+diff xuemeng tensor(96.5991, device='cuda:0')
+diff xuemeng tensor(99.7495, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(72.8797, device='cuda:0')
+diff xuemeng tensor(90.5698, device='cuda:0')
+diff xuemeng tensor(113.6998, device='cuda:0')
+diff xuemeng tensor(66.7888, device='cuda:0')
+diff xuemeng tensor(109.7869, device='cuda:0')
+diff xuemeng tensor(52.3255, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(17.9249, device='cuda:0')
+diff xuemeng tensor(42.4230, device='cuda:0')
+diff xuemeng tensor(58.3042, device='cuda:0')
+diff xuemeng tensor(40.8094, device='cuda:0')
+diff xuemeng tensor(50.4000, device='cuda:0')
+diff xuemeng tensor(31.6663, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(20.0236, device='cuda:0')
+diff xuemeng tensor(25.8420, device='cuda:0')
+diff xuemeng tensor(43.9050, device='cuda:0')
+diff xuemeng tensor(20.1593, device='cuda:0')
+diff xuemeng tensor(24.7544, device='cuda:0')
+diff xuemeng tensor(48.8302, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(32.9664, device='cuda:0')
+diff xuemeng tensor(61.5863, device='cuda:0')
+diff xuemeng tensor(89.2906, device='cuda:0')
+diff xuemeng tensor(50.9394, device='cuda:0')
+diff xuemeng tensor(45.8499, device='cuda:0')
+diff xuemeng tensor(95.5742, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(97.5761, device='cuda:0')
+diff xuemeng tensor(44.9788, device='cuda:0')
+diff xuemeng tensor(58.8230, device='cuda:0')
+diff xuemeng tensor(76.8903, device='cuda:0')
+diff xuemeng tensor(52.8354, device='cuda:0')
+diff xuemeng tensor(94.5712, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(74.1386, device='cuda:0')
+diff xuemeng tensor(82.0220, device='cuda:0')
+diff xuemeng tensor(108.0672, device='cuda:0')
+diff xuemeng tensor(67.5933, device='cuda:0')
+diff xuemeng tensor(104.8589, device='cuda:0')
+diff xuemeng tensor(9.2836, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(5.9816, device='cuda:0')
+diff xuemeng tensor(6.3889, device='cuda:0')
+diff xuemeng tensor(16.8993, device='cuda:0')
+diff xuemeng tensor(6.3422, device='cuda:0')
+diff xuemeng tensor(14.3498, device='cuda:0')
+diff xuemeng tensor(105.1103, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(79.4424, device='cuda:0')
+diff xuemeng tensor(84.3735, device='cuda:0')
+diff xuemeng tensor(92.1035, device='cuda:0')
+diff xuemeng tensor(69.6066, device='cuda:0')
+diff xuemeng tensor(92.0411, device='cuda:0')
+diff xuemeng tensor(106.3664, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(86.5326, device='cuda:0')
+diff xuemeng tensor(90.0755, device='cuda:0')
+diff xuemeng tensor(93.4759, device='cuda:0')
+diff xuemeng tensor(71.8540, device='cuda:0')
+diff xuemeng tensor(94.2572, device='cuda:0')
+diff xuemeng tensor(110.1499, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(89.2615, device='cuda:0')
+diff xuemeng tensor(82.0356, device='cuda:0')
+diff xuemeng tensor(84.0110, device='cuda:0')
+diff xuemeng tensor(75.3719, device='cuda:0')
+diff xuemeng tensor(82.5810, device='cuda:0')
+diff xuemeng tensor(94.4741, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(68.1676, device='cuda:0')
+diff xuemeng tensor(79.6596, device='cuda:0')
+diff xuemeng tensor(105.8113, device='cuda:0')
+diff xuemeng tensor(57.5468, device='cuda:0')
+diff xuemeng tensor(90.9312, device='cuda:0')
+diff xuemeng tensor(26.5209, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(5.1204, device='cuda:0')
+diff xuemeng tensor(19.6983, device='cuda:0')
+diff xuemeng tensor(19.5176, device='cuda:0')
+diff xuemeng tensor(12.7867, device='cuda:0')
+diff xuemeng tensor(14.8926, device='cuda:0')
+diff xuemeng tensor(100.7261, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(83.3971, device='cuda:0')
+diff xuemeng tensor(78.4093, device='cuda:0')
+diff xuemeng tensor(93.5767, device='cuda:0')
+diff xuemeng tensor(75.1288, device='cuda:0')
+diff xuemeng tensor(93.5273, device='cuda:0')
+diff xuemeng tensor(43.1458, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(19.0514, device='cuda:0')
+diff xuemeng tensor(42.5761, device='cuda:0')
+diff xuemeng tensor(71.8625, device='cuda:0')
+diff xuemeng tensor(42.0130, device='cuda:0')
+diff xuemeng tensor(60.1410, device='cuda:0')
+diff xuemeng tensor(94.3940, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(81.8688, device='cuda:0')
+diff xuemeng tensor(78.7753, device='cuda:0')
+diff xuemeng tensor(99.5803, device='cuda:0')
+diff xuemeng tensor(68.1852, device='cuda:0')
+diff xuemeng tensor(95.7190, device='cuda:0')
+results: 1228.043701171875
+Namespace(dataset='new_20_120', model='gru_v3', cd='MCroDom', source_dataset='Dataset without target!', SDom='aet0', TDom='uci2', g='0', e=None, encoder_cfg=PretrainModelConfig(feature_num=6, hidden=72, hidden_ff=144, n_layers=4, n_heads=4, seq_len=120, emb_norm=True), model_cfg=ClassifierModelConfig(seq_len=20, feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_cnn=0, conv_io=[], pool=[], flat_num=0, num_attn=0, num_head=0, atten_hidden=0, num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, encoder='limu_bert', encoder_cfg=<class 'argParse.PretrainModelConfig'>, input=6, save_path='checkpoint/'), seed=3431, batch_size=64, lr=0.001, Pre_epoch=500, Ada_epoch=50, warmup=0.1, save_steps=100, total_steps=500000000, lambda1=0.0, lambda2=0.0, alpha=0.6, data_parallel=False, sr=20, seq_len=20, dimension=6, activity_label_index=0, activity_label_size=6, activity_label=['still', 'walking', 'upstairs', 'downstairs', 'jogging', 'biking'], user_label_index=1, user_label_size=167, domain_label_index=2, domain_label_size=6, size=34530, note='hhar+uci+motion+shoaib+usc+ku', feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, save_path='checkpoint/', encoder='limu_bert', mask_cfg=MaskConfig(mask_ratio=0.15, mask_alpha=4, max_gram=10, mask_prob=0.8, replace_prob=0.0))
+cuda:0 (6 GPUs)
+checkpoint/aet0uci20/new_20_12020.pt
+checkpoint/aet0uci20/new_20_12020.pt
+cuda:0 (6 GPUs)
+diff xuemeng tensor(83.1969, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(71.0424, device='cuda:0')
+diff xuemeng tensor(88.4165, device='cuda:0')
+diff xuemeng tensor(105.3972, device='cuda:0')
+diff xuemeng tensor(63.2299, device='cuda:0')
+diff xuemeng tensor(105.2935, device='cuda:0')
+diff xuemeng tensor(34.8264, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(49.0583, device='cuda:0')
+diff xuemeng tensor(14.8245, device='cuda:0')
+diff xuemeng tensor(14.4725, device='cuda:0')
+diff xuemeng tensor(8.6060, device='cuda:0')
+diff xuemeng tensor(24.2712, device='cuda:0')
+diff xuemeng tensor(60.5962, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(22.6030, device='cuda:0')
+diff xuemeng tensor(57.1736, device='cuda:0')
+diff xuemeng tensor(85.0476, device='cuda:0')
+diff xuemeng tensor(49.2143, device='cuda:0')
+diff xuemeng tensor(66.7980, device='cuda:0')
+diff xuemeng tensor(90.8569, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(86.9483, device='cuda:0')
+diff xuemeng tensor(86.6191, device='cuda:0')
+diff xuemeng tensor(103.7802, device='cuda:0')
+diff xuemeng tensor(74.1354, device='cuda:0')
+diff xuemeng tensor(98.3517, device='cuda:0')
+diff xuemeng tensor(96.0350, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(78.3905, device='cuda:0')
+diff xuemeng tensor(92.6941, device='cuda:0')
+diff xuemeng tensor(111.4991, device='cuda:0')
+diff xuemeng tensor(58.3538, device='cuda:0')
+diff xuemeng tensor(95.0205, device='cuda:0')
+diff xuemeng tensor(94.3444, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(74.6484, device='cuda:0')
+diff xuemeng tensor(94.0276, device='cuda:0')
+diff xuemeng tensor(109.0527, device='cuda:0')
+diff xuemeng tensor(64.6246, device='cuda:0')
+diff xuemeng tensor(107.6785, device='cuda:0')
+diff xuemeng tensor(97.3842, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(80.8260, device='cuda:0')
+diff xuemeng tensor(84.6590, device='cuda:0')
+diff xuemeng tensor(104.3141, device='cuda:0')
+diff xuemeng tensor(53.3255, device='cuda:0')
+diff xuemeng tensor(91.8986, device='cuda:0')
+diff xuemeng tensor(24.7772, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(13.8102, device='cuda:0')
+diff xuemeng tensor(21.0752, device='cuda:0')
+diff xuemeng tensor(23.1366, device='cuda:0')
+diff xuemeng tensor(14.1410, device='cuda:0')
+diff xuemeng tensor(15.6677, device='cuda:0')
+diff xuemeng tensor(-1.6649, device='cuda:0')
+diff xuemeng tensor(90.6387, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(69.5238, device='cuda:0')
+diff xuemeng tensor(71.6636, device='cuda:0')
+diff xuemeng tensor(92.2047, device='cuda:0')
+diff xuemeng tensor(62.8410, device='cuda:0')
+diff xuemeng tensor(87.1533, device='cuda:0')
+diff xuemeng tensor(103.9701, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(99.5700, device='cuda:0')
+diff xuemeng tensor(47.5013, device='cuda:0')
+diff xuemeng tensor(56.3656, device='cuda:0')
+diff xuemeng tensor(71.7457, device='cuda:0')
+diff xuemeng tensor(53.7322, device='cuda:0')
+diff xuemeng tensor(98.6223, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(79.4506, device='cuda:0')
+diff xuemeng tensor(81.2225, device='cuda:0')
+diff xuemeng tensor(110.7049, device='cuda:0')
+diff xuemeng tensor(65.6090, device='cuda:0')
+diff xuemeng tensor(101.6787, device='cuda:0')
+diff xuemeng tensor(45.7726, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(7.7751, device='cuda:0')
+diff xuemeng tensor(25.0773, device='cuda:0')
+diff xuemeng tensor(35.4613, device='cuda:0')
+diff xuemeng tensor(27.4142, device='cuda:0')
+diff xuemeng tensor(39.3390, device='cuda:0')
+diff xuemeng tensor(91.8388, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(81.3394, device='cuda:0')
+diff xuemeng tensor(77.3788, device='cuda:0')
+diff xuemeng tensor(92.1801, device='cuda:0')
+diff xuemeng tensor(64.2516, device='cuda:0')
+diff xuemeng tensor(90.0415, device='cuda:0')
+diff xuemeng tensor(104.0348, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(87.8754, device='cuda:0')
+diff xuemeng tensor(90.1404, device='cuda:0')
+diff xuemeng tensor(93.7523, device='cuda:0')
+diff xuemeng tensor(68.0280, device='cuda:0')
+diff xuemeng tensor(96.5215, device='cuda:0')
+diff xuemeng tensor(102.5621, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(88.8214, device='cuda:0')
+diff xuemeng tensor(75.4732, device='cuda:0')
+diff xuemeng tensor(91.2082, device='cuda:0')
+diff xuemeng tensor(71.5100, device='cuda:0')
+diff xuemeng tensor(91.0306, device='cuda:0')
+diff xuemeng tensor(68.0931, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(52.2071, device='cuda:0')
+diff xuemeng tensor(58.4972, device='cuda:0')
+diff xuemeng tensor(64.1586, device='cuda:0')
+diff xuemeng tensor(42.9660, device='cuda:0')
+diff xuemeng tensor(44.6109, device='cuda:0')
+diff xuemeng tensor(57.3415, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(53.7152, device='cuda:0')
+diff xuemeng tensor(38.2011, device='cuda:0')
+diff xuemeng tensor(43.2190, device='cuda:0')
+diff xuemeng tensor(27.4103, device='cuda:0')
+diff xuemeng tensor(38.3768, device='cuda:0')
+diff xuemeng tensor(98.5609, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(89.4954, device='cuda:0')
+diff xuemeng tensor(81.9027, device='cuda:0')
+diff xuemeng tensor(99.8829, device='cuda:0')
+diff xuemeng tensor(70.9467, device='cuda:0')
+diff xuemeng tensor(96.5906, device='cuda:0')
+diff xuemeng tensor(90.7342, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(83.6989, device='cuda:0')
+diff xuemeng tensor(57.3983, device='cuda:0')
+diff xuemeng tensor(81.8970, device='cuda:0')
+diff xuemeng tensor(53.7463, device='cuda:0')
+diff xuemeng tensor(76.6445, device='cuda:0')
+diff xuemeng tensor(97.0207, device='cuda:0', grad_fn=<SubBackward0>)
+diff xuemeng tensor(85.3173, device='cuda:0')
+diff xuemeng tensor(76.9256, device='cuda:0')
+diff xuemeng tensor(98.6863, device='cuda:0')
+diff xuemeng tensor(66.7778, device='cuda:0')
+diff xuemeng tensor(96.4055, device='cuda:0')
+results: 1419.8221435546875
+Namespace(dataset='new_20_120', model='gru_v3', cd='MCroDom', source_dataset='Dataset without target!', SDom='aet0', TDom='uci2', g='0', e=None, encoder_cfg=PretrainModelConfig(feature_num=6, hidden=72, hidden_ff=144, n_layers=4, n_heads=4, seq_len=120, emb_norm=True), model_cfg=ClassifierModelConfig(seq_len=20, feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_cnn=0, conv_io=[], pool=[], flat_num=0, num_attn=0, num_head=0, atten_hidden=0, num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, encoder='limu_bert', encoder_cfg=<class 'argParse.PretrainModelConfig'>, input=6, save_path='checkpoint/'), seed=3431, batch_size=64, lr=0.001, Pre_epoch=500, Ada_epoch=50, warmup=0.1, save_steps=100, total_steps=500000000, lambda1=0.0, lambda2=0.0, alpha=0.6, data_parallel=False, sr=20, seq_len=20, dimension=6, activity_label_index=0, activity_label_size=6, activity_label=['still', 'walking', 'upstairs', 'downstairs', 'jogging', 'biking'], user_label_index=1, user_label_size=167, domain_label_index=2, domain_label_size=6, size=34530, note='hhar+uci+motion+shoaib+usc+ku', feature_num=6, num_rnn=1, num_layers=[1], rnn_io=[[6, 10]], rnn_bidirection=[True], num_linear=1, linear_io=[[20, 3]], activ=False, dropout=True, save_path='checkpoint/', encoder='limu_bert', mask_cfg=MaskConfig(mask_ratio=0.15, mask_alpha=4, max_gram=10, mask_prob=0.8, replace_prob=0.0))
+cuda:0 (6 GPUs)
+checkpoint/aet0uci20/new_20_120bestval.pt
+[[1155.7308349609375, 'checkpoint/aet0uci20/new_20_12018.pt'], [1228.043701171875, 'checkpoint/aet0uci20/new_20_12019.pt'], [1259.1907958984375, 'checkpoint/aet0uci20/new_20_12016.pt'], [1306.441650390625, 'checkpoint/aet0uci20/new_20_12012.pt'], [1319.5413818359375, 'checkpoint/aet0uci20/new_20_12015.pt'], [1324.2945556640625, 'checkpoint/aet0uci20/new_20_12011.pt'], [1402.119873046875, 'checkpoint/aet0uci20/new_20_12017.pt'], [1419.8221435546875, 'checkpoint/aet0uci20/new_20_12020.pt'], [1482.078125, 'checkpoint/aet0uci20/new_20_12014.pt'], [1535.0465087890625, 'checkpoint/aet0uci20/new_20_12013.pt']]
+checkpoint/aet0uci20/new_20_12018.pt
+The selected model is checkpoint/aet0uci20/new_20_12018.pt
+cuda:0 (6 GPUs)
+cuda:0 (6 GPUs)
+cuda:0 (6 GPUs)
+distance_sum: tensor(207.4542)
+Distance_Sort [[0, tensor(207.4542), 0.95703125, 0.9287671402193716]]
+Epoch 1/50 , Accuracy: 0.957, F1: 0.929
+cuda:0 (6 GPUs)
+distance_sum: tensor(211.4524)
+Distance_Sort [[1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [0, tensor(207.4542), 0.95703125, 0.9287671402193716]]
+Epoch 2/50 , Accuracy: 0.960, F1: 0.935
+cuda:0 (6 GPUs)
+distance_sum: tensor(212.9974)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [0, tensor(207.4542), 0.95703125, 0.9287671402193716]]
+Epoch 3/50 , Accuracy: 0.965, F1: 0.942
+cuda:0 (6 GPUs)
+distance_sum: tensor(210.6190)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [0, tensor(207.4542), 0.95703125, 0.9287671402193716]]
+Epoch 4/50 , Accuracy: 0.964, F1: 0.942
+cuda:0 (6 GPUs)
+distance_sum: tensor(209.3177)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [0, tensor(207.4542), 0.95703125, 0.9287671402193716]]
+Epoch 5/50 , Accuracy: 0.960, F1: 0.933
+cuda:0 (6 GPUs)
+distance_sum: tensor(195.7152)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [5, tensor(195.7152), 0.9609375, 0.9347844867219947]]
+Epoch 6/50 , Accuracy: 0.961, F1: 0.935
+cuda:0 (6 GPUs)
+distance_sum: tensor(212.0264)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [5, tensor(195.7152), 0.9609375, 0.9347844867219947]]
+Epoch 7/50 , Accuracy: 0.959, F1: 0.932
+cuda:0 (6 GPUs)
+distance_sum: tensor(193.8596)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598]]
+Epoch 8/50 , Accuracy: 0.956, F1: 0.927
+cuda:0 (6 GPUs)
+distance_sum: tensor(184.0193)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494]]
+Epoch 9/50 , Accuracy: 0.964, F1: 0.940
+cuda:0 (6 GPUs)
+distance_sum: tensor(184.5501)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494]]
+Epoch 10/50 , Accuracy: 0.960, F1: 0.935
+cuda:0 (6 GPUs)
+distance_sum: tensor(182.0065)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812]]
+Epoch 11/50 , Accuracy: 0.964, F1: 0.941
+cuda:0 (6 GPUs)
+distance_sum: tensor(198.0701)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812]]
+Epoch 12/50 , Accuracy: 0.957, F1: 0.930
+cuda:0 (6 GPUs)
+distance_sum: tensor(193.0025)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812]]
+Epoch 13/50 , Accuracy: 0.968, F1: 0.948
+cuda:0 (6 GPUs)
+distance_sum: tensor(169.0330)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 14/50 , Accuracy: 0.963, F1: 0.939
+cuda:0 (6 GPUs)
+distance_sum: tensor(179.5809)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 15/50 , Accuracy: 0.958, F1: 0.932
+cuda:0 (6 GPUs)
+distance_sum: tensor(191.7366)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 16/50 , Accuracy: 0.960, F1: 0.934
+cuda:0 (6 GPUs)
+distance_sum: tensor(185.6587)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 17/50 , Accuracy: 0.964, F1: 0.942
+cuda:0 (6 GPUs)
+distance_sum: tensor(193.8792)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 18/50 , Accuracy: 0.967, F1: 0.946
+cuda:0 (6 GPUs)
+distance_sum: tensor(211.9045)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 19/50 , Accuracy: 0.954, F1: 0.924
+cuda:0 (6 GPUs)
+distance_sum: tensor(212.8323)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 20/50 , Accuracy: 0.965, F1: 0.945
+cuda:0 (6 GPUs)
+distance_sum: tensor(207.8985)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 21/50 , Accuracy: 0.958, F1: 0.931
+cuda:0 (6 GPUs)
+distance_sum: tensor(206.1097)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 22/50 , Accuracy: 0.962, F1: 0.938
+cuda:0 (6 GPUs)
+distance_sum: tensor(205.4453)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 23/50 , Accuracy: 0.971, F1: 0.952
+cuda:0 (6 GPUs)
+distance_sum: tensor(199.8942)
+Distance_Sort [[2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 24/50 , Accuracy: 0.965, F1: 0.944
+cuda:0 (6 GPUs)
+distance_sum: tensor(214.6250)
+Distance_Sort [[24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 25/50 , Accuracy: 0.962, F1: 0.937
+cuda:0 (6 GPUs)
+distance_sum: tensor(213.3513)
+Distance_Sort [[24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 26/50 , Accuracy: 0.964, F1: 0.941
+cuda:0 (6 GPUs)
+distance_sum: tensor(202.8820)
+Distance_Sort [[24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 27/50 , Accuracy: 0.956, F1: 0.931
+cuda:0 (6 GPUs)
+distance_sum: tensor(202.8938)
+Distance_Sort [[24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 28/50 , Accuracy: 0.963, F1: 0.940
+cuda:0 (6 GPUs)
+distance_sum: tensor(214.6093)
+Distance_Sort [[24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 29/50 , Accuracy: 0.964, F1: 0.942
+cuda:0 (6 GPUs)
+distance_sum: tensor(212.3684)
+Distance_Sort [[24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 30/50 , Accuracy: 0.964, F1: 0.940
+cuda:0 (6 GPUs)
+distance_sum: tensor(208.2248)
+Distance_Sort [[24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 31/50 , Accuracy: 0.965, F1: 0.943
+cuda:0 (6 GPUs)
+distance_sum: tensor(212.8166)
+Distance_Sort [[24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 32/50 , Accuracy: 0.962, F1: 0.940
+cuda:0 (6 GPUs)
+distance_sum: tensor(208.4803)
+Distance_Sort [[24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 33/50 , Accuracy: 0.969, F1: 0.948
+cuda:0 (6 GPUs)
+distance_sum: tensor(224.1075)
+Distance_Sort [[33, tensor(224.1075), 0.966796875, 0.9459530805549982], [24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 34/50 , Accuracy: 0.967, F1: 0.946
+cuda:0 (6 GPUs)
+distance_sum: tensor(206.2945)
+Distance_Sort [[33, tensor(224.1075), 0.966796875, 0.9459530805549982], [24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [34, tensor(206.2945), 0.966796875, 0.9461706995638244], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 35/50 , Accuracy: 0.967, F1: 0.946
+cuda:0 (6 GPUs)
+distance_sum: tensor(229.2890)
+Distance_Sort [[35, tensor(229.2890), 0.9700520833333334, 0.9511897700645894], [33, tensor(224.1075), 0.966796875, 0.9459530805549982], [24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [34, tensor(206.2945), 0.966796875, 0.9461706995638244], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 36/50 , Accuracy: 0.970, F1: 0.951
+cuda:0 (6 GPUs)
+distance_sum: tensor(223.7065)
+Distance_Sort [[35, tensor(229.2890), 0.9700520833333334, 0.9511897700645894], [33, tensor(224.1075), 0.966796875, 0.9459530805549982], [36, tensor(223.7065), 0.9635416666666666, 0.9424997232661119], [24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [34, tensor(206.2945), 0.966796875, 0.9461706995638244], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 37/50 , Accuracy: 0.964, F1: 0.942
+cuda:0 (6 GPUs)
+distance_sum: tensor(210.6898)
+Distance_Sort [[35, tensor(229.2890), 0.9700520833333334, 0.9511897700645894], [33, tensor(224.1075), 0.966796875, 0.9459530805549982], [36, tensor(223.7065), 0.9635416666666666, 0.9424997232661119], [24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [37, tensor(210.6898), 0.9680989583333334, 0.9491924953829635], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [34, tensor(206.2945), 0.966796875, 0.9461706995638244], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 38/50 , Accuracy: 0.968, F1: 0.949
+cuda:0 (6 GPUs)
+distance_sum: tensor(217.5067)
+Distance_Sort [[35, tensor(229.2890), 0.9700520833333334, 0.9511897700645894], [33, tensor(224.1075), 0.966796875, 0.9459530805549982], [36, tensor(223.7065), 0.9635416666666666, 0.9424997232661119], [38, tensor(217.5067), 0.9641927083333334, 0.940284403832584], [24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [37, tensor(210.6898), 0.9680989583333334, 0.9491924953829635], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [34, tensor(206.2945), 0.966796875, 0.9461706995638244], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 39/50 , Accuracy: 0.964, F1: 0.940
+cuda:0 (6 GPUs)
+distance_sum: tensor(218.8198)
+Distance_Sort [[35, tensor(229.2890), 0.9700520833333334, 0.9511897700645894], [33, tensor(224.1075), 0.966796875, 0.9459530805549982], [36, tensor(223.7065), 0.9635416666666666, 0.9424997232661119], [39, tensor(218.8198), 0.9596354166666666, 0.9339056265692878], [38, tensor(217.5067), 0.9641927083333334, 0.940284403832584], [24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [37, tensor(210.6898), 0.9680989583333334, 0.9491924953829635], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [34, tensor(206.2945), 0.966796875, 0.9461706995638244], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 40/50 , Accuracy: 0.960, F1: 0.934
+cuda:0 (6 GPUs)
+distance_sum: tensor(209.7187)
+Distance_Sort [[35, tensor(229.2890), 0.9700520833333334, 0.9511897700645894], [33, tensor(224.1075), 0.966796875, 0.9459530805549982], [36, tensor(223.7065), 0.9635416666666666, 0.9424997232661119], [39, tensor(218.8198), 0.9596354166666666, 0.9339056265692878], [38, tensor(217.5067), 0.9641927083333334, 0.940284403832584], [24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [37, tensor(210.6898), 0.9680989583333334, 0.9491924953829635], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [40, tensor(209.7187), 0.966796875, 0.9453192476183645], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [34, tensor(206.2945), 0.966796875, 0.9461706995638244], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 41/50 , Accuracy: 0.967, F1: 0.945
+cuda:0 (6 GPUs)
+distance_sum: tensor(227.1975)
+Distance_Sort [[35, tensor(229.2890), 0.9700520833333334, 0.9511897700645894], [41, tensor(227.1975), 0.9654947916666666, 0.9446191675011275], [33, tensor(224.1075), 0.966796875, 0.9459530805549982], [36, tensor(223.7065), 0.9635416666666666, 0.9424997232661119], [39, tensor(218.8198), 0.9596354166666666, 0.9339056265692878], [38, tensor(217.5067), 0.9641927083333334, 0.940284403832584], [24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [37, tensor(210.6898), 0.9680989583333334, 0.9491924953829635], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [40, tensor(209.7187), 0.966796875, 0.9453192476183645], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [34, tensor(206.2945), 0.966796875, 0.9461706995638244], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 42/50 , Accuracy: 0.965, F1: 0.945
+cuda:0 (6 GPUs)
+distance_sum: tensor(206.3613)
+Distance_Sort [[35, tensor(229.2890), 0.9700520833333334, 0.9511897700645894], [41, tensor(227.1975), 0.9654947916666666, 0.9446191675011275], [33, tensor(224.1075), 0.966796875, 0.9459530805549982], [36, tensor(223.7065), 0.9635416666666666, 0.9424997232661119], [39, tensor(218.8198), 0.9596354166666666, 0.9339056265692878], [38, tensor(217.5067), 0.9641927083333334, 0.940284403832584], [24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [37, tensor(210.6898), 0.9680989583333334, 0.9491924953829635], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [40, tensor(209.7187), 0.966796875, 0.9453192476183645], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [42, tensor(206.3613), 0.9635416666666666, 0.9411114077603537], [34, tensor(206.2945), 0.966796875, 0.9461706995638244], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 43/50 , Accuracy: 0.964, F1: 0.941
+cuda:0 (6 GPUs)
+distance_sum: tensor(182.2424)
+Distance_Sort [[35, tensor(229.2890), 0.9700520833333334, 0.9511897700645894], [41, tensor(227.1975), 0.9654947916666666, 0.9446191675011275], [33, tensor(224.1075), 0.966796875, 0.9459530805549982], [36, tensor(223.7065), 0.9635416666666666, 0.9424997232661119], [39, tensor(218.8198), 0.9596354166666666, 0.9339056265692878], [38, tensor(217.5067), 0.9641927083333334, 0.940284403832584], [24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [37, tensor(210.6898), 0.9680989583333334, 0.9491924953829635], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [40, tensor(209.7187), 0.966796875, 0.9453192476183645], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [42, tensor(206.3613), 0.9635416666666666, 0.9411114077603537], [34, tensor(206.2945), 0.966796875, 0.9461706995638244], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [43, tensor(182.2424), 0.95703125, 0.9300325173478925], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 44/50 , Accuracy: 0.957, F1: 0.930
+cuda:0 (6 GPUs)
+distance_sum: tensor(233.3894)
+Distance_Sort [[44, tensor(233.3894), 0.9609375, 0.9364151018683515], [35, tensor(229.2890), 0.9700520833333334, 0.9511897700645894], [41, tensor(227.1975), 0.9654947916666666, 0.9446191675011275], [33, tensor(224.1075), 0.966796875, 0.9459530805549982], [36, tensor(223.7065), 0.9635416666666666, 0.9424997232661119], [39, tensor(218.8198), 0.9596354166666666, 0.9339056265692878], [38, tensor(217.5067), 0.9641927083333334, 0.940284403832584], [24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [37, tensor(210.6898), 0.9680989583333334, 0.9491924953829635], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [40, tensor(209.7187), 0.966796875, 0.9453192476183645], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [42, tensor(206.3613), 0.9635416666666666, 0.9411114077603537], [34, tensor(206.2945), 0.966796875, 0.9461706995638244], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [43, tensor(182.2424), 0.95703125, 0.9300325173478925], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 45/50 , Accuracy: 0.961, F1: 0.936
+cuda:0 (6 GPUs)
+distance_sum: tensor(213.4456)
+Distance_Sort [[44, tensor(233.3894), 0.9609375, 0.9364151018683515], [35, tensor(229.2890), 0.9700520833333334, 0.9511897700645894], [41, tensor(227.1975), 0.9654947916666666, 0.9446191675011275], [33, tensor(224.1075), 0.966796875, 0.9459530805549982], [36, tensor(223.7065), 0.9635416666666666, 0.9424997232661119], [39, tensor(218.8198), 0.9596354166666666, 0.9339056265692878], [38, tensor(217.5067), 0.9641927083333334, 0.940284403832584], [24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [45, tensor(213.4456), 0.9557291666666666, 0.9289437158301441], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [37, tensor(210.6898), 0.9680989583333334, 0.9491924953829635], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [40, tensor(209.7187), 0.966796875, 0.9453192476183645], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [42, tensor(206.3613), 0.9635416666666666, 0.9411114077603537], [34, tensor(206.2945), 0.966796875, 0.9461706995638244], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [43, tensor(182.2424), 0.95703125, 0.9300325173478925], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 46/50 , Accuracy: 0.956, F1: 0.929
+cuda:0 (6 GPUs)
+distance_sum: tensor(201.9346)
+Distance_Sort [[44, tensor(233.3894), 0.9609375, 0.9364151018683515], [35, tensor(229.2890), 0.9700520833333334, 0.9511897700645894], [41, tensor(227.1975), 0.9654947916666666, 0.9446191675011275], [33, tensor(224.1075), 0.966796875, 0.9459530805549982], [36, tensor(223.7065), 0.9635416666666666, 0.9424997232661119], [39, tensor(218.8198), 0.9596354166666666, 0.9339056265692878], [38, tensor(217.5067), 0.9641927083333334, 0.940284403832584], [24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [45, tensor(213.4456), 0.9557291666666666, 0.9289437158301441], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [37, tensor(210.6898), 0.9680989583333334, 0.9491924953829635], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [40, tensor(209.7187), 0.966796875, 0.9453192476183645], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [42, tensor(206.3613), 0.9635416666666666, 0.9411114077603537], [34, tensor(206.2945), 0.966796875, 0.9461706995638244], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [46, tensor(201.9346), 0.9622395833333334, 0.9400277586732559], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [43, tensor(182.2424), 0.95703125, 0.9300325173478925], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 47/50 , Accuracy: 0.962, F1: 0.940
+cuda:0 (6 GPUs)
+distance_sum: tensor(192.7273)
+Distance_Sort [[44, tensor(233.3894), 0.9609375, 0.9364151018683515], [35, tensor(229.2890), 0.9700520833333334, 0.9511897700645894], [41, tensor(227.1975), 0.9654947916666666, 0.9446191675011275], [33, tensor(224.1075), 0.966796875, 0.9459530805549982], [36, tensor(223.7065), 0.9635416666666666, 0.9424997232661119], [39, tensor(218.8198), 0.9596354166666666, 0.9339056265692878], [38, tensor(217.5067), 0.9641927083333334, 0.940284403832584], [24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [45, tensor(213.4456), 0.9557291666666666, 0.9289437158301441], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [37, tensor(210.6898), 0.9680989583333334, 0.9491924953829635], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [40, tensor(209.7187), 0.966796875, 0.9453192476183645], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [42, tensor(206.3613), 0.9635416666666666, 0.9411114077603537], [34, tensor(206.2945), 0.966796875, 0.9461706995638244], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [46, tensor(201.9346), 0.9622395833333334, 0.9400277586732559], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [47, tensor(192.7273), 0.966796875, 0.9463936896557691], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [43, tensor(182.2424), 0.95703125, 0.9300325173478925], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 48/50 , Accuracy: 0.967, F1: 0.946
+cuda:0 (6 GPUs)
+distance_sum: tensor(207.1554)
+Distance_Sort [[44, tensor(233.3894), 0.9609375, 0.9364151018683515], [35, tensor(229.2890), 0.9700520833333334, 0.9511897700645894], [41, tensor(227.1975), 0.9654947916666666, 0.9446191675011275], [33, tensor(224.1075), 0.966796875, 0.9459530805549982], [36, tensor(223.7065), 0.9635416666666666, 0.9424997232661119], [39, tensor(218.8198), 0.9596354166666666, 0.9339056265692878], [38, tensor(217.5067), 0.9641927083333334, 0.940284403832584], [24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [45, tensor(213.4456), 0.9557291666666666, 0.9289437158301441], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [37, tensor(210.6898), 0.9680989583333334, 0.9491924953829635], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [40, tensor(209.7187), 0.966796875, 0.9453192476183645], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [48, tensor(207.1554), 0.9674479166666666, 0.9472288583561094], [42, tensor(206.3613), 0.9635416666666666, 0.9411114077603537], [34, tensor(206.2945), 0.966796875, 0.9461706995638244], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [46, tensor(201.9346), 0.9622395833333334, 0.9400277586732559], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [47, tensor(192.7273), 0.966796875, 0.9463936896557691], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [43, tensor(182.2424), 0.95703125, 0.9300325173478925], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 49/50 , Accuracy: 0.967, F1: 0.947
+cuda:0 (6 GPUs)
+distance_sum: tensor(195.8370)
+Distance_Sort [[44, tensor(233.3894), 0.9609375, 0.9364151018683515], [35, tensor(229.2890), 0.9700520833333334, 0.9511897700645894], [41, tensor(227.1975), 0.9654947916666666, 0.9446191675011275], [33, tensor(224.1075), 0.966796875, 0.9459530805549982], [36, tensor(223.7065), 0.9635416666666666, 0.9424997232661119], [39, tensor(218.8198), 0.9596354166666666, 0.9339056265692878], [38, tensor(217.5067), 0.9641927083333334, 0.940284403832584], [24, tensor(214.6250), 0.9615885416666666, 0.9374504802711132], [28, tensor(214.6093), 0.9641927083333334, 0.942108632696206], [45, tensor(213.4456), 0.9557291666666666, 0.9289437158301441], [25, tensor(213.3513), 0.9635416666666666, 0.9409420572890691], [2, tensor(212.9974), 0.96484375, 0.9420496286962724], [19, tensor(212.8323), 0.9654947916666666, 0.9452761088580175], [31, tensor(212.8166), 0.9622395833333334, 0.9397229693926121], [29, tensor(212.3684), 0.9635416666666666, 0.9396721280068339], [6, tensor(212.0264), 0.958984375, 0.9323616736413529], [18, tensor(211.9045), 0.9544270833333334, 0.9244073014488887], [1, tensor(211.4524), 0.9602864583333334, 0.9348887092031268], [37, tensor(210.6898), 0.9680989583333334, 0.9491924953829635], [3, tensor(210.6190), 0.9641927083333334, 0.9416344294003869], [40, tensor(209.7187), 0.966796875, 0.9453192476183645], [4, tensor(209.3177), 0.9602864583333334, 0.9334193751748175], [32, tensor(208.4803), 0.96875, 0.948375198563634], [30, tensor(208.2248), 0.9654947916666666, 0.9432575386734707], [20, tensor(207.8985), 0.9583333333333334, 0.9314718292380244], [0, tensor(207.4542), 0.95703125, 0.9287671402193716], [48, tensor(207.1554), 0.9674479166666666, 0.9472288583561094], [42, tensor(206.3613), 0.9635416666666666, 0.9411114077603537], [34, tensor(206.2945), 0.966796875, 0.9461706995638244], [21, tensor(206.1097), 0.9615885416666666, 0.9376263781726883], [22, tensor(205.4453), 0.970703125, 0.9523233677759287], [27, tensor(202.8938), 0.962890625, 0.940244224354118], [26, tensor(202.8820), 0.9563802083333334, 0.931128614510168], [46, tensor(201.9346), 0.9622395833333334, 0.9400277586732559], [23, tensor(199.8942), 0.9654947916666666, 0.9439435654845127], [11, tensor(198.0701), 0.95703125, 0.9302277882215998], [49, tensor(195.8370), 0.9674479166666666, 0.9482409215433628], [5, tensor(195.7152), 0.9609375, 0.9347844867219947], [17, tensor(193.8792), 0.9674479166666666, 0.946055769647947], [7, tensor(193.8596), 0.9557291666666666, 0.9267497563124598], [12, tensor(193.0025), 0.9680989583333334, 0.9477002073760878], [47, tensor(192.7273), 0.966796875, 0.9463936896557691], [15, tensor(191.7366), 0.9596354166666666, 0.9339350902088038], [16, tensor(185.6587), 0.9641927083333334, 0.9422680153742022], [9, tensor(184.5501), 0.9602864583333334, 0.9353839095553482], [8, tensor(184.0193), 0.9635416666666666, 0.9403432868998494], [43, tensor(182.2424), 0.95703125, 0.9300325173478925], [10, tensor(182.0065), 0.9635416666666666, 0.9406498666786812], [14, tensor(179.5809), 0.9583333333333334, 0.9315861863057324], [13, tensor(169.0330), 0.962890625, 0.9394559752792728]]
+Epoch 50/50 , Accuracy: 0.967, F1: 0.948
