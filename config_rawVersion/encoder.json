@@ -1,0 +1,21 @@
+{
+	"limu_bert": {
+		"feature_num" : 6,
+		"hidden": 72,
+		"hidden_ff": 144,
+		"n_layers": 4,
+		"n_heads": 4,
+		"seq_len": 120, 
+		"emb_norm": true
+	},
+	"unihar_bert": {
+		"feature_num" : 6,
+		"hidden": 36,
+		"hidden_ff": 72,
+		"n_layers": 1,
+		"n_heads": 4,
+		"seq_len": 20,
+		"emb_norm": true
+	}
+}
+
